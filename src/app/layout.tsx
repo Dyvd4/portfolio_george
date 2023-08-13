@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from 'next/font/local'
@@ -20,7 +21,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
-			<body className={matterFont.className}>{children}</body>
+			<body className={matterFont.className}>
+				<Navbar />
+				{children}
+			</body>
 		</html>
 	);
 }

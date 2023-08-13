@@ -1,0 +1,20 @@
+<svg width="225" height="226" viewBox="0 0 225 226" fill="none"
+	xmlns="http://www.w3.org/2000/svg">
+	<g id="hero-section_1st-row_smile">
+		<g id="Smile" filter="url(#filter0_d_238_206)">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M158.865 88.5766C165.726 114.183 150.53 140.503 124.923 147.364C99.3171 154.226 72.997 139.03 66.1357 113.423C59.2745 87.8169 74.4705 61.4967 100.077 54.6355C125.683 47.7743 152.003 62.9703 158.865 88.5766ZM98.0199 96.4138C102.382 95.245 104.971 90.7607 103.802 86.398C102.633 82.0357 98.1491 79.4466 93.7868 80.6154C89.424 81.7844 86.835 86.2688 88.0039 90.6311C89.1729 94.9938 93.6572 97.5828 98.0199 96.4138ZM122.747 89.7882C127.11 88.6192 129.699 84.1349 128.53 79.7722C127.361 75.4099 122.877 72.8208 118.514 73.9897C114.152 75.1586 111.563 79.643 112.732 84.0053C113.901 88.368 118.385 90.957 122.747 89.7882ZM117.169 117.05C106.547 119.896 95.6289 113.592 92.7828 102.97L84.5402 105.179C88.606 120.353 104.203 129.358 119.377 125.292C134.552 121.226 143.556 105.629 139.491 90.4552L131.248 92.6638C134.094 103.285 127.791 114.203 117.169 117.05Z" fill="#6053F8"/>
+		</g>
+	</g>
+	<defs>
+		<filter id="filter0_d_238_206" x="0.488281" y="0.988037" width="224.024" height="224.024" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dy="12"/>
+			<feGaussianBlur stdDeviation="32"/>
+			<feComposite in2="hardAlpha" operator="out"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0.375389 0 0 0 0 0.323611 0 0 0 0 0.970833 0 0 0 0.48 0"/>
+			<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_238_206"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_238_206" result="shape"/>
+		</filter>
+	</defs>
+</svg>
