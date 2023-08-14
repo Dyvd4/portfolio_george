@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html lang="en">
 			<head>
 				<title>Portfolio</title>
-				<link rel="icon" href="/Logo.svg" type="image/x-icon" />
+				<link rel="icon" href="/Favicon.svg" type="image/x-icon" />
 			</head>
 			<body className={matterFont.className}>
 				<Navbar />
