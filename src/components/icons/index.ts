@@ -1,6 +1,6 @@
 import ArrowRight from "./ArrowRight";
 import Telegram from "./Telegram";
-import Dribble from "./Dribble";
+import Dribble from "./Dribbble";
 import Behance from "./Behance";
 import Icon from "./Icon";
 import Copy from "./Copy";

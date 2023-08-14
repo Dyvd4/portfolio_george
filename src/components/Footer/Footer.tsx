@@ -1,8 +1,8 @@
 "use-client";
 
-import { ComponentPropsWithRef, PropsWithChildren } from "react";
+import { Behance, Dribble, Telegram } from "@/components/icons";
 import { cn } from "@/utils/component-utils";
-import { ArrowRight, Behance, Dribble, Telegram } from "@/components/icons";
+import { ComponentPropsWithRef, PropsWithChildren } from "react";
 
 type _FooterProps = {};
 
@@ -17,7 +17,9 @@ function Footer({ className, children, ...props }: FooterProps) {
 				<Behance variant="secondary" />
 				<Dribble variant="secondary" />
 			</div>
-			<div className="text-secondary">© 2023 George Palkin. All rights reserved.</div>
+			<div className="text-secondary text-sm">
+				© 2023 George Palkin. All rights reserved.
+			</div>
 		</footer>
 	);
 }

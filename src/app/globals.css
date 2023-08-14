@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+	.bg-primary {
+		background-color: hsla(245, 92%, 65%, 1);
+	}
+
+	.bg-secondary {
+		background-color: hsla(0, 0%, 7%, 1);
+	}
+
+	.text-primary {
+		color: hsla(0, 0%, 100%, 1);
+	}
+
+	.text-secondary {
+		color: hsla(0, 0%, 50%, 1);
+	}
+
+	.fill-primary {
+		fill: hsla(0, 0%, 100%, 1);
+	}
+
+	.fill-secondary {
+		fill: hsla(0, 0%, 50%, 1);
+	}
+}
+
 :root {
 	--foreground-rgb: 128, 128, 128;
 	--background-rgb: 0, 0, 0;

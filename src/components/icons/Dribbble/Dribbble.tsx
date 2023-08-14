@@ -3,11 +3,11 @@
 import { cn } from "@/utils/component-utils";
 import Icon, { IconProps } from "../Icon";
 
-type _CopyProps = {};
+type _DribbleProps = {};
 
-export type CopyProps = _CopyProps & Omit<IconProps, keyof _CopyProps>;
+export type DribbleProps = _DribbleProps & Omit<IconProps, keyof _DribbleProps>;
 
-function Copy({ className, ...props }: CopyProps) {
+function Dribble({ className, ...props }: DribbleProps) {
 	return (
 		<Icon className={cn(``, className)} {...props}>
 			<>
@@ -27,4 +27,4 @@ function Copy({ className, ...props }: CopyProps) {
 	);
 }
 
-export default Copy;
+export default Dribble;

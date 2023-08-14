@@ -1,32 +1,34 @@
 "use-client";
 
 import { cn } from "@/utils/component-utils";
-import Image, { ImageProps } from "next/image";
+import { ComponentPropsWithRef, PropsWithChildren } from "react";
 
 export type IconVariant = "primary" | "secondary";
 type _IconProps = {
 	variant?: IconVariant;
 };
 
-export type IconProps = _IconProps & Omit<ImageProps, keyof _IconProps>;
+export type IconProps = _IconProps &
+	Omit<PropsWithChildren<ComponentPropsWithRef<"svg">>, keyof _IconProps>;
 
-function Icon({ className, src, alt, variant = "primary", ...props }: IconProps) {
+function Icon({ className, children, variant = "primary", ...props }: IconProps) {
 	return (
-		<Image
+		<svg
 			className={cn(
 				``,
 				{
-					"text-primary": variant === "primary",
-					"fill-gray-500 stroke-gray-500": variant === "secondary",
+					"fill-primary": variant === "primary",
+					"fill-secondary": variant === "secondary",
 				},
 				className
 			)}
-			src={src}
-			alt={alt}
-			width={32}
-			height={32}
-			{...props}
-		/>
+			width="32"
+			height="32"
+			viewBox="0 0 32 32"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			{children}
+		</svg>
 	);
 }
 
