@@ -22,6 +22,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
+			<head>
+				<title>Portfolio</title>
+				<link rel="icon" href="/Logo.svg" type="image/x-icon" />
+			</head>
 			<body className={matterFont.className}>
 				<Navbar />
 				{children}
