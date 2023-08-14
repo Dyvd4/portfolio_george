@@ -1,17 +1,18 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
-import localFont from 'next/font/local'
+import localFont from "next/font/local";
+import Footer from "@/components/Footer";
 
 const matterFont = localFont({
 	src: [
 		{
 			path: "../fonts/matter-font/Matter-Regular.otf",
 			weight: "400",
-			style: "normal"
-		}
-	]
-})
+			style: "normal",
+		},
+	],
+});
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<body className={matterFont.className}>
 				<Navbar />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);
