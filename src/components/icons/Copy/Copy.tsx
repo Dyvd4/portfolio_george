@@ -1,5 +1,3 @@
-"use-client";
-
 import { cn } from "@/utils/component-utils";
 import Icon, { IconProps } from "../Icon";
 

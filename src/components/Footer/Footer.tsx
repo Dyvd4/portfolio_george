@@ -1,5 +1,3 @@
-"use-client";
-
 import { Behance, Dribble, Telegram } from "@/components/icons";
 import { cn } from "@/utils/component-utils";
 import { ComponentPropsWithRef, PropsWithChildren } from "react";
