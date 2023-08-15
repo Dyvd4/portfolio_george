@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			</head>
 			<body className={matterFont.className}>
 				<Navbar />
-				{children}
+				<main className="relative min-h-screen">{children}</main>
 				<Footer />
 			</body>
 		</html>

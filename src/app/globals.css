@@ -2,29 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--color-primary: hsla(0, 0%, 100%, 1);
+	--color-secondary: hsla(0, 0%, 50%, 1);
+	--color-tertiary: hsla(0, 0%, 25%, 1);
+	--background-color-primary: hsla(245, 92%, 65%, 1);
+	--background-color-secondary: hsla(0, 0%, 7%, 1);
+}
+
 @layer components {
 	.bg-primary {
-		background-color: hsla(245, 92%, 65%, 1);
+		background-color: var(--background-color-primary);
 	}
 
 	.bg-secondary {
-		background-color: hsla(0, 0%, 7%, 1);
+		background-color: var(--background-color-secondary);
 	}
 
 	.text-primary {
-		color: hsla(0, 0%, 100%, 1);
+		color: var(--color-primary);
 	}
 
 	.text-secondary {
-		color: hsla(0, 0%, 50%, 1);
+		color: var(--color-secondary);
+	}
+
+	.text-tertiary {
+		color: var(--color-tertiary);
 	}
 
 	.fill-primary {
-		fill: hsla(0, 0%, 100%, 1);
+		fill: var(--color-primary);
 	}
 
 	.fill-secondary {
-		fill: hsla(0, 0%, 50%, 1);
+		fill: var(--color-secondary);
+	}
+
+	.fill-tertiary {
+		fill: var(--color-tertiary);
+	}
+
+	.border-primary {
+		border-color: var(--color-primary);
+	}
+
+	.border-secondary {
+		border-color: var(--color-secondary);
+	}
+
+	.border-tertiary {
+		border-color: var(--color-tertiary);
+	}
+
+	.stroke-tertiary {
+		stroke: var(--color-tertiary);
 	}
 }
 
