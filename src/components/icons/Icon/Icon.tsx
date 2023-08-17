@@ -14,7 +14,7 @@ function Icon({ className, children, variant = "primary", ...props }: IconProps)
 		<div className="flex items-center justify-center p-1">
 			<svg
 				className={cn(
-					``,
+					`hover:fill-primary cursor-pointer`,
 					{
 						"fill-primary": variant === "primary",
 						"fill-secondary": variant === "secondary",
