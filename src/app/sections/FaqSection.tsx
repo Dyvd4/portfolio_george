@@ -51,7 +51,7 @@ function FaqSection({ className, children, ...props }: FaqSectionProps) {
 			)}
 			{...props}
 		>
-			<h1 className="text-7xl">FAQ's</h1>
+			<h1 className="text-7xl">FAQ&apos;s</h1>
 			<ul className="flex flex-col gap-4">
 				{FAQs.map(({ title, description }) => (
 					<li key={title}>
