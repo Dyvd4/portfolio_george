@@ -1,30 +1,44 @@
-"use-client";
-
+import useCssVariableValue from "@/hooks/useCssVariableValue";
 import { cn } from "@/utils/component-utils";
-import Icon, { IconProps } from "../Icon";
+import { ComponentPropsWithRef } from "react";
 
-type _ArrowDownCircleProps = {};
+type _ArrowDownCircleProps = {
+	isActive?: boolean;
+};
 
 export type ArrowDownCircleProps = _ArrowDownCircleProps &
-	Omit<IconProps, keyof _ArrowDownCircleProps>;
+	Omit<ComponentPropsWithRef<"svg">, keyof _ArrowDownCircleProps>;
 
-function ArrowDownCircle({ className, ...props }: ArrowDownCircleProps) {
+function ArrowDownCircle({ className, isActive, ...props }: ArrowDownCircleProps) {
+	const secondaryColor = useCssVariableValue("--color-secondary");
+	const primaryColor = useCssVariableValue("--color-primary");
+	const strokeColor = (isActive ? primaryColor : secondaryColor) || "white";
 	return (
-		<Icon className={cn(``, className)} {...props}>
-			<>
-				<g id="Name=ArrowDownCircle" clipPath="url(#clip0_1_78)">
-					<path
-						id="Vector"
-						d="M22 7H15V5H22V7ZM23.726 17C23.284 18.297 21.697 20 18.625 20C15.551 20 13.061 18.271 13.061 14.325C13.061 10.415 15.386 8.405 18.527 8.405C21.609 8.405 23.491 10.187 23.902 12.831C23.98 13.337 24.011 14.019 23.997 14.971H15.97C16.1 18.182 19.453 18.283 20.558 17H23.726ZM16.04 13H21.005C20.9 11.453 19.869 10.781 18.528 10.781C17.062 10.781 16.251 11.549 16.04 13ZM6.466 19.988H0V5.021H6.953C12.429 5.102 12.533 10.465 9.673 11.927C13.134 13.187 13.25 19.988 6.466 19.988ZM3 11H6.584C9.092 11 9.49 8 6.272 8H3V11ZM6.391 14H3V17.016H6.341C9.396 17.016 9.209 14 6.391 14Z"
-					></path>
-				</g>
-				<defs>
-					<clipPath id="clip0_1_78">
-						<rect width={24} height={24} fill="white"></rect>
-					</clipPath>
-				</defs>
-			</>
-		</Icon>
+		<svg
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+			className={cn("", className)}
+		>
+			<path
+				fill-rule="evenodd"
+				clip-rule="evenodd"
+				d="M2.75024 12C2.75024 17.108 6.89124 21.25 12.0002 21.25C17.1082 21.25 21.2502 17.108 21.2502 12C21.2502 6.892 17.1082 2.75 12.0002 2.75C6.89124 2.75 2.75024 6.892 2.75024 12Z"
+				stroke={strokeColor}
+				stroke-width="1.5"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			/>
+			<path
+				d="M8.52905 10.5577L12.0001 14.0437L15.4711 10.5577"
+				stroke={strokeColor}
+				stroke-width="1.5"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			/>
+		</svg>
 	);
 }
 

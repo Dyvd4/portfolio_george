@@ -1,4 +1,4 @@
-"use-client";
+"use client";
 
 import { ComponentPropsWithRef, PropsWithChildren } from "react";
 import { cn } from "@/utils/component-utils";
