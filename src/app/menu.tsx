@@ -1,15 +1,16 @@
 "use client";
 
 import menuIsActiveAtom from "@/atoms/menuIsActiveAtom";
+import { Behance, Dribble, Telegram } from "@/components/icons";
 import { cn } from "@/utils/component-utils";
 import { useAtom } from "jotai";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ComponentPropsWithRef, PropsWithChildren, useEffect } from "react";
 
-type _MenuProps = {};
+type Links = { href: string; title: string };
 
-const LINKS: Array<{ href: string; title: string }> = [
+const LINKS: Array<Links> = [
 	{
 		href: "/work",
 		title: "Work",
@@ -28,6 +29,7 @@ const LINKS: Array<{ href: string; title: string }> = [
 	},
 ];
 
+type _MenuProps = {};
 export type MenuProps = _MenuProps &
 	Omit<PropsWithChildren<ComponentPropsWithRef<"div">>, keyof _MenuProps>;
 
@@ -51,7 +53,7 @@ function Menu({ className, children, ...props }: MenuProps) {
 			className={cn(
 				`fixed inset-0 z-40 flex -translate-y-full
 				transform items-center justify-center 
-				bg-black transition-all duration-500`,
+				bg-black transition-all duration-700`,
 				{
 					"translate-y-0": menuIsActive,
 				},
@@ -59,15 +61,33 @@ function Menu({ className, children, ...props }: MenuProps) {
 			)}
 			{...props}
 		>
-			<ul className="flex w-[1200px] flex-col gap-8 text-8xl leading-[132px]">
-				{LINKS.map(({ href, title }) => (
-					<li key={href} className="hover:text-primary cursor-pointer hover:underline">
-						<Link href={href} onClick={(e) => handleClick(e, href)}>
-							{title}
-						</Link>
-					</li>
-				))}
-			</ul>
+			<div className="flex w-[1200px] justify-between">
+				<ul className="flex flex-col gap-8 text-8xl leading-[132px]">
+					{LINKS.map(({ href, title }) => (
+						<li
+							key={href}
+							className="hover:text-primary flex cursor-pointer items-end justify-between hover:underline"
+						>
+							<Link href={href} onClick={(e) => handleClick(e, href)}>
+								{title}
+							</Link>
+						</li>
+					))}
+				</ul>
+				<div className="flex items-end">
+					<ul className="flex gap-6">
+						<li key={"Telegram"}>
+							<Telegram variant="secondary" />
+						</li>
+						<li key={"Behance"}>
+							<Behance variant="secondary" />
+						</li>
+						<li key={"Dribble"}>
+							<Dribble variant="secondary" />
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	);
 }
