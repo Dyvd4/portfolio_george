@@ -59,7 +59,7 @@ function Menu({ className, children, ...props }: MenuProps) {
 			)}
 			{...props}
 		>
-			<ul className="flex flex-col gap-8 text-8xl">
+			<ul className="flex w-[1200px] flex-col gap-8 text-8xl leading-[132px]">
 				{LINKS.map(({ href, title }) => (
 					<li key={href} className="hover:text-primary cursor-pointer hover:underline">
 						<Link href={href} onClick={(e) => handleClick(e, href)}>
