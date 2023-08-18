@@ -46,24 +46,30 @@ function Menu({ className, children, ...props }: MenuProps) {
 		setMenuIsActive(false);
 	};
 
-	return menuIsActive ? (
-		<div className={cn(`fixed inset-0 z-40`, className)} {...props}>
-			<div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 justify-center bg-black">
-				<ul className="flex flex-col gap-4 text-8xl">
-					{LINKS.map(({ href, title }) => (
-						<li
-							key={href}
-							className="hover:text-primary cursor-pointer hover:underline"
-						>
-							<Link href={href} onClick={(e) => handleClick(e, href)}>
-								{title}
-							</Link>
-						</li>
-					))}
-				</ul>
-			</div>
+	return (
+		<div
+			className={cn(
+				`fixed inset-0 z-40 flex -translate-y-full
+				transform items-center justify-center 
+				bg-black transition-all duration-500`,
+				{
+					"translate-y-0": menuIsActive,
+				},
+				className
+			)}
+			{...props}
+		>
+			<ul className="flex flex-col gap-8 text-8xl">
+				{LINKS.map(({ href, title }) => (
+					<li key={href} className="hover:text-primary cursor-pointer hover:underline">
+						<Link href={href} onClick={(e) => handleClick(e, href)}>
+							{title}
+						</Link>
+					</li>
+				))}
+			</ul>
 		</div>
-	) : null;
+	);
 }
 
 export default Menu;
