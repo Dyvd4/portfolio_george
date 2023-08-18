@@ -1,13 +1,15 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import "./globals.css";
+import Provider from "@/components/Provider/Provider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Footer from "@/components/Footer";
+import "./globals.css";
+import Menu from "./menu";
 
 const matterFont = localFont({
 	src: [
 		{
-			path: "../fonts/matter-font/Matter-Regular.otf",
+			path: "../../public/fonts/matter-font/Matter-Regular.otf",
 			weight: "400",
 			style: "normal",
 		},
@@ -27,9 +29,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<link rel="icon" href="/Favicon.svg" type="image/x-icon" />
 			</head>
 			<body className={matterFont.className}>
-				<Navbar />
-				<main className="relative min-h-screen">{children}</main>
-				<Footer />
+				<Provider>
+					<Navbar />
+					<Menu />
+					<main className="min-h-screen">{children}</main>
+					<Footer />
+				</Provider>
 			</body>
 		</html>
 	);
