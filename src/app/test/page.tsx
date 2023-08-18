@@ -1,6 +1,5 @@
-import { ComponentPropsWithRef, PropsWithChildren } from "react";
-import { cn } from "@/utils/component-utils";
 import Expandable from "@/components/Expandable/Expandable";
+import { cn } from "@/utils/component-utils";
 
 function Page(props) {
 	return (
