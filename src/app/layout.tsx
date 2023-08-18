@@ -9,7 +9,7 @@ import Menu from "./menu";
 const matterFont = localFont({
 	src: [
 		{
-			path: "../fonts/matter-font/Matter-Regular.otf",
+			path: "../../public/fonts/matter-font/Matter-Regular.otf",
 			weight: "400",
 			style: "normal",
 		},
@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<Provider>
 					<Navbar />
 					<Menu />
-					<main className="relative min-h-screen">{children}</main>
+					<main className="min-h-screen">{children}</main>
 					<Footer />
 				</Provider>
 			</body>

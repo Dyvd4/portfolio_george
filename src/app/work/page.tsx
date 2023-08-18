@@ -1,11 +1,6 @@
 import { cn } from "@/utils/component-utils";
 
-async function Page(props) {
-	await new Promise((res, rej) => {
-		setTimeout(() => {
-			res("");
-		}, 2000);
-	});
+function Page(props) {
 	return (
 		<div
 			className={cn(
