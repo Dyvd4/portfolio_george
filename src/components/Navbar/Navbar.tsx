@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import { ComponentPropsWithRef, PropsWithChildren } from "react";
+import menuIsActiveAtom from "@/atoms/menuIsActiveAtom";
+import Logo from "@/components/Logo";
 import { cn } from "@/utils/component-utils";
 import { useAtom } from "jotai";
-import menuIsActiveAtom from "@/atoms/menuIsActiveAtom";
+import { ComponentPropsWithRef, PropsWithChildren } from "react";
 
 type _NavbarProps = {};
 
@@ -19,7 +19,7 @@ function Navbar({ className, children, ...props }: NavbarProps) {
 			className={cn(`fixed z-50 flex w-full justify-between px-12 py-8`, className)}
 			{...props}
 		>
-			<Image src="/Logo.svg" alt="Logo" width={32} height={32} priority />
+			<Logo />
 			<div
 				onClick={() => setMenuIsActive((isActive) => !isActive)}
 				className="text-primary cursor-pointer text-lg"

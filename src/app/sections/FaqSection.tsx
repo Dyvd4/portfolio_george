@@ -1,8 +1,6 @@
-"use client";
-
-import { ComponentPropsWithRef, PropsWithChildren } from "react";
-import { cn } from "@/utils/component-utils";
 import Expandable from "@/components/Expandable";
+import { cn } from "@/utils/component-utils";
+import { ComponentPropsWithRef } from "react";
 
 type _FaqSectionProps = {};
 
@@ -39,7 +37,7 @@ const FAQs: Array<{ title: string; description: string }> = [
 	},
 ];
 export type FaqSectionProps = _FaqSectionProps &
-	Omit<PropsWithChildren<ComponentPropsWithRef<"section">>, keyof _FaqSectionProps>;
+	Omit<ComponentPropsWithRef<"section">, keyof _FaqSectionProps>;
 
 function FaqSection({ className, children, ...props }: FaqSectionProps) {
 	return (
