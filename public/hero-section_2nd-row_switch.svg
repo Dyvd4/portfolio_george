@@ -1,18 +1,7 @@
-<svg width="299" height="208" viewBox="0 0 299 208" fill="none"
-	xmlns="http://www.w3.org/2000/svg">
-	<g id="hero-section_2nd-row_switch" filter="url(#filter0_d_238_208)">
-		<path id="Switch" fill-rule="evenodd" clip-rule="evenodd" d="M104.21 52C82.279 52 64.5 69.9088 64.5 92C64.5 114.091 82.279 132 104.21 132H194.79C216.721 132 234.5 114.091 234.5 92C234.5 69.9088 216.721 52 194.79 52H104.21ZM194.79 117.455C208.746 117.455 220.06 106.058 220.06 92C220.06 77.9418 208.746 66.5455 194.79 66.5455C180.833 66.5455 169.519 77.9418 169.519 92C169.519 106.058 180.833 117.455 194.79 117.455Z" fill="#6053F8"/>
-	</g>
-	<defs>
-		<filter id="filter0_d_238_208" x="0.5" y="0" width="298" height="208" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-			<feOffset dy="12"/>
-			<feGaussianBlur stdDeviation="32"/>
-			<feComposite in2="hardAlpha" operator="out"/>
-			<feColorMatrix type="matrix" values="0 0 0 0 0.375389 0 0 0 0 0.323611 0 0 0 0 0.970833 0 0 0 0.48 0"/>
-			<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_238_208"/>
-			<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_238_208" result="shape"/>
-		</filter>
-	</defs>
+<svg width="171" height="80" viewBox="0 0 171 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="hero-section_2nd-row_switch">
+        <path id="Switch" fill-rule="evenodd" clip-rule="evenodd"
+            d="M40.2104 0C18.279 0 0.5 17.9088 0.5 40C0.5 62.0912 18.279 80 40.2104 80H130.79C152.721 80 170.5 62.0912 170.5 40C170.5 17.9088 152.721 0 130.79 0H40.2104ZM130.79 65.4545C144.746 65.4545 156.06 54.0582 156.06 40C156.06 25.9418 144.746 14.5455 130.79 14.5455C116.833 14.5455 105.519 25.9418 105.519 40C105.519 54.0582 116.833 65.4545 130.79 65.4545Z"
+            fill="#6053F8" />
+    </g>
 </svg>
