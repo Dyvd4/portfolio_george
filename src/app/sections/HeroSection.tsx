@@ -25,12 +25,12 @@ function ContactSection({ className, ...props }: ContactSectionProps) {
 				<h1>
 					Crafting <i className="pr-4">friendly</i> and
 				</h1>
-				<h1 className="flex items-center gap-12">
+				<h1 className="flex items-center gap-12 pl-4">
 					<Image
 						style={{
-							filter: "drop-shadow(0px 12px 64px rgba(96, 83, 248, 0.48))",
+							filter: "drop-shadow(0px 12px 64px rgba(96, 83, 248, 0.64))",
 						}}
-						className="pl-2 pt-4"
+						className="pt-4"
 						src={"/hero-section_1st-row_smile.svg"}
 						width={97}
 						height={98}
@@ -46,9 +46,9 @@ function ContactSection({ className, ...props }: ContactSectionProps) {
 					</div>
 					<Image
 						style={{
-							filter: "drop-shadow(0px 12px 64px rgba(96, 83, 248, 0.48))",
+							filter: "drop-shadow(0px 12px 64px rgba(96, 83, 248, 0.64))",
 						}}
-						className="pl-2 pt-6"
+						className="pt-6"
 						src={"/hero-section_2nd-row_switch.svg"}
 						width={171}
 						height={80}
