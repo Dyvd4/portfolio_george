@@ -1,6 +1,7 @@
 import Expandable from "@/components/Expandable";
 import { cn } from "@/utils/component-utils";
 import { ComponentPropsWithRef } from "react";
+import Image from "next/image";
 
 type _FaqSectionProps = {};
 
@@ -57,6 +58,27 @@ function FaqSection({ className, children, ...props }: FaqSectionProps) {
 					</li>
 				))}
 			</ul>
+			<Image
+				className="absolute left-[340.833px] top-[340.833px]"
+				src={"/Spiral 2.svg"}
+				alt="spiral 2"
+				width={108}
+				height={123}
+			/>
+			<Image
+				className="absolute bottom-[792px] right-[204px]"
+				src={"/Transparency.svg"}
+				alt="Transparency"
+				width={128}
+				height={128}
+			/>
+			<Image
+				className="absolute bottom-[449.742px] left-[206.074px]"
+				src={"/Heavy Waves.svg"}
+				alt="Heavy waves"
+				width={118}
+				height={84}
+			/>
 		</section>
 	);
 }
