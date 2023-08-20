@@ -21,6 +21,7 @@ function ArrowDownCircle({ className, isActive, ...props }: ArrowDownCircleProps
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
 			className={cn("", className)}
+			{...props}
 		>
 			<path
 				stroke={strokeColor}
