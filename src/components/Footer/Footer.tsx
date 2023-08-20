@@ -3,6 +3,7 @@ import { Behance, Dribble, Telegram } from "@/components/icons";
 import { cn } from "@/utils/component-utils";
 import { ComponentPropsWithRef, PropsWithChildren } from "react";
 import DevSign from "@/components/DevSign";
+import Copyable from "@/components/Copyable";
 
 type _FooterProps = {};
 
@@ -13,9 +14,11 @@ function Footer({ className, children, ...props }: FooterProps) {
 	return (
 		<footer className={cn(`flex flex-col justify-center gap-[360px]`, className)} {...props}>
 			<div className="flex flex-col items-center gap-6">
-				<h1 className="text-primary text-[88px] leading-[150%] underline">
-					hello@itsgeorge.com
-				</h1>
+				<Copyable>
+					<h1 className="text-primary text-[88px] leading-[150%] underline">
+						hello@itsgeorge.com
+					</h1>
+				</Copyable>
 				<Button>Contact form</Button>
 			</div>
 			<div className="flex justify-between px-12 py-8">
