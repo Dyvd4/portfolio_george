@@ -1,6 +1,7 @@
 import Button from "@/components/buttons/Button";
 import { cn } from "@/utils/component-utils";
 import Image from "next/image";
+import Link from "next/link";
 import { ComponentPropsWithRef } from "react";
 
 type _ContactSectionProps = {};
@@ -56,7 +57,9 @@ function ContactSection({ className, ...props }: ContactSectionProps) {
 					/>
 				</h1>
 			</div>
-			<Button>Start a project</Button>
+			<Link href={"#footer"}>
+				<Button>Start a project</Button>
+			</Link>
 		</section>
 	);
 }

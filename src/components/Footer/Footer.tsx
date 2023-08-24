@@ -12,7 +12,11 @@ export type FooterProps = _FooterProps &
 
 function Footer({ className, children, ...props }: FooterProps) {
 	return (
-		<footer className={cn(`flex flex-col justify-center gap-[360px]`, className)} {...props}>
+		<footer
+			id="footer"
+			className={cn(`flex flex-col justify-center gap-[360px]`, className)}
+			{...props}
+		>
 			<div className="flex flex-col items-center gap-6">
 				<Copyable>
 					<h1 className="text-primary text-[88px] leading-[150%] underline">
