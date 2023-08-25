@@ -5,7 +5,7 @@ import useToggle from "@/hooks/useToggle";
 import { cn } from "@/utils/component-utils";
 import autoAnimate from "@formkit/auto-animate";
 import classNames from "classnames";
-import { ComponentPropsWithRef, PropsWithChildren, useState } from "react";
+import { ComponentPropsWithRef, PropsWithChildren } from "react";
 
 type _ExpandableProps = {
 	title: string;
@@ -17,21 +17,16 @@ export type ExpandableProps = _ExpandableProps &
 
 function Expandable({ className, children, title, description, ...props }: ExpandableProps) {
 	const [isExpanded, , toggleIsExpanded] = useToggle(false);
-	const [hoverIsActive, setHoverIsActive] = useState(false);
 
 	return (
 		<div
-			onMouseOut={() => setHoverIsActive(false)}
-			onMouseOver={() => setHoverIsActive(true)}
 			ref={(ref) => ref && autoAnimate(ref)}
 			onClick={toggleIsExpanded}
 			className={cn(
-				`border-1 border-tertiary group
+				`expandable
+				border-1 border-tertiary hover:border-primary group
 				flex w-[576px] cursor-pointer flex-col
 				gap-4 rounded-lg border p-6 text-xl`,
-				{
-					"border-primary": !!hoverIsActive,
-				},
 				className
 			)}
 			{...props}
@@ -42,7 +37,6 @@ function Expandable({ className, children, title, description, ...props }: Expan
 					className={classNames({
 						"rotate-180": isExpanded,
 					})}
-					isActive={!!hoverIsActive}
 				/>
 			</div>
 			{isExpanded && (

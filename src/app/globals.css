@@ -20,6 +20,15 @@
 	p {
 		color: var(--color-primary);
 	}
+
+	svg.icon path {
+		cursor: pointer;
+		stroke: var(--color-secondary);
+	}
+	svg.icon:hover > path,
+	.expandable:hover svg.icon > path {
+		stroke: var(--color-primary);
+	}
 }
 @layer components {
 	.bg-primary {
@@ -66,6 +75,9 @@
 		border-color: var(--color-tertiary);
 	}
 
+	.stroke-primary {
+		stroke: var(--color-primary);
+	}
 	.stroke-tertiary {
 		stroke: var(--color-tertiary);
 	}
