@@ -1,13 +1,11 @@
 import { cn } from "@/utils/component-utils";
 import { ComponentPropsWithRef } from "react";
 
-type _CopyProps = {
-	isActive?: boolean;
-};
+type _TimesProps = {};
 
-export type CopyProps = _CopyProps & Omit<ComponentPropsWithRef<"svg">, keyof _CopyProps>;
+export type TimesProps = _TimesProps & Omit<ComponentPropsWithRef<"svg">, keyof _TimesProps>;
 
-function Copy({ className, isActive, ...props }: CopyProps) {
+function Times({ className, ...props }: TimesProps) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -38,4 +36,4 @@ function Copy({ className, isActive, ...props }: CopyProps) {
 	);
 }
 
-export default Copy;
+export default Times;
