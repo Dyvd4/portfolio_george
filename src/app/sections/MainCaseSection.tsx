@@ -14,8 +14,7 @@ function MainCaseSection({ className, ...props }: MainCaseSectionProps) {
 				className="flex h-[1026px] w-[1824px] rounded-2xl"
 				style={{
 					backgroundSize: "cover",
-					background:
-						"url(main-case-section_case.png), lightgray 0px -206.547px / 100% 133.333% no-repeat",
+					backgroundImage: "url(main-case-section_case.png)",
 				}}
 			>
 				<Button
