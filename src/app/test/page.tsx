@@ -1,4 +1,5 @@
-import Expandable from "@/components/Expandable/Expandable";
+import FormControl from "@/components/FormControl";
+import Input from "@/components/Input";
 import { cn } from "@/utils/component-utils";
 
 function Page(props) {
@@ -8,7 +9,9 @@ function Page(props) {
 				`absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 transform`
 			)}
 		>
-			<Expandable title="test" description="kdjsffjsdfjksklflks" />
+			<FormControl hasError errorMessage={"*error message"}>
+				<Input hasError placeholder="name" />
+			</FormControl>
 		</div>
 	);
 }
