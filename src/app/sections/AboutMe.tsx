@@ -3,6 +3,7 @@ import { cn } from "@/utils/component-utils";
 import Image from "next/image";
 import Link from "next/link";
 import { ComponentPropsWithRef } from "react";
+import { ABOUT_ME_HREF } from "../menu";
 
 type _AboutMeSectionProps = {};
 
@@ -22,7 +23,7 @@ function AboutMeSection({ className, ...props }: AboutMeSectionProps) {
 			<h1 className="text-center text-7xl leading-[150%] tracking-[-0.36px]">
 				I empower companies through problem-solving and exceptional user experiences.
 			</h1>
-			<Link href={"/about-me"}>
+			<Link rel="noreferrer noopener" target={"_blank"} href={ABOUT_ME_HREF}>
 				<Button className="w-fit">More about me</Button>
 			</Link>
 			<Image

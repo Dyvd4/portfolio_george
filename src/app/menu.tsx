@@ -10,6 +10,8 @@ import { ComponentPropsWithRef, PropsWithChildren, useEffect } from "react";
 
 type Links = { href: string; title: string; target?: string };
 
+export const ABOUT_ME_HREF =
+	"https://niklapinv.notion.site/George-Palkin-Resume-10a727f21ccd405195712547bf9f698c?pvs=4";
 const LINKS: Array<Links> = [
 	{
 		title: "Work",
@@ -17,7 +19,7 @@ const LINKS: Array<Links> = [
 	},
 	{
 		title: "About me",
-		href: "https://niklapinv.notion.site/George-Palkin-Resume-10a727f21ccd405195712547bf9f698c?pvs=4",
+		href: ABOUT_ME_HREF,
 		target: "_blank",
 	},
 	{
