@@ -18,7 +18,7 @@ function ModalCover({ className, children, ...props }: ModalCoverProps) {
 				backdropFilter: "blur(8px)",
 			}}
 			className={cn(
-				`invisible absolute inset-0 z-40 flex items-center justify-center bg-[rgba(17,17,17,0.64)]
+				`invisible fixed inset-0 z-40 flex items-center justify-center bg-[rgba(17,17,17,0.64)]
 				opacity-0 transition-all duration-500`,
 				{
 					"visible opacity-100": !!modalIsActive,
