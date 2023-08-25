@@ -43,6 +43,7 @@ export type FaqSectionProps = _FaqSectionProps &
 function FaqSection({ className, children, ...props }: FaqSectionProps) {
 	return (
 		<section
+			id="faqs"
 			className={cn(
 				`relative flex flex-col items-center justify-center 
 				gap-10 px-[672px] py-[440px]`,

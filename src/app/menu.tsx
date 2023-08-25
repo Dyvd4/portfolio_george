@@ -8,24 +8,25 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ComponentPropsWithRef, PropsWithChildren, useEffect } from "react";
 
-type Links = { href: string; title: string };
+type Links = { href: string; title: string; target?: string };
 
 const LINKS: Array<Links> = [
 	{
-		href: "/work",
 		title: "Work",
+		href: "#cases",
 	},
 	{
-		href: "/about-me",
 		title: "About me",
+		href: "https://niklapinv.notion.site/George-Palkin-Resume-10a727f21ccd405195712547bf9f698c?pvs=4",
+		target: "_blank",
 	},
 	{
-		href: "/faq",
 		title: "F.A.Q",
+		href: "#faqs",
 	},
 	{
-		href: "/contact",
 		title: "Contact me",
+		href: "#footer",
 	},
 ];
 
@@ -42,7 +43,7 @@ function Menu({ className, children, ...props }: MenuProps) {
 		else document.body.style.overflow = "unset";
 	}, [menuIsActive]);
 
-	const handleClick = (e, href: string) => {
+	const handleLinkClick = (e, href: string) => {
 		e.preventDefault();
 		router.push(href);
 		setMenuIsActive(false);
@@ -63,12 +64,21 @@ function Menu({ className, children, ...props }: MenuProps) {
 		>
 			<div className="flex w-[1200px] justify-between">
 				<ul className="flex flex-col gap-8 text-8xl leading-[132px]">
-					{LINKS.map(({ href, title }) => (
+					{LINKS.map(({ href, title, target }) => (
 						<li
 							key={href}
 							className="hover:text-primary flex cursor-pointer items-end justify-between hover:underline"
 						>
-							<Link href={href} onClick={(e) => handleClick(e, href)}>
+							<Link
+								rel="noreferrer noopener"
+								target={target}
+								href={href}
+								onClick={
+									target === "_blank"
+										? undefined
+										: (e) => handleLinkClick(e, href)
+								}
+							>
 								{title}
 							</Link>
 						</li>

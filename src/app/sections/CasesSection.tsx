@@ -15,7 +15,7 @@ export type CasesSectionProps = _CasesSectionProps &
 
 function CasesSection({ className, ...props }: CasesSectionProps) {
 	return (
-		<section className={cn(``, className)} {...props}>
+		<section id="cases" className={cn(``, className)} {...props}>
 			{getTwoDArray(CASES, 2).map((cards, i) => (
 				<div className="flex gap-12 px-12" key={i}>
 					{cards.map(({ title, src }, i) =>
