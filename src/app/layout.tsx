@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Menu from "./menu";
+import ModalPortal from "./modal-portal";
 
 const matterFont = localFont({
 	src: [
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<Provider>
 					<Navbar />
 					<Menu />
+					<ModalPortal />
 					<main className="min-h-screen">{children}</main>
 					<Footer />
 				</Provider>

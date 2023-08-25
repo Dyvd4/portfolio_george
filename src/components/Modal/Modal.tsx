@@ -3,7 +3,8 @@
 import modalIsActiveAtom from "@/atoms/modalIsActiveAtom";
 import { cn } from "@/utils/component-utils";
 import { useAtom } from "jotai";
-import { ComponentPropsWithRef, PropsWithChildren } from "react";
+import { ComponentPropsWithRef, PropsWithChildren, useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 type _ModalProps = {};
 
@@ -12,21 +13,30 @@ export type ModalProps = _ModalProps &
 
 function Modal({ className, children, ...props }: ModalProps) {
 	const [modalIsActive] = useAtom(modalIsActiveAtom);
+	const [domIsReady, setDomIsReady] = useState(false);
+
+	useEffect(() => {
+		setDomIsReady(true);
+	}, []);
 
 	return (
-		<div
-			className={cn(
-				`border-1 scale-0 transform rounded-2xl border border-[#111]
+		!!domIsReady &&
+		createPortal(
+			<div
+				className={cn(
+					`border-1 absolute z-50 scale-0 transform rounded-2xl border border-[#111]
 				bg-[#050505] pb-8 pl-8 pr-8 pt-6 transition-transform duration-500 ease-in-out`,
-				{
-					"scale-100": !!modalIsActive,
-				},
-				className
-			)}
-			{...props}
-		>
-			{children}
-		</div>
+					{
+						"scale-100": !!modalIsActive,
+					},
+					className
+				)}
+				{...props}
+			>
+				{children}
+			</div>,
+			document.getElementById("modal-portal")!
+		)
 	);
 }
 
