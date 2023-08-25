@@ -1,33 +1,34 @@
 import { cn } from "@/utils/component-utils";
 import { ComponentPropsWithRef } from "react";
 
-type _ArrowRightProps = {};
+type _TimesProps = {};
 
-export type ArrowRightProps = _ArrowRightProps &
-	Omit<ComponentPropsWithRef<"svg">, keyof _ArrowRightProps>;
+export type TimesProps = _TimesProps & Omit<ComponentPropsWithRef<"svg">, keyof _TimesProps>;
 
-function ArrowRight({ className, ...props }: ArrowRightProps) {
+function Times({ className, ...props }: TimesProps) {
 	return (
 		<svg
-			width={32}
-			height={32}
-			viewBox="0 0 32 32"
-			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
+			width={18}
+			height={18}
+			viewBox="0 0 18 18"
+			fill="none"
 			className={cn("group cursor-pointer", className)}
 			{...props}
 		>
 			<path
 				className="group-hover:stroke-primary stroke-secondary"
-				d="M26.3334 15.6343H6.33337"
-				strokeWidth={2}
+				d="M16.9948 1.00732L1.0061 16.996"
+				stroke="white"
+				strokeWidth="1.5"
 				strokeLinecap="round"
 				strokeLinejoin="round"
 			/>
 			<path
 				className="group-hover:stroke-primary stroke-secondary"
-				d="M18.267 7.60172L26.3336 15.6337L18.267 23.6671"
-				strokeWidth={2}
+				d="M17 17.0059L0.997925 1.00049"
+				stroke="white"
+				strokeWidth="1.5"
 				strokeLinecap="round"
 				strokeLinejoin="round"
 			/>
@@ -35,4 +36,4 @@ function ArrowRight({ className, ...props }: ArrowRightProps) {
 	);
 }
 
-export default ArrowRight;
+export default Times;
