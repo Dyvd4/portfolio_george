@@ -8,7 +8,7 @@ export type ModalFooterProps = _ModalFooterProps &
 
 function ModalFooter({ className, children, ...props }: ModalFooterProps) {
 	return (
-		<div className={cn(`pl-1 pt-6`, className)} {...props}>
+		<div className={cn(`pt-6`, className)} {...props}>
 			{children}
 		</div>
 	);
