@@ -1,5 +1,3 @@
-"use client";
-
 import { cn } from "@/utils/component-utils";
 import Image from "next/image";
 import { ComponentPropsWithRef, PropsWithChildren } from "react";
