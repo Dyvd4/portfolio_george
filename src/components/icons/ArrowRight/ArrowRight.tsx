@@ -18,14 +18,14 @@ function ArrowRight({ className, ...props }: ArrowRightProps) {
 			{...props}
 		>
 			<path
-				className="group-hover:stroke-primary stroke-secondary"
+				className="group-hover:stroke-primary stroke-tertiary"
 				d="M26.3334 15.6343H6.33337"
 				strokeWidth={2}
 				strokeLinecap="round"
 				strokeLinejoin="round"
 			/>
 			<path
-				className="group-hover:stroke-primary stroke-secondary"
+				className="group-hover:stroke-primary stroke-tertiary"
 				d="M18.267 7.60172L26.3336 15.6337L18.267 23.6671"
 				strokeWidth={2}
 				strokeLinecap="round"

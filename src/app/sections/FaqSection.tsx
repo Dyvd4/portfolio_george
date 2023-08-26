@@ -3,8 +3,6 @@ import { cn } from "@/utils/component-utils";
 import { ComponentPropsWithRef } from "react";
 import Image from "next/image";
 
-type _FaqSectionProps = {};
-
 const FAQs: Array<{ title: string; description: string }> = [
 	{
 		title: "Do I get fully working website at the end?",
@@ -37,6 +35,9 @@ const FAQs: Array<{ title: string; description: string }> = [
 			"I take 50% upfront and the remaining 50% after the design is finalized. For clients in Russia, I accept any payment method. However, please note that I can only accept crypto-transactions from clients outside Russia as SWIFT transactions are blocked.",
 	},
 ];
+
+type _FaqSectionProps = {};
+
 export type FaqSectionProps = _FaqSectionProps &
 	Omit<ComponentPropsWithRef<"section">, keyof _FaqSectionProps>;
 
