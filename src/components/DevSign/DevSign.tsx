@@ -1,7 +1,7 @@
 import Button from "@/components/buttons/Button";
 import Link from "next/link";
 
-const PORTFOLIO_LINK = "https://www.david-kimmich-portfolio.de/about-me";
+const PORTFOLIO_LINK = process.env.NEXT_PUBLIC_DEV_SIGN_URL!;
 
 function DevSign() {
 	return (
