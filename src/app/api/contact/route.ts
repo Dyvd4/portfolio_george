@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 
-const contactSchema = z.object({
+export const contactSchema = z.object({
 	name: z.string().nonempty(),
 	email: z.string().email(),
 	message: z.string().nonempty(),
