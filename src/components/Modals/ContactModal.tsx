@@ -65,7 +65,7 @@ function ContactModal({ className, children, ...props }: ContactModalProps) {
 
 	return (
 		<Modal>
-			<ModalHeader>Contact Form</ModalHeader>
+			<ModalHeader onClose={() => setErrorMap(null)}>Contact Form</ModalHeader>
 			<ModalBody>
 				<form className="flex flex-col gap-2" onSubmit={handleSubmit(makeContactRequest)}>
 					<FormControl errorMessage={errorMap?.name?._errors}>
