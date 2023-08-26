@@ -1,7 +1,7 @@
 import Button from "@/components/buttons/Button";
 import Link from "next/link";
 
-const PORTFOLIO_LINK = "https://www.david-kimmich-portfolio.de/about-me";
+const PORTFOLIO_LINK = "https://www.portfolio.ticketify.dev/about-me";
 
 function DevSign() {
 	return (
