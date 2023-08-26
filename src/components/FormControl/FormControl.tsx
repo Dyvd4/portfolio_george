@@ -16,16 +16,16 @@ function FormControl({ className, children, errorMessage, ...props }: FormContro
 			})}
 			{errorMessage instanceof String && (
 				<>
-					<p className="pl-2 text-sm text-red-500">{errorMessage}</p>
+					<div className="pl-2 text-sm text-red-500">{errorMessage}</div>
 				</>
 			)}
 			{errorMessage instanceof Array && (
 				<>
-					<p className="pl-2 text-sm text-red-500">
+					<div className="pl-2 text-sm text-red-500">
 						{errorMessage.map((msg) => (
 							<div key={msg}>{msg}</div>
 						))}
-					</p>
+					</div>
 				</>
 			)}
 		</div>
