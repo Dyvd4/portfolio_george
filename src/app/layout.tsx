@@ -6,6 +6,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Menu from "./menu";
 import ModalPortal from "./modal-portal";
+import { Toaster } from "react-hot-toast";
 
 const matterFont = localFont({
 	src: [
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					<ModalPortal />
 					<main className="min-h-screen">{children}</main>
 					<Footer />
+					<Toaster position="bottom-center" />
 				</Provider>
 			</body>
 		</html>
