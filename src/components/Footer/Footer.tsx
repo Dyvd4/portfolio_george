@@ -9,6 +9,7 @@ import { cn } from "@/utils/component-utils";
 import { useAtom } from "jotai";
 import { ComponentPropsWithRef, PropsWithChildren } from "react";
 import ContactModal from "../Modals/ContactModal";
+import { toast } from "react-hot-toast";
 
 type _FooterProps = {};
 
@@ -17,6 +18,16 @@ export type FooterProps = _FooterProps &
 
 function Footer({ className, children, ...props }: FooterProps) {
 	const [, setModalIsActive] = useAtom(modalIsActiveAtom);
+
+	const handleCopyClick = () =>
+		toast.success("Copied", {
+			style: {
+				borderRadius: "10px",
+				background: "#333",
+				color: "#fff",
+			},
+		});
+
 	return (
 		<>
 			<footer
@@ -25,7 +36,7 @@ function Footer({ className, children, ...props }: FooterProps) {
 				{...props}
 			>
 				<div className="flex flex-col items-center gap-6">
-					<Copyable>
+					<Copyable onClick={handleCopyClick}>
 						<h1 className="text-primary text-[88px] leading-[150%] underline">
 							hello@itsgeorge.com
 						</h1>
