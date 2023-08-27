@@ -13,7 +13,7 @@ function Copyable({ className, children, ...props }: CopyableProps) {
 	const childrenRef = useRef<HTMLDivElement | null>(null);
 	const handleClick = () => navigator.clipboard.writeText(childrenRef.current!.innerText);
 	return (
-		<div className={cn(`flex gap-2`, className)} {...props}>
+		<div className={cn(`flex cursor-pointer gap-2`, className)} {...props}>
 			<div ref={childrenRef}>{children}</div>
 			<div className="flex items-start">
 				<Copy onClick={handleClick} isActive />

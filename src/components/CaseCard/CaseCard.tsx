@@ -1,5 +1,3 @@
-"use client";
-
 import { cn } from "@/utils/component-utils";
 import Image from "next/image";
 import { ComponentPropsWithRef, PropsWithChildren } from "react";
@@ -18,7 +16,7 @@ function CaseCard({ className, children, title, src, ...props }: CaseCardProps) 
 		<div className={cn(`flex flex-col items-start gap-4`, className)} {...props}>
 			<Image className="rounded-2xl" width={888} height={888} src={src} alt={"case card"} />
 			<h3
-				className="text-secondary hover:text-primary group flex cursor-pointer
+				className="hover:text-primary text-tertiary group flex cursor-pointer
 							items-center gap-2 text-2xl transition-all duration-150"
 			>
 				{title}

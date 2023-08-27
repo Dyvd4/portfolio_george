@@ -8,9 +8,13 @@ import Textarea from "@/components/Textarea";
 import Button from "@/components/buttons/Button";
 import { cn } from "@/utils/component-utils";
 import { useAtom } from "jotai";
+import { toast } from "react-hot-toast";
 
 function Page(props) {
 	const [, setModalIsActive] = useAtom(modalIsActiveAtom);
+	const triggerToast = () => {
+		toast("test");
+	};
 	return (
 		<div
 			className={cn(
@@ -18,10 +22,11 @@ function Page(props) {
 			)}
 		>
 			<div>
+				<Button onClick={triggerToast}>trigger toast</Button>
 				<Textarea />
 				<Button onClick={() => setModalIsActive(true)}>Toggle modal</Button>
 				<ContactModal />
-				<FormControl hasError errorMessage={"*error message"}>
+				<FormControl errorMessage={"*error message"}>
 					<Input hasError placeholder="name" />
 				</FormControl>
 			</div>

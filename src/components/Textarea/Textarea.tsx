@@ -1,5 +1,5 @@
 import { cn } from "@/utils/component-utils";
-import { ComponentPropsWithRef, PropsWithChildren } from "react";
+import { ComponentPropsWithRef, PropsWithChildren, forwardRef } from "react";
 
 type _TextareaProps = {
 	hasError?: boolean;
@@ -8,9 +8,13 @@ type _TextareaProps = {
 export type TextareaProps = _TextareaProps &
 	Omit<PropsWithChildren<ComponentPropsWithRef<"textarea">>, keyof _TextareaProps>;
 
-function Textarea({ className, children, hasError, ...props }: TextareaProps) {
+const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function Textarea(
+	{ className, children, hasError, ...props }: TextareaProps,
+	ref
+) {
 	return (
 		<textarea
+			ref={ref}
 			className={cn(
 				`text-tertiary bg-secondary text-primary focus:placeholder:text-primary
                 rounded-lg px-4 py-3 outline-1 outline-white hover:outline focus:outline`,
@@ -22,6 +26,6 @@ function Textarea({ className, children, hasError, ...props }: TextareaProps) {
 			{...props}
 		/>
 	);
-}
+});
 
 export default Textarea;
