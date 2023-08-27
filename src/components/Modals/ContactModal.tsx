@@ -1,6 +1,5 @@
 "use client";
 
-import { ContactSchema, contactSchema } from "@/app/api/contact/route";
 import modalIsActiveAtom from "@/atoms/modalIsActiveAtom";
 import Modal, { ModalBody, ModalFooter, ModalHeader } from "@/components/Modal";
 import request from "@/utils/request-utils";
@@ -11,10 +10,17 @@ import { ComponentPropsWithRef, PropsWithChildren, useRef, useState } from "reac
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { z } from "zod";
-import FormControl from "../FormControl";
-import Input from "../Input";
-import Textarea from "../Textarea";
-import ButtonSecondary from "../buttons/ButtonSecondary";
+import FormControl from "@/components/FormControl";
+import Input from "@/components/Input";
+import Textarea from "@/components/Textarea";
+import ButtonSecondary from "@/components/buttons/ButtonSecondary";
+
+const contactSchema = z.object({
+	name: z.string().nonempty(),
+	email: z.string().email(),
+	message: z.string().nonempty(),
+});
+type ContactSchema = z.infer<typeof contactSchema>;
 
 type _ContactModalProps = {};
 
