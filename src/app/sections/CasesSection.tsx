@@ -2,12 +2,10 @@ import CaseCard from "@/components/CaseCard";
 import { getTwoDArray } from "@/utils/array-utils";
 import { cn } from "@/utils/component-utils";
 import { ComponentPropsWithRef } from "react";
-import yandexMatchImage from "../../../public/Yandex-Match.png";
-import rubleBrothersImage from "../../../public/Ruble-Brothers.png";
 
 const CASES: Array<{ title: string; src: string }> = [
-	{ title: "Yandex Match", src: yandexMatchImage },
-	{ title: "Ruble Brothers", src: rubleBrothersImage },
+	{ title: "Yandex Match", src: "/Yandex-Match.png" },
+	{ title: "Ruble Brothers", src: "/Ruble-Brothers.png" },
 ];
 
 type _CasesSectionProps = {};
