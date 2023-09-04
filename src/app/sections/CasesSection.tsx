@@ -4,8 +4,8 @@ import { cn } from "@/utils/component-utils";
 import { ComponentPropsWithRef } from "react";
 
 const CASES: Array<{ title: string; src: string }> = [
-	{ title: "Yandex Match", src: "/Yandex-Match.jpg" },
-	{ title: "Ruble Brothers", src: "/Ruble-Brothers.jpg" },
+	{ title: "Yandex Match", src: "/Yandex-Match.png" },
+	{ title: "Ruble Brothers", src: "/Ruble-Brothers.png" },
 ];
 
 type _CasesSectionProps = {};
