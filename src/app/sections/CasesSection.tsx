@@ -6,7 +6,7 @@ import { ComponentPropsWithRef } from "react";
 
 const CASES: Array<_CaseCardProps> = [
 	{ title: "Yandex Match", src: "/Yandex-Match.png", href: "/project-yandex" },
-	{ title: "Ruble Brothers", src: "/Ruble-Brothers.png", href: "/ruble-brothers" },
+	{ title: "Ruble Brothers", src: "/Ruble-Brothers.png", href: "/project-ruble-brothers" },
 ];
 
 type _CasesSectionProps = {};
