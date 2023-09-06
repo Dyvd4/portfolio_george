@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
-import { ComponentPropsWithRef, PropsWithChildren } from "react";
 import ArrowBottomLeft from "@/components/icons/ArrowBottomLeft";
-import useFooterOptions from "@/hooks/useFooterOptions";
+import { cn } from "@/utils/component-utils";
+import Image from "next/image";
+import { ComponentPropsWithRef } from "react";
 
 type _ProjectFooterProps = {
 	imageSrc: string;
@@ -11,18 +11,11 @@ type _ProjectFooterProps = {
 };
 
 type ProjectFooterProps = _ProjectFooterProps &
-	Omit<PropsWithChildren<ComponentPropsWithRef<"footer">>, keyof _ProjectFooterProps>;
+	Omit<ComponentPropsWithRef<"footer">, keyof _ProjectFooterProps>;
 
-function ProjectFooter({
-	className,
-	children,
-	nextProjectHref,
-	imageSrc,
-	...props
-}: ProjectFooterProps) {
-	useFooterOptions({ disable: true });
+function ProjectFooter({ className, nextProjectHref, imageSrc, ...props }: ProjectFooterProps) {
 	return (
-		<footer className="flex flex-col gap-6 px-12 pt-[440px]">
+		<footer className={cn(`flex flex-col gap-6 px-12 pt-[440px]`, className)} {...props}>
 			<div className="flex justify-between gap-4">
 				<h1 className=" text-9xl">Next Project</h1>
 				<div className="flex flex-col justify-end">
