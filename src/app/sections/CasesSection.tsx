@@ -1,11 +1,12 @@
 import CaseCard from "@/components/CaseCard";
+import { _CaseCardProps } from "@/components/CaseCard/CaseCard";
 import { getTwoDArray } from "@/utils/array-utils";
 import { cn } from "@/utils/component-utils";
 import { ComponentPropsWithRef } from "react";
 
-const CASES: Array<{ title: string; src: string }> = [
-	{ title: "Yandex Match", src: "/Yandex-Match.png" },
-	{ title: "Ruble Brothers", src: "/Ruble-Brothers.png" },
+const CASES: Array<_CaseCardProps> = [
+	{ title: "Yandex Match", src: "/Yandex-Match.png", href: "/project-yandex" },
+	{ title: "Ruble Brothers", src: "/Ruble-Brothers.png", href: "/ruble-brothers" },
 ];
 
 type _CasesSectionProps = {};
@@ -18,13 +19,16 @@ function CasesSection({ className, ...props }: CasesSectionProps) {
 		<section id="cases" className={cn(``, className)} {...props}>
 			{getTwoDArray(CASES, 2).map((cards, i) => (
 				<div className="flex gap-12 px-12" key={i}>
-					{cards.map(({ title, src }, i) =>
+					{cards.map((caseCardProps, i) =>
 						i % 2 === 1 ? (
-							<div className="flex-start flex flex-col pt-20" key={title}>
-								<CaseCard key={title} title={title} src={src} />
+							<div
+								className="flex-start flex flex-col pt-20"
+								key={caseCardProps.title}
+							>
+								<CaseCard {...caseCardProps} />
 							</div>
 						) : (
-							<CaseCard key={title} title={title} src={src} />
+							<CaseCard key={caseCardProps.title} {...caseCardProps} />
 						)
 					)}
 				</div>
