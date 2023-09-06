@@ -11,7 +11,7 @@ export type HeroSectionProps = _HeroSectionProps &
 function HeroSection({ className, ...props }: HeroSectionProps) {
 	return (
 		<section
-			className={cn(`flex h-full flex-col justify-between px-12 pb-10`, className)}
+			className={cn(`flex h-screen flex-col justify-between px-12 pb-10 pt-28`, className)}
 			{...props}
 		>
 			<Image alt="Logotype" src={"/project-peek/Logotype.svg"} width={1824} height={333} />
@@ -23,7 +23,7 @@ function HeroSection({ className, ...props }: HeroSectionProps) {
 					into an immersive visual realm.
 				</p>
 				<div className="flex flex-col justify-end">
-					<Button>Visit the website</Button>
+					<Button disabled>Visit the website</Button>
 				</div>
 			</div>
 		</section>

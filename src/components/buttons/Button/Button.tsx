@@ -13,12 +13,12 @@ function Button({ className, children, ...props }: ButtonProps) {
 		<button
 			className={cn(
 				`bg-secondary hover:text-primary hover:bg-primary
+				disabled:hover:bg-secondary disabled:hover:text-secondary
 				transform rounded-full
-				px-8 py-3
-				text-lg
-				transition-all duration-150 
-				hover:shadow-[0px_12px_64px_0px_rgba(96,83,248,0.48)] active:scale-95
-				active:shadow-none `,
+				px-8 py-3 text-lg transition-all
+				duration-150 hover:shadow-[0px_12px_64px_0px_rgba(96,83,248,0.48)]
+				active:scale-95 active:shadow-none 
+				disabled:cursor-not-allowed disabled:hover:shadow-none disabled:active:scale-100`,
 				className
 			)}
 			{...props}

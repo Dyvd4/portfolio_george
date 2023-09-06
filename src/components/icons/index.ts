@@ -4,4 +4,5 @@ import Dribble from "./Dribbble";
 import Behance from "./Behance";
 import Icon from "./Icon";
 import Copy from "./Copy";
-export { ArrowRight, Icon, Telegram, Dribble, Behance, Copy };
+import ArrowBottomLeft from "./ArrowBottomLeft";
+export { ArrowRight, Icon, Telegram, Dribble, Behance, Copy, ArrowBottomLeft };

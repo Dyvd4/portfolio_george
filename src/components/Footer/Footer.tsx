@@ -10,6 +10,7 @@ import { useAtom } from "jotai";
 import { ComponentPropsWithRef, PropsWithChildren } from "react";
 import ContactModal from "../Modals/ContactModal";
 import { toast } from "react-hot-toast";
+import footerIsActiveAtom from "@/atoms/footerIsActiveAtom";
 
 type _FooterProps = {};
 
@@ -18,6 +19,7 @@ export type FooterProps = _FooterProps &
 
 function Footer({ className, children, ...props }: FooterProps) {
 	const [, setModalIsActive] = useAtom(modalIsActiveAtom);
+	const [footerIsActive] = useAtom(footerIsActiveAtom);
 
 	const handleCopyClick = () =>
 		toast.success("Copied", {
@@ -28,7 +30,7 @@ function Footer({ className, children, ...props }: FooterProps) {
 			},
 		});
 
-	return (
+	return !!footerIsActive ? (
 		<>
 			<footer
 				id="footer"
@@ -57,7 +59,7 @@ function Footer({ className, children, ...props }: FooterProps) {
 			</footer>
 			<ContactModal />
 		</>
-	);
+	) : null;
 }
 
 export default Footer;
