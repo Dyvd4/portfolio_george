@@ -15,7 +15,7 @@ export const ABOUT_ME_HREF =
 const LINKS: Array<Links> = [
 	{
 		title: "Work",
-		href: "#cases",
+		href: "/#cases",
 	},
 	{
 		title: "About me",
@@ -24,11 +24,11 @@ const LINKS: Array<Links> = [
 	},
 	{
 		title: "F.A.Q",
-		href: "#faqs",
+		href: "/#faqs",
 	},
 	{
 		title: "Contact me",
-		href: "#footer",
+		href: "/#footer",
 	},
 ];
 
