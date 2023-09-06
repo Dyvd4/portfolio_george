@@ -4,9 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 
 const CONTACT_RECIPIENT = process.env.CONTACT_RECIPIENT!;
-console.log("🚀 ~ file: route.ts:7 ~ CONTACT_RECIPIENT:", CONTACT_RECIPIENT);
 const BASE_URL = process.env.BASE_URL!;
-console.log("🚀 ~ file: route.ts:9 ~ BASE_URL:", BASE_URL);
 // const { CONTACT_RECIPIENT, BASE_URL } = config;
 
 export const contactSchema = z.object({
