@@ -16,18 +16,15 @@ function HeroSection({ className, ...props }: HeroSectionProps) {
 		>
 			<Image
 				priority
-				className="rounded-2xl"
 				alt="Logotype"
-				src={"/project-peek/Logotype.svg"}
+				src={"/project-yandex/Logotype.svg"}
 				width={1824}
 				height={333}
 			/>
 			<div className="flex justify-between">
 				<p>
-					Revolutionizing design and function, the project showcases a cutting <br />
-					-edge smart speaker concept. During this project I designed <br /> an adaptive
-					website, 3D models and animations that transport users <br />
-					into an immersive visual realm.
+					Yandex Match is a new dating service that can help you find a person <br />
+					with similar hobbies thanks to the new feature — «Maximum Match»!
 				</p>
 				<div className="flex flex-col justify-end">
 					<Button disabled>Visit the website</Button>
