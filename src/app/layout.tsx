@@ -32,9 +32,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			</head>
 			<JotaiProvider>
 				<body className={matterFont.className}>
-					<div className="flex min-h-screen flex-col">
+					<div className="min-h-screen">
 						<Navbar />
-						<main className="flex flex-1 flex-col">{children}</main>
+						<main>{children}</main>
 					</div>
 					<Footer />
 					<Menu />
