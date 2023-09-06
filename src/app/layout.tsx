@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import Provider from "@/components/Provider/Provider";
+import JotaiProvider from "@/components/Provider/Provider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -30,16 +30,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<title>Portfolio</title>
 				<link rel="icon" href="/Favicon.svg" type="image/x-icon" />
 			</head>
-			<body className={matterFont.className}>
-				<Provider>
-					<Navbar />
+			<JotaiProvider>
+				<body className={matterFont.className}>
+					<div className="min-h-screen">
+						<Navbar />
+						<main>{children}</main>
+					</div>
+					<Footer />
 					<Menu />
 					<ModalPortal />
-					<main className="min-h-screen">{children}</main>
-					<Footer />
 					<Toaster position="bottom-center" />
-				</Provider>
-			</body>
+				</body>
+			</JotaiProvider>
 		</html>
 	);
 }
