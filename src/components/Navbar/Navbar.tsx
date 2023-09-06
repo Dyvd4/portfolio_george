@@ -15,16 +15,15 @@ function Navbar({ className, children, ...props }: NavbarProps) {
 	const [menuIsActive, setMenuIsActive] = useAtom(menuIsActiveAtom);
 	const menuTitle = !menuIsActive ? "Menu" : "Close";
 	return (
-		<nav
-			className={cn(`fixed z-50 flex w-full justify-between px-12 py-8`, className)}
-			{...props}
-		>
-			<Logo />
-			<div
-				onClick={() => setMenuIsActive((isActive) => !isActive)}
-				className="text-primary cursor-pointer text-lg"
-			>
-				{menuTitle}
+		<nav className={cn(`sticky top-0 z-50 px-12 py-8`, className)} {...props}>
+			<div className="flex w-full justify-between">
+				<Logo />
+				<div
+					onClick={() => setMenuIsActive((isActive) => !isActive)}
+					className="text-primary cursor-pointer text-lg"
+				>
+					{menuTitle}
+				</div>
 			</div>
 		</nav>
 	);
