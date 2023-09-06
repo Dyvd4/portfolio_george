@@ -3,9 +3,7 @@ import mailTransport from "@/server/mail-transport";
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 
-const CONTACT_RECIPIENT = process.env.CONTACT_RECIPIENT!;
-const BASE_URL = process.env.BASE_URL!;
-// const { CONTACT_RECIPIENT, BASE_URL } = config;
+const { CONTACT_RECIPIENT, BASE_URL } = config;
 
 export const contactSchema = z.object({
 	name: z.string().nonempty(),
