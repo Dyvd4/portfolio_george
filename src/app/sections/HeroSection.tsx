@@ -4,12 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ComponentPropsWithRef } from "react";
 
-type _ContactSectionProps = {};
+type _HeroSectionProps = {};
 
-export type ContactSectionProps = _ContactSectionProps &
-	Omit<ComponentPropsWithRef<"section">, keyof _ContactSectionProps>;
+export type HeroSectionProps = _HeroSectionProps &
+	Omit<ComponentPropsWithRef<"section">, keyof _HeroSectionProps>;
 
-function ContactSection({ className, ...props }: ContactSectionProps) {
+function HeroSection({ className, ...props }: HeroSectionProps) {
 	return (
 		<section
 			className={cn(
@@ -64,4 +64,4 @@ function ContactSection({ className, ...props }: ContactSectionProps) {
 	);
 }
 
-export default ContactSection;
+export default HeroSection;
