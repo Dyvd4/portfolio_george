@@ -1,35 +1,33 @@
 "use client";
 
-import modalIsActiveAtom from "@/atoms/modalIsActiveAtom";
-import FormControl from "@/components/FormControl";
-import Input from "@/components/Input";
-import ContactModal from "@/components/Modals/ContactModal";
-import Textarea from "@/components/Textarea";
-import Button from "@/components/buttons/Button";
+import useFollowingCursorButtonStyles from "@/hooks/useFollowingCursorButton";
+import useFooterOptions from "@/hooks/useFooterOptions";
 import { cn } from "@/utils/component-utils";
-import { useAtom } from "jotai";
-import { toast } from "react-hot-toast";
+import { useRef } from "react";
+import toast from "react-hot-toast";
 
 function Page(props) {
-	const [, setModalIsActive] = useAtom(modalIsActiveAtom);
-	const triggerToast = () => {
-		toast("test");
-	};
+	useFooterOptions({ disable: true });
+	const boxRef = useRef<HTMLDivElement | null>(null);
+	useFollowingCursorButtonStyles({
+		parentRef: boxRef,
+		buttonProps: {
+			title: "huhu",
+			onClick: () => {
+				toast.success("Yay");
+			},
+		},
+	});
 	return (
 		<div
 			className={cn(
 				`absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 transform`
 			)}
 		>
-			<div>
-				<Button onClick={triggerToast}>trigger toast</Button>
-				<Textarea />
-				<Button onClick={() => setModalIsActive(true)}>Toggle modal</Button>
-				<ContactModal />
-				<FormControl errorMessage={"*error message"}>
-					<Input hasError placeholder="name" />
-				</FormControl>
-			</div>
+			<div
+				ref={boxRef}
+				className={cn(`ml-20 mt-60 h-[500px] w-[500px] border-2 border-green-500`)}
+			></div>
 		</div>
 	);
 }
