@@ -8,13 +8,14 @@ type Options = {
 	};
 };
 
-const setInitialButtonStyle = (button: HTMLButtonElement) => {
+const setInitialStyles = (button: HTMLButtonElement, parentElement: HTMLElement) => {
 	const buttonStyle = button.style;
-	buttonStyle.visibility = "hidden";
-	buttonStyle.transitionDuration = "0s";
+	parentElement.style.cursor = "none";
+	buttonStyle.display = "none";
 	buttonStyle.cursor = "none";
 	buttonStyle.zIndex = "100";
 	buttonStyle.position = "absolute";
+	buttonStyle.transitionDuration = "0s";
 };
 
 const updateButtonPosition = (
@@ -29,7 +30,7 @@ const updateButtonPosition = (
 		e.clientY < rect.bottom &&
 		e.clientY > rect.top;
 	if (!isWithinParent) {
-		setInitialButtonStyle(button);
+		setInitialStyles(button, parentElement);
 		return;
 	}
 	const mouseX = e.clientX;
@@ -37,6 +38,7 @@ const updateButtonPosition = (
 	const transform = `translate(-50%, -50%) translate(${mouseX}px, ${mouseY}px)`;
 	button.style.visibility = "visible";
 	button.style.transform = transform;
+	button.style.display = "block";
 };
 
 const useFollowingCursorButtonStyles = ({ parentRef, buttonProps }: Options) => {
@@ -51,7 +53,7 @@ const useFollowingCursorButtonStyles = ({ parentRef, buttonProps }: Options) => 
 		buttonRef.current = button;
 		button.innerText = buttonProps.title;
 		button.onclick = buttonProps.onClick || null;
-		setInitialButtonStyle(button);
+		setInitialStyles(button, parentRef.current!);
 
 		window!.addEventListener("mousemove", handleMouseMove);
 
