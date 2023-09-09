@@ -20,17 +20,17 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
 		<button
 			ref={ref}
 			className={cn(
-				`bg-secondary 
-				disabled:hover:bg-secondary disabled:hover:text-secondary
+				`bg-secondary disabled:hover:bg-secondary disabled:hover:text-secondary
 				transform select-none
-				rounded-full px-8 py-3 text-lg
-				transition-transform duration-150
+				rounded-full px-8
+				py-3 text-lg transition-transform
+				duration-150
 				disabled:cursor-not-allowed disabled:hover:shadow-none disabled:active:scale-100`,
 				{
 					"text-primary bg-primary shadow-[0px_12px_64px_0px_rgba(96,83,248,0.48)]":
 						isHovering,
-					"active:scale-95 active:shadow-none": !disableActive,
-					"hover:text-primary hover:bg-primary hover:shadow-[0px_12px_64px_0px_rgba(96,83,248,0.48)]":
+					"active:scale-95 active:font-thin active:shadow-none": !disableActive,
+					"hover:text-primary hover:bg-primary hover:font-thin hover:shadow-[0px_12px_64px_0px_rgba(96,83,248,0.48)]":
 						!disableHover,
 				},
 				className
