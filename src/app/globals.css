@@ -9,6 +9,8 @@
 	--background-color-primary: hsla(245, 92%, 65%, 1);
 	--background-color-secondary: hsla(0, 0%, 7%, 1);
 	--background-color-tertiary: hsla(0, 0%, 7%, 0.64);
+	--foreground-rgb: 128, 128, 128;
+	--background-rgb: 0, 0, 0;
 }
 
 @layer base {
@@ -20,6 +22,25 @@
 	h6,
 	p {
 		color: var(--color-primary);
+	}
+
+	body {
+		color: rgb(var(--foreground-rgb));
+		background: rgb(var(--background-rgb));
+	}
+
+	::-webkit-scrollbar {
+		width: 4px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: rgb(var(--background-rgb));
+	}
+
+	::-webkit-scrollbar-thumb {
+		height: 166px;
+		background: var(--color-tertiary);
+		@apply rounded-full;
 	}
 }
 @layer components {
@@ -139,14 +160,4 @@
 			transform: scale(1.2);
 		}
 	}
-}
-
-:root {
-	--foreground-rgb: 128, 128, 128;
-	--background-rgb: 0, 0, 0;
-}
-
-body {
-	color: rgb(var(--foreground-rgb));
-	background: rgb(var(--background-rgb));
 }
