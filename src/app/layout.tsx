@@ -7,6 +7,7 @@ import "./globals.css";
 import Menu from "./menu";
 import ModalPortal from "./modal-portal";
 import { Toaster } from "react-hot-toast";
+import ButtonCursor from "@/components/buttons/ButtonCursor";
 
 const matterFont = localFont({
 	src: [
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			</head>
 			<JotaiProvider>
 				<body className={matterFont.className}>
+					<ButtonCursor />
 					<div className="min-h-screen">
 						<Navbar />
 						<main>{children}</main>
