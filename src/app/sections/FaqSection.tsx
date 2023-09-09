@@ -43,45 +43,47 @@ export type FaqSectionProps = _FaqSectionProps &
 
 function FaqSection({ className, children, ...props }: FaqSectionProps) {
 	return (
-		<section
-			id="faqs"
-			className={cn(
-				`relative flex flex-col items-center justify-center 
-				gap-10 px-[672px] py-[440px]`,
-				className
-			)}
-			{...props}
-		>
-			<h1 className="text-7xl">FAQ&apos;s</h1>
-			<ul className="flex flex-col gap-4">
-				{FAQs.map(({ title, description }) => (
-					<li key={title}>
-						<Expandable title={title} description={description} />
-					</li>
-				))}
-			</ul>
-			<Image
-				className="absolute left-[340.833px] top-[295.074px]"
-				src={"/Spiral 2.svg"}
-				alt="spiral 2"
-				width={108}
-				height={123}
-			/>
-			<Image
-				className="absolute bottom-[660px] right-[204px]"
-				src={"/Transparency.svg"}
-				alt="Transparency"
-				width={128}
-				height={128}
-			/>
-			<Image
-				className="absolute bottom-[317.742px] left-[206.074px]"
-				src={"/Heavy Waves.svg"}
-				alt="Heavy waves"
-				width={118}
-				height={84}
-			/>
-		</section>
+		<>
+			<section
+				id="faqs"
+				className={cn(
+					`relative flex flex-col items-center justify-center 
+				gap-10 py-[440px]`,
+					className
+				)}
+				{...props}
+			>
+				<h1 className="text-7xl">FAQ&apos;s</h1>
+				<ul className="flex flex-col gap-4">
+					{FAQs.map(({ title, description }) => (
+						<li key={title}>
+							<Expandable title={title} description={description} />
+						</li>
+					))}
+				</ul>
+				<Image
+					className="absolute left-[340.833px] top-[295.074px]"
+					src={"/Spiral 2.svg"}
+					alt="spiral 2"
+					width={108}
+					height={123}
+				/>
+				<Image
+					className="absolute bottom-[660px] right-[204px]"
+					src={"/Transparency.svg"}
+					alt="Transparency"
+					width={128}
+					height={128}
+				/>
+				<Image
+					className="absolute bottom-[317.742px] left-[206.074px]"
+					src={"/Heavy Waves.svg"}
+					alt="Heavy waves"
+					width={118}
+					height={84}
+				/>
+			</section>
+		</>
 	);
 }
 
