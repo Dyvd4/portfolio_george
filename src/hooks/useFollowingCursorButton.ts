@@ -13,7 +13,8 @@ const setInitialButtonStyle = (button: HTMLButtonElement) => {
 	buttonStyle.visibility = "hidden";
 	buttonStyle.transitionDuration = "0s";
 	buttonStyle.cursor = "none";
-	button.style.zIndex = "100";
+	buttonStyle.zIndex = "100";
+	buttonStyle.position = "absolute";
 };
 
 const updateButtonPosition = (
