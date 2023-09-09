@@ -26,7 +26,7 @@ function MainCaseSection({ className, ...props }: MainCaseSectionProps) {
 		<section className={cn(`relative flex px-12`, className)} {...props}>
 			<div
 				ref={parentRef}
-				className="flex h-[1026px] w-[1824px] rounded-2xl"
+				className="flex h-[1026px] w-full rounded-2xl"
 				style={{
 					backgroundSize: "cover",
 					backgroundImage: "url(main-case-section_case.png)",
