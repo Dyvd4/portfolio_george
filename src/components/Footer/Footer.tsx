@@ -52,9 +52,7 @@ function Footer({ className, children, ...props }: FooterProps) {
 						<Dribble variant="secondary" />
 					</div>
 					<DevSign />
-					<div className="text-secondary text-sm">
-						© 2023 George Palkin. All rights reserved.
-					</div>
+					<div className="text-secondary text-sm">© 2023 George Palkin</div>
 				</div>
 			</footer>
 			<ContactModal />
