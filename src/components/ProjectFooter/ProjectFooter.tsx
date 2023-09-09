@@ -1,9 +1,11 @@
 "use client";
 
 import ArrowBottomLeft from "@/components/icons/ArrowBottomLeft";
+import useFollowingCursorButton from "@/hooks/useFollowingCursorButton";
 import { cn } from "@/utils/component-utils";
 import Image from "next/image";
-import { ComponentPropsWithRef } from "react";
+import { useRouter } from "next/navigation";
+import { ComponentPropsWithRef, useRef } from "react";
 
 type _ProjectFooterProps = {
 	imageSrc: string;
@@ -14,6 +16,19 @@ type ProjectFooterProps = _ProjectFooterProps &
 	Omit<ComponentPropsWithRef<"footer">, keyof _ProjectFooterProps>;
 
 function ProjectFooter({ className, nextProjectHref, imageSrc, ...props }: ProjectFooterProps) {
+	const parentRef = useRef<HTMLImageElement | null>(null);
+	const router = useRouter();
+
+	useFollowingCursorButton({
+		parentRef: parentRef,
+		buttonProps: {
+			title: "See this work",
+			onClick: () => {
+				router.push(nextProjectHref);
+			},
+		},
+	});
+
 	return (
 		<footer className={cn(`flex flex-col gap-6 px-12 pt-[440px]`, className)} {...props}>
 			<div className="flex justify-between gap-4">
@@ -22,7 +37,15 @@ function ProjectFooter({ className, nextProjectHref, imageSrc, ...props }: Proje
 					<ArrowBottomLeft />
 				</div>
 			</div>
-			<Image width={1824} height={640} src={imageSrc} alt="Next project footer image" />
+			<div className="relative h-[640px]">
+				<Image
+					ref={parentRef}
+					className="rounded-tl-2xl rounded-tr-2xl object-cover"
+					fill
+					src={imageSrc}
+					alt="Next project footer image"
+				/>
+			</div>
 		</footer>
 	);
 }
