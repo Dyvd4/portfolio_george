@@ -61,21 +61,21 @@ function FaqSection({ className, children, ...props }: FaqSectionProps) {
 				))}
 			</ul>
 			<Image
-				className="absolute left-[340.833px] top-[340.833px]"
+				className="absolute left-[340.833px] top-[295.074px]"
 				src={"/Spiral 2.svg"}
 				alt="spiral 2"
 				width={108}
 				height={123}
 			/>
 			<Image
-				className="absolute bottom-[792px] right-[204px]"
+				className="absolute bottom-[660px] right-[204px]"
 				src={"/Transparency.svg"}
 				alt="Transparency"
 				width={128}
 				height={128}
 			/>
 			<Image
-				className="absolute bottom-[449.742px] left-[206.074px]"
+				className="absolute bottom-[317.742px] left-[206.074px]"
 				src={"/Heavy Waves.svg"}
 				alt="Heavy waves"
 				width={118}
