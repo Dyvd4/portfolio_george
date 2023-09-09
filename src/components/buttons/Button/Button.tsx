@@ -3,13 +3,15 @@
 import { ComponentPropsWithRef, PropsWithChildren, forwardRef } from "react";
 import { cn } from "@/utils/component-utils";
 
-type _ButtonProps = {};
+type _ButtonProps = {
+	isHovering?: boolean;
+};
 
 export type ButtonProps = _ButtonProps &
 	Omit<PropsWithChildren<ComponentPropsWithRef<"button">>, keyof _ButtonProps>;
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
-	{ className, children, ...props }: ButtonProps,
+	{ className, children, isHovering, ...props }: ButtonProps,
 	ref
 ) {
 	return (
@@ -23,6 +25,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
 				transition-transform duration-150
 				hover:shadow-[0px_12px_64px_0px_rgba(96,83,248,0.48)] active:scale-95 active:shadow-none
 				disabled:cursor-not-allowed disabled:hover:shadow-none disabled:active:scale-100`,
+				{
+					"text-primary bg-primary shadow-[0px_12px_64px_0px_rgba(96,83,248,0.48)]":
+						isHovering,
+				},
 				className
 			)}
 			{...props}

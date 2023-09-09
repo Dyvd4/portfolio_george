@@ -10,7 +10,7 @@ export type ButtonCursorProps = _ButtonCursorProps &
 	Omit<PropsWithChildren<ComponentPropsWithRef<"div">>, keyof _ButtonCursorProps>;
 
 function ButtonCursor({ className, children, ...props }: ButtonCursorProps) {
-	return <Button className={cn(`hidden`, className)} id="button-cursor"></Button>;
+	return <Button isHovering className={cn(`hidden`, className)} id="button-cursor"></Button>;
 }
 
 export default ButtonCursor;
