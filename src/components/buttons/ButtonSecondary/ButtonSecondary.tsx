@@ -10,11 +10,11 @@ function ButtonSecondary({ className, children, ...props }: ButtonSecondaryProps
 	return (
 		<button
 			className={cn(
-				`bg-secondary text-primary
-                disabled:text-secondary 
-                inline-flex transform items-center 
-                justify-center rounded-lg px-8
-                py-3 transition-transform duration-150 hover:bg-white
+				`bg-secondary text-primary disabled:text-secondary
+                inline-flex 
+                transform items-center justify-center 
+                rounded-lg px-8 py-3
+                font-thin transition-transform duration-150 hover:bg-white
                 hover:text-black active:scale-95`,
 				className
 			)}

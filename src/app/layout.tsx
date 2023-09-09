@@ -16,6 +16,11 @@ const matterFont = localFont({
 			weight: "400",
 			style: "normal",
 		},
+		{
+			path: "../../public/fonts/matter-font/Matter-Light.otf",
+			weight: "300",
+			style: "normal",
+		},
 	],
 });
 
