@@ -15,7 +15,7 @@ function Copyable({ className, children, ...props }: CopyableProps) {
 	return (
 		<div className={cn(`flex cursor-pointer gap-2`, className)} {...props}>
 			<div ref={childrenRef}>{children}</div>
-			<div className="flex items-start">
+			<div className="flex items-start pt-4">
 				<Copy onClick={handleClick} isActive />
 			</div>
 		</div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Copyable from "@/components/Copyable";
 import useFollowingCursorButtonStyles from "@/hooks/useFollowingCursorButton";
 import useFooterOptions from "@/hooks/useFooterOptions";
 import { cn } from "@/utils/component-utils";
@@ -24,6 +25,7 @@ function Page(props) {
 				`absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 transform`
 			)}
 		>
+			<Copyable>test</Copyable>
 			<div
 				ref={boxRef}
 				className={cn(`ml-20 mt-60 h-[500px] w-[500px] border-2 border-green-500`)}
