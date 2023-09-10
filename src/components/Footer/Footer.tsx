@@ -21,14 +21,7 @@ function Footer({ className, children, ...props }: FooterProps) {
 	const [, setModalIsActive] = useAtom(modalIsActiveAtom);
 	const [footerIsActive] = useAtom(footerIsActiveAtom);
 
-	const handleCopyClick = () =>
-		toast.success("Copied", {
-			style: {
-				borderRadius: "10px",
-				background: "#333",
-				color: "#fff",
-			},
-		});
+	const handleCopyClick = () => toast.success("Copied");
 
 	return !!footerIsActive ? (
 		<>

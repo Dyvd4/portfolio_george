@@ -45,24 +45,14 @@ function ContactModal({ className, children, ...props }: ContactModalProps) {
 			const { name, email, message } = data;
 			contactSchema.parse({ name, email, message });
 			setModalIsActive(false);
-			toast.promise(
-				request.post(`/api/contact`, data),
-				{
-					loading: "Sending mail...",
-					success: () => {
-						setErrorMap(null);
-						return "Successfully sent mail";
-					},
-					error: "An unknown error occurred",
+			toast.promise(request.post(`/api/contact`, data), {
+				loading: "Sending mail...",
+				success: () => {
+					setErrorMap(null);
+					return "Successfully sent mail";
 				},
-				{
-					style: {
-						borderRadius: "10px",
-						background: "#333",
-						color: "#fff",
-					},
-				}
-			);
+				error: "An unknown error occurred",
+			});
 		} catch (e) {
 			setErrorMap((e as z.ZodError).format());
 			return;

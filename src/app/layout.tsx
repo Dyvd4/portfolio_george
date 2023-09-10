@@ -46,7 +46,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					<Footer />
 					<Menu />
 					<ModalPortal />
-					<Toaster position="bottom-center" />
+					<Toaster
+						position="bottom-center"
+						toastOptions={{
+							style: {
+								borderRadius: "10px",
+								background: "hsla(0, 0%, 7%, 0.64)",
+								color: "hsla(0, 0%, 50%, 1)",
+							},
+						}}
+					/>
 				</body>
 			</JotaiProvider>
 		</html>
