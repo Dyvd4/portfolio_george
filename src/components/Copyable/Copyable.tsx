@@ -5,7 +5,7 @@ import { ComponentPropsWithRef, PropsWithChildren, useRef } from "react";
 import { Copy } from "@/components/icons";
 
 type _CopyableProps = {
-	onClick(copiedText: string): void;
+	onClick?(copiedText: string): void;
 };
 
 export type CopyableProps = _CopyableProps &
@@ -16,7 +16,7 @@ function Copyable({ className, children, onClick, ...props }: CopyableProps) {
 	const handleClick = () => {
 		const copiedText = childrenRef.current!.innerText;
 		navigator.clipboard.writeText(childrenRef.current!.innerText);
-		onClick(copiedText);
+		onClick?.(copiedText);
 	};
 	return (
 		<div
