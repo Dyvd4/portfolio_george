@@ -2,13 +2,13 @@
 
 import Copyable from "@/components/Copyable";
 import useFollowingCursorButtonStyles from "@/hooks/useFollowingCursorButton";
-import useFooterOptions from "@/hooks/useFooterOptions";
+import useFooter from "@/hooks/useFooter";
 import { cn } from "@/utils/component-utils";
 import { useRef } from "react";
 import toast from "react-hot-toast";
 
 function Page(props) {
-	useFooterOptions({ disable: true });
+	useFooter({ disable: true });
 	const boxRef = useRef<HTMLDivElement | null>(null);
 	useFollowingCursorButtonStyles({
 		parentRef: boxRef,

@@ -6,8 +6,8 @@ import { useEffect } from "react";
 type FooterOptions = {
 	disable?: boolean;
 };
-const useFooterOptions = (options: FooterOptions) => {
-	const [, setFooterIsActive] = useAtom(footerIsActiveAtom);
+const useFooter = (options: FooterOptions) => {
+	const [footerIsActive, setFooterIsActive] = useAtom(footerIsActiveAtom);
 	const handleRouteChange = () => {
 		setFooterIsActive(!options.disable);
 	};
@@ -16,5 +16,7 @@ const useFooterOptions = (options: FooterOptions) => {
 	useEffect(() => {
 		handleRouteChange();
 	}, [pathname, searchParams]);
+
+	return [footerIsActive, setFooterIsActive] as const;
 };
-export default useFooterOptions;
+export default useFooter;

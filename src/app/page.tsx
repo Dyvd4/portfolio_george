@@ -1,14 +1,22 @@
 "use client";
 
-import useFooterOptions from "@/hooks/useFooterOptions";
+import useFooter from "@/hooks/useFooter";
 import AboutMeSection from "./sections/AboutMe";
 import CasesSection from "./sections/CasesSection";
 import FaqSection from "./sections/FaqSection";
 import HeroSection from "./sections/HeroSection";
 import MainCaseSection from "./sections/MainCaseSection";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-	useFooterOptions({ disable: false });
+	const [footerIsActive] = useFooter({ disable: false });
+	const router = useRouter();
+
+	useEffect(() => {
+		router.push(window.location.hash);
+	}, [footerIsActive]);
+
 	return (
 		<>
 			<HeroSection />
