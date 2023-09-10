@@ -9,7 +9,11 @@ type _CaseImageProps = {
 export type CaseImageProps = _CaseImageProps &
 	Omit<ComponentPropsWithRef<"div">, keyof _CaseImageProps>;
 
-function CaseImage({ className, imageProps, ...props }: CaseImageProps) {
+function CaseImage({
+	className,
+	imageProps: { className: imageClassName, style: imageStyles, ...restImageProps },
+	...props
+}: CaseImageProps) {
 	return (
 		<div
 			className={cn(
@@ -19,7 +23,11 @@ function CaseImage({ className, imageProps, ...props }: CaseImageProps) {
 			{...props}
 		>
 			{/* eslint-disable-next-line jsx-a11y/alt-text */}
-			<Image {...imageProps} />
+			<Image
+				className={cn("rounded-xl", imageClassName)}
+				style={{ width: "100%", ...imageStyles }}
+				{...restImageProps}
+			/>
 		</div>
 	);
 }

@@ -21,6 +21,9 @@ function HeroSection({ className, ...props }: HeroSectionProps) {
 				src={"/project-peek/Logotype.svg"}
 				width={1824}
 				height={333}
+				style={{
+					width: "100%",
+				}}
 			/>
 			<div className="flex justify-between">
 				<p>

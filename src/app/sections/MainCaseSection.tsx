@@ -1,3 +1,4 @@
+import Image from "next/image";
 import useFollowingCursorButton from "@/hooks/useFollowingCursorButton";
 import { cn } from "@/utils/component-utils";
 import { useRouter } from "next/navigation";
@@ -9,7 +10,7 @@ export type MainCaseSectionProps = _MainCaseSectionProps &
 	Omit<ComponentPropsWithRef<"section">, keyof _MainCaseSectionProps>;
 
 function MainCaseSection({ className, ...props }: MainCaseSectionProps) {
-	const parentRef = useRef<HTMLDivElement | null>(null);
+	const parentRef = useRef<HTMLImageElement | null>(null);
 	const router = useRouter();
 
 	useFollowingCursorButton({
@@ -24,14 +25,19 @@ function MainCaseSection({ className, ...props }: MainCaseSectionProps) {
 
 	return (
 		<section className={cn(`relative flex px-12`, className)} {...props}>
-			<div
+			<Image
 				ref={parentRef}
-				className="flex h-[1026px] w-full rounded-2xl"
+				className="rounded-2xl"
+				width={4000}
+				height={3000}
 				style={{
-					backgroundSize: "cover",
-					backgroundImage: "url(main-case-section_case.png)",
+					width: "100%",
+					height: "1026px",
+					objectFit: "cover",
 				}}
-			></div>
+				src={"/main-case-section_case.png"}
+				alt={"Main case section"}
+			/>
 		</section>
 	);
 }

@@ -23,7 +23,7 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 			</section>
 			<section className="flex gap-12">
 				<CaseImage
-					className="px-60 py-40"
+					className="flex-1 px-60 py-40"
 					imageProps={{
 						src: "/project-ruble-brothers/case-images/iphone-landing-page.png",
 						width: 447,
@@ -32,7 +32,7 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 					}}
 				/>
 				<CaseImage
-					className="px-60 py-40"
+					className="flex-1 px-60 py-40"
 					imageProps={{
 						src: "/project-ruble-brothers/case-images/iphone-landing-page-2.png",
 						width: 447,
@@ -54,7 +54,7 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 			</section>
 			<section className="flex gap-12">
 				<CaseImage
-					className="px-60 py-40"
+					className="flex-1 px-60 py-40"
 					imageProps={{
 						src: "/project-ruble-brothers/case-images/bank.png",
 						width: 447,
@@ -63,7 +63,7 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 					}}
 				/>
 				<CaseImage
-					className="px-60 py-40"
+					className="flex-1 px-60 py-40"
 					imageProps={{
 						src: "/project-ruble-brothers/case-images/iphone-description-page.png",
 						width: 447,
@@ -85,7 +85,7 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 			</section>
 			<section className="flex gap-12">
 				<CaseImage
-					className="px-60 py-40"
+					className="flex-1 px-60 py-40"
 					imageProps={{
 						src: "/project-ruble-brothers/case-images/iphone-benefits-page.png",
 						width: 447,
@@ -94,7 +94,7 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 					}}
 				/>
 				<CaseImage
-					className="px-60 py-40"
+					className="flex-1 px-60 py-40"
 					imageProps={{
 						src: "/project-ruble-brothers/case-images/iphone-benefits-page-2.png",
 						width: 447,
