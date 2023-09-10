@@ -16,7 +16,6 @@ function HeroSection({ className, ...props }: HeroSectionProps) {
 		>
 			<Image
 				priority
-				className="rounded-2xl"
 				alt="Logotype"
 				src={"/project-peek/Logotype.svg"}
 				width={1824}
@@ -26,7 +25,7 @@ function HeroSection({ className, ...props }: HeroSectionProps) {
 				}}
 			/>
 			<div className="flex justify-between">
-				<p>
+				<p className="text-lg">
 					Revolutionizing design and function, the project showcases a cutting <br />
 					-edge smart speaker concept. During this project I designed <br /> an adaptive
 					website, 3D models and animations that transport users <br />

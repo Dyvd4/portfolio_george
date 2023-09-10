@@ -25,7 +25,7 @@ function HeroSection({ className, ...props }: HeroSectionProps) {
 				}}
 			/>
 			<div className="flex justify-between">
-				<p>
+				<p className="text-lg">
 					Yandex Match is a new dating service that can help you find a person <br />
 					with similar hobbies thanks to the new feature — «Maximum Match»!
 				</p>
