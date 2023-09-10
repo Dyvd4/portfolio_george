@@ -1,13 +1,11 @@
 import { cn } from "@/utils/component-utils";
 import { ComponentPropsWithRef } from "react";
 
-type _CopyProps = {
-	isActive?: boolean;
-};
+type _CopyProps = {};
 
 export type CopyProps = _CopyProps & Omit<ComponentPropsWithRef<"svg">, keyof _CopyProps>;
 
-function Copy({ className, isActive, ...props }: CopyProps) {
+function Copy({ className, ...props }: CopyProps) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
