@@ -14,7 +14,7 @@ export default function Home() {
 	const router = useRouter();
 
 	useEffect(() => {
-		router.push(window.location.hash);
+		if (footerIsActive) router.push(window.location.hash);
 	}, [footerIsActive]);
 
 	return (
