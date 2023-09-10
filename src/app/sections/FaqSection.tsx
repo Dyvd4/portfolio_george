@@ -48,12 +48,12 @@ function FaqSection({ className, children, ...props }: FaqSectionProps) {
 				id="faqs"
 				className={cn(
 					`relative flex flex-col items-center justify-center 
-				gap-10 py-[440px]`,
+					gap-10 py-[440px]`,
 					className
 				)}
 				{...props}
 			>
-				<h1 className="text-7xl">FAQ&apos;s</h1>
+				<h1 className="text-7xl leading-[108%]">FAQ&apos;s</h1>
 				<ul className="flex flex-col gap-4">
 					{FAQs.map(({ title, description }) => (
 						<li key={title}>
@@ -69,14 +69,14 @@ function FaqSection({ className, children, ...props }: FaqSectionProps) {
 					height={123}
 				/>
 				<Image
-					className="absolute bottom-[660px] right-[204px]"
+					className="absolute right-[204px] top-[800px]"
 					src={"/Transparency.svg"}
 					alt="Transparency"
 					width={128}
 					height={128}
 				/>
 				<Image
-					className="absolute bottom-[317.742px] left-[206.074px]"
+					className="absolute left-[206.074px] top-[1180px]"
 					src={"/Heavy Waves.svg"}
 					alt="Heavy waves"
 					width={118}
