@@ -4,6 +4,7 @@ import ArrowBottomLeft from "@/components/icons/ArrowBottomLeft";
 import useFollowingCursorButton from "@/hooks/useFollowingCursorButton";
 import { cn } from "@/utils/component-utils";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ComponentPropsWithRef, useRef } from "react";
 
@@ -31,12 +32,15 @@ function ProjectFooter({ className, nextProjectHref, imageSrc, ...props }: Proje
 
 	return (
 		<footer className={cn(`flex flex-col gap-6 px-12 pt-[440px]`, className)} {...props}>
-			<div className="flex justify-between gap-4">
-				<h1 className=" text-9xl">Next Project</h1>
+			<Link
+				href={nextProjectHref}
+				className="group flex cursor-pointer justify-between gap-4"
+			>
+				<h1 className="text-9xl leading-[130%]">Next Project</h1>
 				<div className="flex flex-col justify-end">
 					<ArrowBottomLeft />
 				</div>
-			</div>
+			</Link>
 			<div className="relative h-[640px]">
 				<Image
 					ref={parentRef}
