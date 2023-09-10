@@ -14,10 +14,7 @@ function ButtonCursor({ className, children, ...props }: ButtonCursorProps) {
 		<Button
 			disableActive
 			disableHover
-			style={{
-				backdropFilter: "blur(16px)",
-			}}
-			className={cn(`bg-tertiary hidden`, className)}
+			className={cn(`hidden`, className)}
 			id="button-cursor"
 		></Button>
 	);
