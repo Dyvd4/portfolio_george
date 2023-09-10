@@ -43,10 +43,11 @@ const updateButtonPosition = (
 	button.style.display = "block";
 };
 
-const useFollowingCursorButtonStyles = ({ parentRef, buttonProps }: Options) => {
+const useFollowingCursorButton = ({ parentRef, buttonProps }: Options) => {
 	const buttonRef = useRef<HTMLButtonElement | null>(null);
 
 	const handleMouseMove = (e: MouseEvent) => {
+		if (!buttonRef.current || !parentRef.current) return;
 		updateButtonPosition(e, buttonRef.current!, parentRef.current!);
 	};
 
@@ -65,4 +66,4 @@ const useFollowingCursorButtonStyles = ({ parentRef, buttonProps }: Options) => 
 	}, []);
 };
 
-export default useFollowingCursorButtonStyles;
+export default useFollowingCursorButton;
