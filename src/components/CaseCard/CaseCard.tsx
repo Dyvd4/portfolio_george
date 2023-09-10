@@ -11,22 +11,34 @@ export type _CaseCardProps = {
 };
 
 export type CaseCardProps = _CaseCardProps &
-	Omit<PropsWithChildren<ComponentPropsWithRef<"div">>, keyof _CaseCardProps>;
+	Omit<PropsWithChildren<ComponentPropsWithRef<"a">>, keyof _CaseCardProps>;
 
 function CaseCard({ className, children, title, src, href, ...props }: CaseCardProps) {
 	return (
-		<div className={cn(`flex flex-col items-start gap-4`, className)} {...props}>
-			<Image className="rounded-2xl" width={888} height={888} src={src} alt={"case card"} />
-			<Link href={href}>
-				<h3
-					className="hover:text-primary text-tertiary group flex cursor-pointer
+		<Link
+			className={cn(`group flex flex-1 cursor-pointer flex-col items-start gap-4`, className)}
+			href={href}
+			{...props}
+		>
+			<Image
+				className="rounded-2xl"
+				width={888}
+				height={888}
+				style={{
+					width: "100%",
+					height: "auto",
+				}}
+				src={src}
+				alt={"case card"}
+			/>
+			<h3
+				className="group-hover:text-primary text-tertiary flex cursor-pointer
 							items-center gap-2 text-2xl transition-all duration-150"
-				>
-					{title}
-					<ArrowRight className="-rotate-45 [&>path]:transition-all" />
-				</h3>
-			</Link>
-		</div>
+			>
+				{title}
+				<ArrowRight className="-rotate-45 [&>path]:transition-all" />
+			</h3>
+		</Link>
 	);
 }
 

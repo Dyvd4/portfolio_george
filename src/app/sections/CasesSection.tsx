@@ -21,12 +21,11 @@ function CasesSection({ className, ...props }: CasesSectionProps) {
 				<div className="flex gap-12 px-12" key={i}>
 					{cards.map((caseCardProps, i) =>
 						i % 2 === 1 ? (
-							<div
+							<CaseCard
 								className="flex-start flex flex-col pt-20"
 								key={caseCardProps.title}
-							>
-								<CaseCard {...caseCardProps} />
-							</div>
+								{...caseCardProps}
+							/>
 						) : (
 							<CaseCard key={caseCardProps.title} {...caseCardProps} />
 						)
