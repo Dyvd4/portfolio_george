@@ -32,8 +32,6 @@ function MainCaseSection({ className, ...props }: MainCaseSectionProps) {
 				height={3000}
 				style={{
 					width: "100%",
-					height: "1026px",
-					objectFit: "cover",
 				}}
 				src={"/main-case-section_case.png"}
 				alt={"Main case section"}

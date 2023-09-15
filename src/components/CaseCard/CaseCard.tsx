@@ -21,7 +21,7 @@ function CaseCard({ className, children, title, src, href, ...props }: CaseCardP
 			{...props}
 		>
 			<Image
-				className="transform rounded-2xl transition-transform hover:-translate-y-2"
+				className="transform rounded-2xl"
 				width={888}
 				height={888}
 				style={{
