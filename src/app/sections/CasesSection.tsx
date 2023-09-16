@@ -28,7 +28,7 @@ function CasesSection({ className, ...props }: CasesSectionProps) {
 					{cards.map((caseCardProps, i) =>
 						i % 2 === 1 ? (
 							<CaseCard
-								className="flex-start flex flex-col pt-20"
+								className="flex flex-col pt-20"
 								key={caseCardProps.title}
 								{...caseCardProps}
 							/>

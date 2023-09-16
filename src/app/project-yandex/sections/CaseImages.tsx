@@ -7,9 +7,6 @@ import IphoneLandingPage2Img from "@/public/project-yandex/case-images/iphone-la
 import DescriptionPageImg from "@/public/project-yandex/case-images/description-page.png";
 import IphoneDescriptionPageImg from "@/public/project-yandex/case-images/iphone-description-page.png";
 import IphoneDescriptionPage2Img from "@/public/project-yandex/case-images/iphone-description-page-2.png";
-import Description2PageImg from "@/public/project-yandex/case-images/description-2-page.png";
-import IphoneDescription2PageImg from "@/public/project-yandex/case-images/iphone-description-2-page.png";
-import IphoneDescription2Page2Img from "@/public/project-yandex/case-images/iphone-description-2-page-2.png";
 import DownloadPageImg from "@/public/project-yandex/case-images/download-page.png";
 import IphoneDownloadPageImg from "@/public/project-yandex/case-images/iphone-download-page.png";
 import IphoneDownloadPage2Img from "@/public/project-yandex/case-images/iphone-download-page-2.png";
@@ -69,31 +66,6 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 					imageProps={{
 						src: IphoneDescriptionPage2Img,
 						alt: "Iphone description page 2",
-					}}
-				/>
-			</section>
-			<section>
-				<CaseImage
-					imageProps={{
-						className: "rounded-xl",
-						src: Description2PageImg,
-						alt: "Description page 2",
-					}}
-				/>
-			</section>
-			<section className="flex gap-12">
-				<CaseImage
-					className="flex-1 px-60 py-40"
-					imageProps={{
-						src: IphoneDescription2PageImg,
-						alt: "Iphone description 2 page",
-					}}
-				/>
-				<CaseImage
-					className="flex-1 px-60 py-40"
-					imageProps={{
-						src: IphoneDescription2Page2Img,
-						alt: "Iphone description 2 page 2",
 					}}
 				/>
 			</section>
