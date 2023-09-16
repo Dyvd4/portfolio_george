@@ -3,10 +3,16 @@ import { _CaseCardProps } from "@/components/CaseCard/CaseCard";
 import { getTwoDArray } from "@/utils/array-utils";
 import { cn } from "@/utils/component-utils";
 import { ComponentPropsWithRef } from "react";
+import YandexMatchImg from "@/public/case-images/Yandex-Match.png";
+import RubleBrothersImg from "@/public/case-images/Ruble-Brothers.png";
 
 const CASES: Array<_CaseCardProps> = [
-	{ title: "Yandex Match", src: "/Yandex-Match.png", href: "/project-yandex" },
-	{ title: "Ruble Brothers", src: "/Ruble-Brothers.png", href: "/project-ruble-brothers" },
+	{ title: "Yandex Match", src: YandexMatchImg, href: "/project-yandex" },
+	{
+		title: "Ruble Brothers",
+		src: RubleBrothersImg,
+		href: "/project-ruble-brothers",
+	},
 ];
 
 type _CasesSectionProps = {};
@@ -22,7 +28,7 @@ function CasesSection({ className, ...props }: CasesSectionProps) {
 					{cards.map((caseCardProps, i) =>
 						i % 2 === 1 ? (
 							<CaseCard
-								className="flex-start flex flex-col pt-20"
+								className="flex flex-col pt-20"
 								key={caseCardProps.title}
 								{...caseCardProps}
 							/>

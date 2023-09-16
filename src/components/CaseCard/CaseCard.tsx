@@ -1,12 +1,12 @@
 import { cn } from "@/utils/component-utils";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { ComponentPropsWithRef, PropsWithChildren } from "react";
 import { ArrowRight } from "../icons";
 import Link from "next/link";
 
 export type _CaseCardProps = {
 	title: string;
-	src: string;
+	src: StaticImageData;
 	href: string;
 };
 
@@ -20,17 +20,7 @@ function CaseCard({ className, children, title, src, href, ...props }: CaseCardP
 			href={href}
 			{...props}
 		>
-			<Image
-				className="transform rounded-2xl transition-transform hover:-translate-y-2"
-				width={888}
-				height={888}
-				style={{
-					width: "100%",
-					height: "auto",
-				}}
-				src={src}
-				alt={"case card"}
-			/>
+			<Image className="transform rounded-2xl" src={src} alt={"case card"} />
 			<h3
 				className="group-hover:text-primary text-tertiary flex cursor-pointer
 							items-center gap-2 text-2xl transition-all duration-150"

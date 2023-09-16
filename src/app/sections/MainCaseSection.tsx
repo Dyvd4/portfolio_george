@@ -3,6 +3,7 @@ import useFollowingCursorButton from "@/hooks/useFollowingCursorButton";
 import { cn } from "@/utils/component-utils";
 import { useRouter } from "next/navigation";
 import { ComponentPropsWithRef, useRef } from "react";
+import MainCaseSectionCaseImg from "@/public/main-case-section_case.png";
 
 type _MainCaseSectionProps = {};
 
@@ -28,13 +29,7 @@ function MainCaseSection({ className, ...props }: MainCaseSectionProps) {
 			<Image
 				ref={parentRef}
 				className="rounded-2xl"
-				width={4000}
-				height={3000}
-				style={{
-					width: "100%",
-					height: "auto",
-				}}
-				src={"/main-case-section_case.png"}
+				src={MainCaseSectionCaseImg}
 				alt={"Main case section"}
 			/>
 		</section>

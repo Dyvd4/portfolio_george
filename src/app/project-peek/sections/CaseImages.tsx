@@ -1,6 +1,19 @@
 import CaseImage from "@/components/CaseImage";
 import { cn } from "@/utils/component-utils";
 import { ComponentPropsWithRef } from "react";
+import CaseVideoImg from "@/public/project-peek/case-images/case-video.svg";
+import PickAnyColorImg from "@/public/project-peek/case-images/pick-any-color.png";
+import IphoneBePreparedForTheFutureImg from "@/public/project-peek/case-images/iphone-be-prepared-for-the-future.png";
+import IphonePickAnyColorImg from "@/public/project-peek/case-images/iphone-pick-any-color.png";
+import ChooseYourPeekImg from "@/public/project-peek/case-images/choose-your-peek.png";
+import IphoneChooseYourPeekImg from "@/public/project-peek/case-images/iphone-choose-your-peek.png";
+import IphoneChooseYourPeek2Img from "@/public/project-peek/case-images/iphone-choose-your-peek-2.png";
+import PeekMenuImg from "@/public/project-peek/case-images/peek-menu.png";
+import SpeakerImg from "@/public/project-peek/case-images/speaker.png";
+import IphoneMenuImg from "@/public/project-peek/case-images/iphone-menu.png";
+import YourCartImg from "@/public/project-peek/case-images/your-cart.png";
+import IphonePeekSpeakerAndInformationImg from "@/public/project-peek/case-images/iphone-peek-speaker-and-information.png";
+import PopupImg from "@/public/project-peek/case-images/Pop-up.png";
 
 type _CaseImagesProps = {};
 
@@ -14,9 +27,7 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 				<CaseImage
 					className="p-0"
 					imageProps={{
-						src: "/project-peek/case-images/case-video.svg",
-						width: 1920,
-						height: 1080,
+						src: CaseVideoImg,
 						alt: "Case video",
 					}}
 				/>
@@ -24,9 +35,7 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 			<section>
 				<CaseImage
 					imageProps={{
-						src: "/project-peek/case-images/pick-any-color.png",
-						width: 1920,
-						height: 1080,
+						src: PickAnyColorImg,
 						alt: "Pick any color with the app",
 					}}
 				/>
@@ -35,18 +44,14 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-peek/case-images/iphone-be-prepared-for-the-future.png",
-						width: 447,
-						height: 906,
+						src: IphoneBePreparedForTheFutureImg,
 						alt: "Iphone be prepared for the future",
 					}}
 				/>
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-peek/case-images/iphone-pick-any-color.png",
-						width: 447,
-						height: 906,
+						src: IphonePickAnyColorImg,
 						alt: "Iphone pick any color",
 					}}
 				/>
@@ -54,10 +59,8 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 			<section>
 				<CaseImage
 					imageProps={{
-						src: "/project-peek/case-images/choose-your-peek.png",
+						src: ChooseYourPeekImg,
 						alt: "Choose your peek",
-						width: 1920,
-						height: 1080,
 					}}
 				/>
 			</section>
@@ -65,18 +68,14 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-peek/case-images/iphone-choose-your-peek.png",
-						width: 447,
-						height: 906,
+						src: IphoneChooseYourPeekImg,
 						alt: "Iphone choose your peek",
 					}}
 				/>
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-peek/case-images/iphone-choose-your-peek-2.png",
-						width: 447,
-						height: 906,
+						src: IphoneChooseYourPeek2Img,
 						alt: "Iphone choose your peek part 2",
 					}}
 				/>
@@ -84,10 +83,8 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 			<section>
 				<CaseImage
 					imageProps={{
-						src: "/project-peek/case-images/peek-menu.png",
+						src: PeekMenuImg,
 						alt: "Peek menu",
-						width: 1920,
-						height: 1080,
 					}}
 				/>
 			</section>
@@ -95,18 +92,14 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-peek/case-images/speaker.png",
-						width: 447,
-						height: 906,
+						src: SpeakerImg,
 						alt: "Speaker",
 					}}
 				/>
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-peek/case-images/iphone-menu.png",
-						width: 447,
-						height: 906,
+						src: IphoneMenuImg,
 						alt: "Iphone peek menu",
 					}}
 				/>
@@ -114,10 +107,8 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 			<section>
 				<CaseImage
 					imageProps={{
-						src: "/project-peek/case-images/your-cart.png",
+						src: YourCartImg,
 						alt: "Your cart",
-						width: 1920,
-						height: 1080,
 					}}
 				/>
 			</section>
@@ -125,18 +116,14 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-peek/case-images/iphone-peek-speaker-and-information.png",
-						width: 447,
-						height: 906,
+						src: IphonePeekSpeakerAndInformationImg,
 						alt: "Iphone peek speaker and information",
 					}}
 				/>
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-peek/case-images/Pop-up.png",
-						width: 447,
-						height: 906,
+						src: PopupImg,
 						alt: "Pop up",
 					}}
 				/>

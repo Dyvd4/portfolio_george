@@ -1,6 +1,15 @@
 import CaseImage from "@/components/CaseImage";
 import { cn } from "@/utils/component-utils";
 import { ComponentPropsWithRef } from "react";
+import LandingPageImg from "@/public/project-yandex/case-images/landing-page.png";
+import IphoneLandingPageImg from "@/public/project-yandex/case-images/iphone-landing-page.png";
+import IphoneLandingPage2Img from "@/public/project-yandex/case-images/iphone-landing-page-2.png";
+import DescriptionPageImg from "@/public/project-yandex/case-images/description-page.png";
+import IphoneDescriptionPageImg from "@/public/project-yandex/case-images/iphone-description-page.png";
+import IphoneDescriptionPage2Img from "@/public/project-yandex/case-images/iphone-description-page-2.png";
+import DownloadPageImg from "@/public/project-yandex/case-images/download-page.png";
+import IphoneDownloadPageImg from "@/public/project-yandex/case-images/iphone-download-page.png";
+import IphoneDownloadPage2Img from "@/public/project-yandex/case-images/iphone-download-page-2.png";
 
 type _CaseImagesProps = {};
 
@@ -14,9 +23,7 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 				<CaseImage
 					imageProps={{
 						className: "rounded-xl",
-						src: "/project-yandex/case-images/landing-page.png",
-						width: 1920,
-						height: 1080,
+						src: LandingPageImg,
 						alt: "Landing page",
 					}}
 				/>
@@ -25,18 +32,14 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-yandex/case-images/iphone-landing-page.png",
-						width: 447,
-						height: 906,
+						src: IphoneLandingPageImg,
 						alt: "Iphone landing page",
 					}}
 				/>
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-yandex/case-images/iphone-landing-page-2.png",
-						width: 447,
-						height: 906,
+						src: IphoneLandingPage2Img,
 						alt: "Iphone landing page part 2",
 					}}
 				/>
@@ -45,10 +48,8 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 				<CaseImage
 					imageProps={{
 						className: "rounded-xl",
-						src: "/project-yandex/case-images/description-page.png",
+						src: DescriptionPageImg,
 						alt: "Description page",
-						width: 1025,
-						height: 779,
 					}}
 				/>
 			</section>
@@ -56,18 +57,14 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-yandex/case-images/iphone-description-page.png",
-						width: 447,
-						height: 906,
+						src: IphoneDescriptionPageImg,
 						alt: "Iphone description page",
 					}}
 				/>
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-yandex/case-images/iphone-description-page-2.png",
-						width: 447,
-						height: 906,
+						src: IphoneDescriptionPage2Img,
 						alt: "Iphone description page 2",
 					}}
 				/>
@@ -76,41 +73,8 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 				<CaseImage
 					imageProps={{
 						className: "rounded-xl",
-						src: "/project-yandex/case-images/description-2-page.png",
-						alt: "Description page 2",
-						width: 1920,
-						height: 1080,
-					}}
-				/>
-			</section>
-			<section className="flex gap-12">
-				<CaseImage
-					className="flex-1 px-60 py-40"
-					imageProps={{
-						src: "/project-yandex/case-images/iphone-description-2-page.png",
-						width: 447,
-						height: 906,
-						alt: "Iphone description 2 page",
-					}}
-				/>
-				<CaseImage
-					className="flex-1 px-60 py-40"
-					imageProps={{
-						src: "/project-yandex/case-images/iphone-description-2-page-2.png",
-						width: 447,
-						height: 906,
-						alt: "Iphone description 2 page 2",
-					}}
-				/>
-			</section>
-			<section>
-				<CaseImage
-					imageProps={{
-						className: "rounded-xl",
-						src: "/project-yandex/case-images/download-page.png",
+						src: DownloadPageImg,
 						alt: "Download page",
-						width: 1920,
-						height: 1080,
 					}}
 				/>
 			</section>
@@ -118,18 +82,14 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-yandex/case-images/iphone-download-page.png",
-						width: 447,
-						height: 906,
+						src: IphoneDownloadPageImg,
 						alt: "Iphone download page",
 					}}
 				/>
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-yandex/case-images/iphone-download-page-2.png",
-						width: 447,
-						height: 906,
+						src: IphoneDownloadPage2Img,
 						alt: "Iphone download page 2",
 					}}
 				/>

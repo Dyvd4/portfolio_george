@@ -18,6 +18,7 @@ const setInitialStyles = (button: HTMLButtonElement, parentElement: HTMLElement)
 	buttonStyle.position = "absolute";
 	buttonStyle.transitionDuration = "0s";
 	buttonStyle.backdropFilter = "blur(16px)";
+	buttonStyle.color = "white";
 };
 
 const updateButtonPosition = (
