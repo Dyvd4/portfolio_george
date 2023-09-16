@@ -1,6 +1,12 @@
 // prettier-ignore
 import { cn } from "@/utils/component-utils";
+import { Metadata } from "next/types";
 
+export const metadata: Metadata = {
+	title: "Privacy policy",
+	description: "Every website needs to have a privacy policy. Or do they have to?",
+	keywords: ["unnecessary", "sometimes existing"],
+};
 function Page(props) {
 	return (
 		<div

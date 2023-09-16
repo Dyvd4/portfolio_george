@@ -1,6 +1,7 @@
 import Button from "@/components/buttons/Button";
 import { cn } from "@/utils/component-utils";
 import Image from "next/image";
+import { Metadata } from "next/types";
 import { ComponentPropsWithRef } from "react";
 
 type _HeroSectionProps = {};
@@ -8,6 +9,12 @@ type _HeroSectionProps = {};
 export type HeroSectionProps = _HeroSectionProps &
 	Omit<ComponentPropsWithRef<"section">, keyof _HeroSectionProps>;
 
+export const metadata: Metadata = {
+	title: "Peek",
+	description:
+		"Revolutionizing design and function, the project showcases a cutting-edge smart speaker concept. During this project I designed an adaptive website, 3D models and animations that transport users into an immersive visual realm.",
+	keywords: ["design", "cutting-edge", "smart speaker", "3D models", "peek"],
+};
 function HeroSection({ className, ...props }: HeroSectionProps) {
 	return (
 		<section

@@ -1,12 +1,27 @@
 import Button from "@/components/buttons/Button";
 import { cn } from "@/utils/component-utils";
 import Image from "next/image";
+import { Metadata } from "next/types";
 import { ComponentPropsWithRef } from "react";
 
 type _HeroSectionProps = {};
 
 export type HeroSectionProps = _HeroSectionProps &
 	Omit<ComponentPropsWithRef<"section">, keyof _HeroSectionProps>;
+
+export const metadata: Metadata = {
+	title: "Ruble brothers",
+	description:
+		"Presenting a money exchange landing page design that is intuitive, user-friendly, and modern. Our design will make it easy for customers to quickly and securely exchange money.",
+	keywords: [
+		"design",
+		"money exchange",
+		"intuitive",
+		"user-friendly",
+		"modern",
+		"ruble brothers",
+	],
+};
 
 function HeroSection({ className, ...props }: HeroSectionProps) {
 	return (
@@ -26,8 +41,10 @@ function HeroSection({ className, ...props }: HeroSectionProps) {
 			/>
 			<div className="flex justify-between">
 				<p className="text-lg">
-					Yandex Match is a new dating service that can help you find a person <br />
-					with similar hobbies thanks to the new feature — «Maximum Match»!
+					Presenting a money exchange landing page design that is intuitive,
+					<br />
+					user-friendly, and modern. Our design will make it easy for customers <br />
+					to quickly and securely exchange money.
 				</p>
 				<div className="flex flex-col justify-end">
 					<Button disabled>Visit the website</Button>

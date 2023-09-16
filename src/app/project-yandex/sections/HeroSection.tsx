@@ -1,12 +1,20 @@
 import Button from "@/components/buttons/Button";
 import { cn } from "@/utils/component-utils";
 import Image from "next/image";
+import { Metadata } from "next/types";
 import { ComponentPropsWithRef } from "react";
 
 type _HeroSectionProps = {};
 
 export type HeroSectionProps = _HeroSectionProps &
 	Omit<ComponentPropsWithRef<"section">, keyof _HeroSectionProps>;
+
+export const metadata: Metadata = {
+	title: "Yandex",
+	description:
+		"Yandex Match is a new dating service that can help you find a person with similar hobbies thanks to the new feature — «Maximum Match»!",
+	keywords: ["design", "dating service", "Maximum Match", "yandex"],
+};
 
 function HeroSection({ className, ...props }: HeroSectionProps) {
 	return (
