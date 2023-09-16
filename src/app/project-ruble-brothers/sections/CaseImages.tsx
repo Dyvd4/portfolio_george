@@ -1,6 +1,15 @@
 import CaseImage from "@/components/CaseImage";
 import { cn } from "@/utils/component-utils";
 import { ComponentPropsWithRef } from "react";
+import LandingPageImg from "@/public/project-ruble-brothers/case-images/landing-page.png";
+import IphoneLandingPageImg from "@/public/project-ruble-brothers/case-images/iphone-landing-page.png";
+import IphoneLandingPage2Img from "@/public/project-ruble-brothers/case-images/iphone-landing-page-2.png";
+import DescriptionPageImg from "@/public/project-ruble-brothers/case-images/description-page.png";
+import BankImg from "@/public/project-ruble-brothers/case-images/bank.png";
+import IphoneDescriptionPageImg from "@/public/project-ruble-brothers/case-images/iphone-description-page.png";
+import BenefitsPageImg from "@/public/project-ruble-brothers/case-images/benefits-page.png";
+import IphoneBenefitsPageImg from "@/public/project-ruble-brothers/case-images/iphone-benefits-page.png";
+import IphoneBenefitsPage2Img from "@/public/project-ruble-brothers/case-images/iphone-benefits-page-2.png";
 
 type _CaseImagesProps = {};
 
@@ -14,9 +23,7 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 				<CaseImage
 					imageProps={{
 						className: "rounded-xl",
-						src: "/project-ruble-brothers/case-images/landing-page.png",
-						width: 1920,
-						height: 1080,
+						src: LandingPageImg,
 						alt: "Landing page",
 					}}
 				/>
@@ -25,18 +32,14 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-ruble-brothers/case-images/iphone-landing-page.png",
-						width: 447,
-						height: 906,
+						src: IphoneLandingPageImg,
 						alt: "Iphone landing page",
 					}}
 				/>
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-ruble-brothers/case-images/iphone-landing-page-2.png",
-						width: 447,
-						height: 906,
+						src: IphoneLandingPage2Img,
 						alt: "Iphone landing page part 2",
 					}}
 				/>
@@ -45,10 +48,8 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 				<CaseImage
 					imageProps={{
 						className: "rounded-xl",
-						src: "/project-ruble-brothers/case-images/description-page.png",
+						src: DescriptionPageImg,
 						alt: "Description page",
-						width: 1025,
-						height: 779,
 					}}
 				/>
 			</section>
@@ -56,18 +57,14 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-ruble-brothers/case-images/bank.png",
-						width: 447,
-						height: 906,
+						src: BankImg,
 						alt: "Bank",
 					}}
 				/>
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-ruble-brothers/case-images/iphone-description-page.png",
-						width: 447,
-						height: 906,
+						src: IphoneDescriptionPageImg,
 						alt: "Iphone description page",
 					}}
 				/>
@@ -76,10 +73,8 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 				<CaseImage
 					imageProps={{
 						className: "rounded-xl",
-						src: "/project-ruble-brothers/case-images/benefits-page.png",
+						src: BenefitsPageImg,
 						alt: "Benefits",
-						width: 1920,
-						height: 1080,
 					}}
 				/>
 			</section>
@@ -87,18 +82,14 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-ruble-brothers/case-images/iphone-benefits-page.png",
-						width: 447,
-						height: 906,
+						src: IphoneBenefitsPageImg,
 						alt: "Iphone benefits page",
 					}}
 				/>
 				<CaseImage
 					className="flex-1 px-60 py-40"
 					imageProps={{
-						src: "/project-ruble-brothers/case-images/iphone-benefits-page-2.png",
-						width: 447,
-						height: 906,
+						src: IphoneBenefitsPage2Img,
 						alt: "Iphone benefits page 2",
 					}}
 				/>
