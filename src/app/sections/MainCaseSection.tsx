@@ -31,6 +31,9 @@ function MainCaseSection({ className, ...props }: MainCaseSectionProps) {
 				className="rounded-2xl"
 				src={MainCaseSectionCaseImg}
 				alt={"Main case section"}
+				style={{
+					width: "100%",
+				}}
 			/>
 		</section>
 	);
