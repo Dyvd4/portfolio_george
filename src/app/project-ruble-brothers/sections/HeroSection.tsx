@@ -1,27 +1,12 @@
 import Button from "@/components/buttons/Button";
 import { cn } from "@/utils/component-utils";
 import Image from "next/image";
-import { Metadata } from "next/types";
 import { ComponentPropsWithRef } from "react";
 
 type _HeroSectionProps = {};
 
 export type HeroSectionProps = _HeroSectionProps &
 	Omit<ComponentPropsWithRef<"section">, keyof _HeroSectionProps>;
-
-export const metadata: Metadata = {
-	title: "Ruble brothers",
-	description:
-		"Presenting a money exchange landing page design that is intuitive, user-friendly, and modern. Our design will make it easy for customers to quickly and securely exchange money.",
-	keywords: [
-		"design",
-		"money exchange",
-		"intuitive",
-		"user-friendly",
-		"modern",
-		"ruble brothers",
-	],
-};
 
 function HeroSection({ className, ...props }: HeroSectionProps) {
 	return (
