@@ -8,6 +8,9 @@ import Menu from "./menu";
 import ModalPortal from "./modal-portal";
 import { Toaster } from "react-hot-toast";
 import ButtonCursor from "@/components/buttons/ButtonCursor";
+import config from "@/app/config";
+
+const { BASE_URL } = config;
 
 const matterFont = localFont({
 	src: [
@@ -28,6 +31,7 @@ export const metadata: Metadata = {
 	title: "itsgeorge: Designing Exceptional User Experiences",
 	description:
 		"I'm George Palkin, a friendly UX/UI designer crafting creative solutions for exceptional user experiences, empowering companies through innovation.",
+	metadataBase: new URL(BASE_URL),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
