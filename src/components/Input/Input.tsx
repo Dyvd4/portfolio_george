@@ -16,7 +16,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
 		<input
 			ref={ref}
 			className={cn(
-				`text-tertiary bg-secondary text-primary focus:placeholder:text-primary
+				`text-tertiary bg-secondary text-primary focus:placeholder:text-primary placeholder:text-tertiary
                 rounded-lg px-4 py-3 outline-1 outline-white hover:outline focus:outline`,
 				{
 					"text-red-500 placeholder:text-red-500": !!hasError,
