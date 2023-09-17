@@ -25,8 +25,9 @@ const matterFont = localFont({
 });
 
 export const metadata: Metadata = {
-	title: "itsgeorge",
-	description: "Portfolio from itsgeorge",
+	title: "itsgeorge: Designing Exceptional User Experiences",
+	description:
+		"I'm George Palkin, a friendly UX/UI designer crafting creative solutions for exceptional user experiences, empowering companies through innovation.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
