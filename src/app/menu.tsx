@@ -1,18 +1,18 @@
 "use client";
 
 import menuIsActiveAtom from "@/atoms/menuIsActiveAtom";
-import { Behance, Dribble, Telegram } from "@/components/icons";
+import SocialLinks from "@/components/SocialLinks";
 import { cn } from "@/utils/component-utils";
 import { useAtom } from "jotai";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ComponentPropsWithRef, PropsWithChildren, useEffect } from "react";
 
-type Links = { href: string; title: string; target?: string };
+export type Link = { href: string; title: string; target?: string };
 
 export const ABOUT_ME_HREF =
 	"https://niklapinv.notion.site/George-Palkin-Resume-10a727f21ccd405195712547bf9f698c?pvs=4";
-const LINKS: Array<Links> = [
+const LINKS: Array<Link> = [
 	{
 		title: "Work",
 		href: "/#cases",
@@ -87,17 +87,7 @@ function Menu({ className, children, ...props }: MenuProps) {
 					))}
 				</ul>
 				<div className="flex items-end">
-					<ul className="flex gap-6">
-						<li key={"Telegram"}>
-							<Telegram variant="secondary" />
-						</li>
-						<li key={"Behance"}>
-							<Behance variant="secondary" />
-						</li>
-						<li key={"Dribble"}>
-							<Dribble variant="secondary" />
-						</li>
-					</ul>
+					<SocialLinks />
 				</div>
 			</div>
 		</div>

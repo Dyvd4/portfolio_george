@@ -1,16 +1,16 @@
 "use client";
 
+import footerIsActiveAtom from "@/atoms/footerIsActiveAtom";
 import modalIsActiveAtom from "@/atoms/modalIsActiveAtom";
 import Copyable from "@/components/Copyable";
 import DevSign from "@/components/DevSign";
 import Button from "@/components/buttons/Button";
-import { Behance, Dribble, Telegram } from "@/components/icons";
 import { cn } from "@/utils/component-utils";
 import { useAtom } from "jotai";
 import { ComponentPropsWithRef, PropsWithChildren } from "react";
-import ContactModal from "../Modals/ContactModal";
 import { toast } from "react-hot-toast";
-import footerIsActiveAtom from "@/atoms/footerIsActiveAtom";
+import ContactModal from "../Modals/ContactModal";
+import SocialLinks from "@/components/SocialLinks";
 
 type _FooterProps = {};
 
@@ -39,11 +39,7 @@ function Footer({ className, children, ...props }: FooterProps) {
 					<Button onClick={() => setModalIsActive(true)}>Contact form</Button>
 				</div>
 				<div className="flex justify-between px-12 py-8">
-					<div className="flex gap-8">
-						<Telegram variant="secondary" />
-						<Behance variant="secondary" />
-						<Dribble variant="secondary" />
-					</div>
+					<SocialLinks className="gap-8" />
 					<DevSign />
 					<div className="text-secondary text-sm">© 2023 George Palkin</div>
 				</div>
