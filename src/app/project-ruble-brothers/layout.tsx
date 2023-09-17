@@ -1,4 +1,7 @@
 import { Metadata } from "next/types";
+import config from "@/app/config";
+
+const { BASE_URL } = config;
 
 export const metadata: Metadata = {
 	title: "Ruble brothers",
@@ -12,6 +15,7 @@ export const metadata: Metadata = {
 		"modern",
 		"ruble brothers",
 	],
+	metadataBase: new URL(BASE_URL),
 };
 
 function Layout({ children }: { children: React.ReactNode }) {
