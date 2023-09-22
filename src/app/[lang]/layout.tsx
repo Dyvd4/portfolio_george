@@ -34,9 +34,9 @@ export const metadata: Metadata = {
 	metadataBase: new URL(BASE_URL),
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children, params }: { children: React.ReactNode; params }) {
 	return (
-		<html lang="en">
+		<html lang={params.lang}>
 			<head>
 				<title>Portfolio</title>
 				<link rel="icon" href="/Favicon.svg" type="image/x-icon" />
