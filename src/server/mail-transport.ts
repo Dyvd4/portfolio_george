@@ -1,5 +1,5 @@
 import nodemailer from "nodemailer";
-import config from "@/app/config";
+import config from "@/app/[lang]/config";
 
 const { SMPT_USERNAME, SMPT_PASSWORD, SMTP_HOST } = config;
 

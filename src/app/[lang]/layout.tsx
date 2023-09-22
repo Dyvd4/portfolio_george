@@ -8,19 +8,19 @@ import Menu from "./menu";
 import ModalPortal from "./modal-portal";
 import { Toaster } from "react-hot-toast";
 import ButtonCursor from "@/components/buttons/ButtonCursor";
-import config from "@/app/config";
+import config from "@/app/[lang]/config";
 
 const { BASE_URL } = config;
 
 const matterFont = localFont({
 	src: [
 		{
-			path: "../../public/fonts/matter-font/Matter-Regular.otf",
+			path: "../../../public/fonts/matter-font/Matter-Regular.otf",
 			weight: "400",
 			style: "normal",
 		},
 		{
-			path: "../../public/fonts/matter-font/Matter-Light.otf",
+			path: "../../../public/fonts/matter-font/Matter-Light.otf",
 			weight: "300",
 			style: "normal",
 		},

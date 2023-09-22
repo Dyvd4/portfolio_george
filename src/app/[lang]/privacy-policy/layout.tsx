@@ -1,5 +1,5 @@
 import { Metadata } from "next/types";
-import config from "@/app/config";
+import config from "@/app/[lang]/config";
 
 const { BASE_URL } = config;
 

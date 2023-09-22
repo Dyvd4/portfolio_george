@@ -1,4 +1,4 @@
-import config from "@/app/config";
+import config from "@/app/[lang]/config";
 import mailTransport from "@/server/mail-transport";
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
