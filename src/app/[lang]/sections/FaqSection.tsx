@@ -2,6 +2,9 @@ import Expandable from "@/components/Expandable";
 import { cn } from "@/utils/component-utils";
 import { ComponentPropsWithRef } from "react";
 import Image from "next/image";
+import SpiralTwoImg from "@/public/Spiral 2.svg";
+import TransparencyImg from "@/public/Transparency.svg";
+import HeavyWavesImg from "@/public/Heavy Waves.svg";
 
 const FAQs: Array<{ title: string; description: string }> = [
 	{
@@ -63,24 +66,18 @@ function FaqSection({ className, children, ...props }: FaqSectionProps) {
 				</ul>
 				<Image
 					className="absolute left-[340.833px] top-[295.074px]"
-					src={"/Spiral 2.svg"}
+					src={SpiralTwoImg}
 					alt="spiral 2"
-					width={108}
-					height={123}
 				/>
 				<Image
 					className="absolute right-[204px] top-[800px]"
-					src={"/Transparency.svg"}
+					src={TransparencyImg}
 					alt="Transparency"
-					width={128}
-					height={128}
 				/>
 				<Image
 					className="absolute left-[206.074px] top-[1180px]"
-					src={"/Heavy Waves.svg"}
+					src={HeavyWavesImg}
 					alt="Heavy waves"
-					width={118}
-					height={84}
 				/>
 			</section>
 		</>

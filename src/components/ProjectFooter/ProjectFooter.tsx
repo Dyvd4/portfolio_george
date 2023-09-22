@@ -2,12 +2,12 @@
 
 import ArrowBottomLeft from "@/components/icons/ArrowBottomLeft";
 import { cn } from "@/utils/component-utils";
-import Image from "next/image";
+import Image, { ImageProps } from "next/image";
 import Link from "next/link";
 import { ComponentPropsWithRef } from "react";
 
 type _ProjectFooterProps = {
-	imageSrc: string;
+	imageSrc: ImageProps["src"];
 	nextProjectHref: string;
 };
 

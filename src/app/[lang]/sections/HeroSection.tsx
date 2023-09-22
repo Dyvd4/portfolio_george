@@ -3,6 +3,8 @@ import { cn } from "@/utils/component-utils";
 import Image from "next/image";
 import Link from "next/link";
 import { ComponentPropsWithRef } from "react";
+import HeroSectionSmileImg from "@/public/hero-section_1st-row_smile.svg";
+import HeroSectionSwitchImg from "@/public/hero-section_2nd-row_switch.svg";
 
 type _HeroSectionProps = {};
 
@@ -32,9 +34,7 @@ function HeroSection({ className, ...props }: HeroSectionProps) {
 							filter: "drop-shadow(0px 12px 64px rgba(96, 83, 248, 0.64))",
 						}}
 						className="pt-4"
-						src={"/hero-section_1st-row_smile.svg"}
-						width={97}
-						height={98}
+						src={HeroSectionSmileImg}
 						alt="smile"
 					/>
 					<div>
@@ -50,9 +50,7 @@ function HeroSection({ className, ...props }: HeroSectionProps) {
 							filter: "drop-shadow(0px 12px 64px rgba(96, 83, 248, 0.64))",
 						}}
 						className="pt-6"
-						src={"/hero-section_2nd-row_switch.svg"}
-						width={171}
-						height={80}
+						src={HeroSectionSwitchImg}
 						alt="switch"
 					/>
 				</h1>

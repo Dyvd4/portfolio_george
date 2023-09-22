@@ -2,6 +2,7 @@ import Button from "@/components/buttons/Button";
 import { cn } from "@/utils/component-utils";
 import Image from "next/image";
 import { ComponentPropsWithRef } from "react";
+import LogotypeImg from "@/public/project-peek/Logotype.svg";
 
 type _HeroSectionProps = {};
 
@@ -17,9 +18,7 @@ function HeroSection({ className, ...props }: HeroSectionProps) {
 			<Image
 				priority
 				alt="Logotype"
-				src={"/project-peek/Logotype.svg"}
-				width={1824}
-				height={333}
+				src={LogotypeImg}
 				style={{
 					width: "100%",
 				}}

@@ -4,6 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { ComponentPropsWithRef } from "react";
 import { ABOUT_ME_HREF } from "../menu";
+import DawnImg from "@/public/Dawn.svg";
+import SpiralOneImg from "@/public/Spiral 1.svg";
+import SpiralThreeImg from "@/public/Spiral 3.svg";
 
 type _AboutMeSectionProps = {};
 
@@ -28,25 +31,15 @@ function AboutMeSection({ className, ...props }: AboutMeSectionProps) {
 			</Link>
 			<Image
 				className="absolute left-[169.024px] top-[151.968px]"
-				src={"/Spiral 3.svg"}
+				src={SpiralThreeImg}
 				alt="spiral 3"
-				width={127}
-				height={156}
 			/>
 			<Image
 				className="absolute right-[48px] top-[379px]"
-				src={"/Spiral 1.svg"}
+				src={SpiralOneImg}
 				alt="spiral 1"
-				width={132}
-				height={125}
 			/>
-			<Image
-				className="absolute bottom-[128px] left-[560px]"
-				src={"/Dawn.svg"}
-				alt="dawn"
-				width={132}
-				height={125}
-			/>
+			<Image className="absolute bottom-[128px] left-[560px]" src={DawnImg} alt="dawn" />
 		</section>
 	);
 }

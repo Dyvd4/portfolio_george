@@ -5,6 +5,7 @@ import { cn } from "@/utils/component-utils";
 import CaseImages from "./sections/CaseImages";
 import HeroSection from "./sections/HeroSection";
 import useFooter from "@/hooks/useFooter";
+import FooterImg from "@/public/project-ruble-brothers/footer-image.png";
 
 function Page(props) {
 	useFooter({ disable: true });
@@ -12,10 +13,7 @@ function Page(props) {
 		<div className={cn(``)}>
 			<HeroSection />
 			<CaseImages />
-			<ProjectFooter
-				imageSrc={"/project-ruble-brothers/footer-image.png"}
-				nextProjectHref="/project-peek"
-			/>
+			<ProjectFooter imageSrc={FooterImg} nextProjectHref="/project-peek" />
 		</div>
 	);
 }
