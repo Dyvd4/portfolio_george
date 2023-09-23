@@ -54,9 +54,9 @@ function Menu({ className, children, ...props }: MenuProps) {
 	return (
 		<div
 			className={cn(
-				`fixed inset-0 z-40 flex -translate-y-full
-				transform items-center justify-center 
-				bg-black transition-all duration-700`,
+				`fixed inset-0 z-40 flex
+				-translate-y-full transform items-center 
+				justify-center bg-black transition-all duration-700`,
 				{
 					"translate-y-0": menuIsActive,
 				},
@@ -64,12 +64,16 @@ function Menu({ className, children, ...props }: MenuProps) {
 			)}
 			{...props}
 		>
-			<div className="flex w-[1200px] justify-between">
-				<ul className="flex flex-col gap-8 text-8xl leading-[132px]">
+			<div
+				className="flex w-[1200px] flex-col items-center justify-between 
+			sm:px-0 md:flex-row md:items-end md:px-20 xl:p-0"
+			>
+				<ul className="flex flex-col gap-6 text-6xl leading-[150%] md:gap-8 md:text-8xl">
 					{LINKS.map(({ href, title, target }) => (
 						<li
 							key={href}
-							className="hover:text-primary flex cursor-pointer items-end justify-between hover:underline"
+							className="hover:text-primary flex cursor-pointer
+									items-end justify-center hover:underline md:justify-start"
 						>
 							<Link
 								rel="noreferrer noopener"
@@ -86,9 +90,12 @@ function Menu({ className, children, ...props }: MenuProps) {
 						</li>
 					))}
 				</ul>
-				<div className="flex items-end">
+				<div className="mb-5 hidden items-end md:flex">
 					<SocialLinks />
 				</div>
+			</div>
+			<div className="absolute bottom-0 mx-auto pb-24 md:hidden">
+				<SocialLinks />
 			</div>
 		</div>
 	);
