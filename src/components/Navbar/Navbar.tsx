@@ -20,7 +20,7 @@ function Navbar({ className, children, ...props }: NavbarProps) {
 				<Logo />
 				<div
 					onClick={() => setMenuIsActive((isActive) => !isActive)}
-					className="text-primary cursor-pointer text-lg"
+					className="text-primary cursor-pointer text-base md:text-lg"
 				>
 					{menuTitle}
 				</div>
