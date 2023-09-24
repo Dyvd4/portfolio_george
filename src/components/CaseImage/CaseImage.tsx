@@ -17,7 +17,7 @@ function CaseImage({
 	return (
 		<div
 			className={cn(
-				`bg-tertiary flex items-center justify-center rounded-2xl p-16`,
+				`bg-tertiary flex items-center justify-center rounded-2xl p-2 2xl:p-16`,
 				className
 			)}
 			{...props}
