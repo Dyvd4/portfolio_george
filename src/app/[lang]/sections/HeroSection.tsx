@@ -15,22 +15,22 @@ function HeroSection({ className, ...props }: HeroSectionProps) {
 	return (
 		<section
 			className={cn(
-				`relative flex flex-col items-center justify-center gap-6 px-4 pb-16 pt-32 md:min-h-screen
-                 md:px-0 md:py-0`,
+				`relative flex flex-col items-center justify-center gap-6 px-4 pb-16 pt-32 xl:min-h-screen
+                 xl:px-0 xl:py-0`,
 				className
 			)}
 			{...props}
 		>
 			<div
 				className="flex flex-col items-start justify-center 
-                            text-3xl !leading-[130%] tracking-[-1.28px] md:text-9xl"
+                            text-3xl !leading-[130%] tracking-[-1.28px] xl:text-9xl"
 			>
 				<h1>
-					Crafting <i className="pr-2 md:pr-4">friendly</i> and
+					Crafting <i className="pr-2 xl:pr-4">friendly</i> and
 				</h1>
-				<h1 className="flex items-center gap-3 pl-4 md:gap-12">
+				<h1 className="flex items-center gap-3 pl-4 xl:gap-12">
 					<Image
-						className="md:hidden"
+						className="xl:hidden"
 						width={26}
 						height={26}
 						style={{
@@ -40,7 +40,7 @@ function HeroSection({ className, ...props }: HeroSectionProps) {
 						alt="smile"
 					/>
 					<Image
-						className="hidden pt-4 md:inline"
+						className="hidden pt-4 xl:inline"
 						width={98}
 						height={98}
 						style={{
@@ -50,15 +50,15 @@ function HeroSection({ className, ...props }: HeroSectionProps) {
 						alt="smile"
 					/>
 					<div>
-						<i className="pr-2 md:pr-4">intuitive</i> interfaces
+						<i className="pr-2 xl:pr-4">intuitive</i> interfaces
 					</div>
 				</h1>
-				<h1 className="flex items-center gap-3 md:gap-12">
+				<h1 className="flex items-center gap-3 xl:gap-12">
 					<div>
-						with <i className="pr-2 md:pr-4">creative</i> flair
+						with <i className="pr-2 xl:pr-4">creative</i> flair
 					</div>
 					<Image
-						className="pt-2 md:hidden"
+						className="pt-2 xl:hidden"
 						width={46}
 						height={22}
 						style={{
@@ -68,7 +68,7 @@ function HeroSection({ className, ...props }: HeroSectionProps) {
 						alt="switch"
 					/>
 					<Image
-						className="hidden pt-6 md:inline"
+						className="hidden pt-6 xl:inline"
 						width={170}
 						height={80}
 						style={{

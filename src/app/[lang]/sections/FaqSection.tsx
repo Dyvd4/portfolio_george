@@ -51,12 +51,12 @@ function FaqSection({ className, children, ...props }: FaqSectionProps) {
 				id="faqs"
 				className={cn(
 					`relative flex flex-col items-center justify-center gap-10
-					overflow-hidden px-4 py-[256px] md:px-0 md:py-[440px]`,
+					overflow-hidden px-4 py-[256px] lg:px-0 lg:py-[440px]`,
 					className
 				)}
 				{...props}
 			>
-				<h1 className="text-4xl leading-[108%] md:text-7xl">FAQ&apos;s</h1>
+				<h1 className="text-4xl leading-[108%] lg:text-7xl">FAQ&apos;s</h1>
 				<ul className="flex flex-col gap-4">
 					{FAQs.map(({ title, description }) => (
 						<li key={title}>
@@ -65,17 +65,17 @@ function FaqSection({ className, children, ...props }: FaqSectionProps) {
 					))}
 				</ul>
 				<Image
-					className="absolute -right-4 top-[132px] h-20 w-16 md:left-[340.833px] md:top-[295.074px] md:h-[123px] md:w-[108px]"
+					className="absolute -right-4 top-[132px] h-20 w-16 lg:left-[340.833px] lg:top-[295.074px] lg:h-[123px] lg:w-[108px]"
 					src={SpiralTwoImg}
 					alt="spiral 2"
 				/>
 				<Image
-					className="absolute right-20 top-[900px] h-20 w-20 md:right-[204px] md:top-[800px] md:h-32 md:w-32"
+					className="absolute right-20 top-[900px] h-20 w-20 lg:right-[204px] lg:top-[800px] lg:h-32 lg:w-32"
 					src={TransparencyImg}
 					alt="Transparency"
 				/>
 				<Image
-					className="absolute left-6 top-11 h-14 w-20 md:left-[206.074px] md:top-[1180px] md:h-[84px] md:w-[118px]"
+					className="absolute left-6 top-11 h-14 w-20 lg:left-[206.074px] lg:top-[1180px] lg:h-[84px] lg:w-[118px]"
 					src={HeavyWavesImg}
 					alt="Heavy waves"
 				/>

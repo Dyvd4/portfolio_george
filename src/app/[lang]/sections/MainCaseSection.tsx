@@ -26,16 +26,16 @@ function MainCaseSection({ className, ...props }: MainCaseSectionProps) {
 	});
 
 	return (
-		<section className={cn(`relative flex md:px-12`, className)} {...props}>
+		<section className={cn(`relative flex lg:px-12`, className)} {...props}>
 			<CaseCard
-				className="md:hidden"
+				className="lg:hidden"
 				title="PEEK"
 				href="/project-peek"
 				src={MainCaseSectionCaseImg}
 			/>
 			<Image
 				ref={parentRef}
-				className="hidden rounded-2xl md:block"
+				className="hidden rounded-2xl lg:block"
 				src={MainCaseSectionCaseImg}
 				alt={"Main case section"}
 				style={{

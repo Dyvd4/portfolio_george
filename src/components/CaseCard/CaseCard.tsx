@@ -24,7 +24,7 @@ function CaseCard({ className, children, title, src, href, ...props }: CaseCardP
 			{...props}
 		>
 			<Image
-				className=" aspect-square transform rounded-xl object-cover md:rounded-2xl lg:aspect-auto lg:object-fill"
+				className="aspect-square transform rounded-xl object-cover md:aspect-auto md:rounded-2xl md:object-fill"
 				src={src}
 				alt={"case card"}
 			/>

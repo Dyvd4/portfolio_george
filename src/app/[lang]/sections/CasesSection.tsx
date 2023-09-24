@@ -24,11 +24,11 @@ function CasesSection({ className, ...props }: CasesSectionProps) {
 	return (
 		<section id="cases" className={cn(``, className)} {...props}>
 			{getTwoDArray(CASES, 2).map((cards, i) => (
-				<div className="flex flex-col gap-12 md:flex-row md:px-12" key={i}>
+				<div className="flex flex-col gap-12 lg:flex-row lg:px-12" key={i}>
 					{cards.map((caseCardProps, i) =>
 						i % 2 === 1 ? (
 							<CaseCard
-								className="flex flex-col md:pt-20"
+								className="flex flex-col lg:pt-20"
 								key={caseCardProps.title}
 								{...caseCardProps}
 							/>

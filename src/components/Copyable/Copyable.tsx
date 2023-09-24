@@ -25,7 +25,7 @@ function Copyable({ className, children, onClick, ...props }: CopyableProps) {
 			{...props}
 		>
 			<div ref={childrenRef}>{children}</div>
-			<div className="hidden items-start pt-4 md:flex">
+			<div className="hidden items-start pt-4 lg:flex">
 				<Copy />
 			</div>
 		</div>

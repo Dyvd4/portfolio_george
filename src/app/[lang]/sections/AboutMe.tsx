@@ -18,30 +18,30 @@ function AboutMeSection({ className, ...props }: AboutMeSectionProps) {
 		<section
 			className={cn(
 				`relative flex flex-col items-center gap-6 overflow-hidden
-                 px-4 py-[256px] md:min-h-screen md:px-[360px]
-				 md:py-[440px]`,
+                 px-4 py-[256px] xl:min-h-screen xl:px-[360px]
+				 xl:py-[440px]`,
 				className
 			)}
 			{...props}
 		>
-			<h1 className="text-center text-2xl !leading-[150%] tracking-[-0.36px] md:text-7xl">
+			<h1 className="text-center text-2xl !leading-[150%] tracking-[-0.36px] xl:text-7xl">
 				I empower companies through problem-solving and exceptional user experiences.
 			</h1>
 			<Link rel="noreferrer noopener" target={"_blank"} href={ABOUT_ME_HREF}>
 				<Button className="w-fit">More about me</Button>
 			</Link>
 			<Image
-				className="absolute left-4 top-10 h-20 w-[38px] md:left-[169.024px] md:top-[151.968px] md:h-[156px] md:w-[127px]"
+				className="absolute left-4 top-10 h-20 w-[38px] xl:left-[169.024px] xl:top-[151.968px] xl:h-[156px] xl:w-[127px]"
 				src={SpiralThreeImg}
 				alt="spiral 3"
 			/>
 			<Image
-				className="absolute -right-6 top-[144px] h-[70px] w-16 md:right-[48px] md:top-[379px] md:h-[125px] md:w-[132px]"
+				className="absolute -right-6 top-[144px] h-[70px] w-16 xl:right-[48px] xl:top-[379px] xl:h-[125px] xl:w-[132px]"
 				src={SpiralOneImg}
 				alt="spiral 1"
 			/>
 			<Image
-				className="absolute bottom-10 left-20 h-20 w-20 md:bottom-[128px] md:left-[560px] md:h-32 md:w-32"
+				className="absolute bottom-10 left-20 h-20 w-20 xl:bottom-[128px] xl:left-[560px] xl:h-32 xl:w-32"
 				src={DawnImg}
 				alt="dawn"
 			/>
