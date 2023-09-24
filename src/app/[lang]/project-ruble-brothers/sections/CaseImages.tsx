@@ -1,24 +1,19 @@
-import CaseImage from "@/components/CaseImage";
-import { cn } from "@/utils/component-utils";
-import { ComponentPropsWithRef } from "react";
-import LandingPageImg from "@/public/project-ruble-brothers/case-images/landing-page.png";
-import IphoneLandingPageImg from "@/public/project-ruble-brothers/case-images/iphone-landing-page.png";
-import IphoneLandingPage2Img from "@/public/project-ruble-brothers/case-images/iphone-landing-page-2.png";
-import DescriptionPageImg from "@/public/project-ruble-brothers/case-images/description-page.png";
+import CaseImage, { IphoneCaseImage } from "@/components/CaseImage";
+import CaseImages from "@/components/sections/CaseImagesSection";
+import IphoneCaseSection from "@/components/sections/IphoneCaseSection";
 import BankImg from "@/public/project-ruble-brothers/case-images/bank.png";
-import IphoneDescriptionPageImg from "@/public/project-ruble-brothers/case-images/iphone-description-page.png";
 import BenefitsPageImg from "@/public/project-ruble-brothers/case-images/benefits-page.png";
-import IphoneBenefitsPageImg from "@/public/project-ruble-brothers/case-images/iphone-benefits-page.png";
+import DescriptionPageImg from "@/public/project-ruble-brothers/case-images/description-page.png";
 import IphoneBenefitsPage2Img from "@/public/project-ruble-brothers/case-images/iphone-benefits-page-2.png";
+import IphoneBenefitsPageImg from "@/public/project-ruble-brothers/case-images/iphone-benefits-page.png";
+import IphoneDescriptionPageImg from "@/public/project-ruble-brothers/case-images/iphone-description-page.png";
+import IphoneLandingPage2Img from "@/public/project-ruble-brothers/case-images/iphone-landing-page-2.png";
+import IphoneLandingPageImg from "@/public/project-ruble-brothers/case-images/iphone-landing-page.png";
+import LandingPageImg from "@/public/project-ruble-brothers/case-images/landing-page.png";
 
-type _CaseImagesProps = {};
-
-export type CaseImagesProps = _CaseImagesProps &
-	Omit<ComponentPropsWithRef<"div">, keyof _CaseImagesProps>;
-
-function CaseImages({ className, ...props }: CaseImagesProps) {
+function RubleBrothersCaseImages() {
 	return (
-		<div className={cn(`flex flex-col gap-12 px-12`, className)} {...props}>
+		<CaseImages>
 			<section>
 				<CaseImage
 					imageProps={{
@@ -28,22 +23,20 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 					}}
 				/>
 			</section>
-			<section className="flex gap-12">
-				<CaseImage
-					className="flex-1 px-60 py-40"
+			<IphoneCaseSection>
+				<IphoneCaseImage
 					imageProps={{
 						src: IphoneLandingPageImg,
 						alt: "Iphone landing page",
 					}}
 				/>
-				<CaseImage
-					className="flex-1 px-60 py-40"
+				<IphoneCaseImage
 					imageProps={{
 						src: IphoneLandingPage2Img,
 						alt: "Iphone landing page part 2",
 					}}
 				/>
-			</section>
+			</IphoneCaseSection>
 			<section>
 				<CaseImage
 					imageProps={{
@@ -53,22 +46,20 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 					}}
 				/>
 			</section>
-			<section className="flex gap-12">
-				<CaseImage
-					className="flex-1 px-60 py-40"
+			<IphoneCaseSection>
+				<IphoneCaseImage
 					imageProps={{
 						src: BankImg,
 						alt: "Bank",
 					}}
 				/>
-				<CaseImage
-					className="flex-1 px-60 py-40"
+				<IphoneCaseImage
 					imageProps={{
 						src: IphoneDescriptionPageImg,
 						alt: "Iphone description page",
 					}}
 				/>
-			</section>
+			</IphoneCaseSection>
 			<section>
 				<CaseImage
 					imageProps={{
@@ -78,24 +69,22 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 					}}
 				/>
 			</section>
-			<section className="flex gap-12">
-				<CaseImage
-					className="flex-1 px-60 py-40"
+			<IphoneCaseSection>
+				<IphoneCaseImage
 					imageProps={{
 						src: IphoneBenefitsPageImg,
 						alt: "Iphone benefits page",
 					}}
 				/>
-				<CaseImage
-					className="flex-1 px-60 py-40"
+				<IphoneCaseImage
 					imageProps={{
 						src: IphoneBenefitsPage2Img,
 						alt: "Iphone benefits page 2",
 					}}
 				/>
-			</section>
-		</div>
+			</IphoneCaseSection>
+		</CaseImages>
 	);
 }
 
-export default CaseImages;
+export default RubleBrothersCaseImages;

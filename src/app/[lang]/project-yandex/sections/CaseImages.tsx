@@ -1,24 +1,19 @@
-import CaseImage from "@/components/CaseImage";
-import { cn } from "@/utils/component-utils";
-import { ComponentPropsWithRef } from "react";
-import LandingPageImg from "@/public/project-yandex/case-images/landing-page.png";
-import IphoneLandingPageImg from "@/public/project-yandex/case-images/iphone-landing-page.png";
-import IphoneLandingPage2Img from "@/public/project-yandex/case-images/iphone-landing-page-2.png";
+import CaseImage, { IphoneCaseImage } from "@/components/CaseImage";
+import CaseImages from "@/components/sections/CaseImagesSection";
+import IphoneCaseSection from "@/components/sections/IphoneCaseSection";
 import DescriptionPageImg from "@/public/project-yandex/case-images/description-page.png";
-import IphoneDescriptionPageImg from "@/public/project-yandex/case-images/iphone-description-page.png";
-import IphoneDescriptionPage2Img from "@/public/project-yandex/case-images/iphone-description-page-2.png";
 import DownloadPageImg from "@/public/project-yandex/case-images/download-page.png";
-import IphoneDownloadPageImg from "@/public/project-yandex/case-images/iphone-download-page.png";
+import IphoneDescriptionPage2Img from "@/public/project-yandex/case-images/iphone-description-page-2.png";
+import IphoneDescriptionPageImg from "@/public/project-yandex/case-images/iphone-description-page.png";
 import IphoneDownloadPage2Img from "@/public/project-yandex/case-images/iphone-download-page-2.png";
+import IphoneDownloadPageImg from "@/public/project-yandex/case-images/iphone-download-page.png";
+import IphoneLandingPage2Img from "@/public/project-yandex/case-images/iphone-landing-page-2.png";
+import IphoneLandingPageImg from "@/public/project-yandex/case-images/iphone-landing-page.png";
+import LandingPageImg from "@/public/project-yandex/case-images/landing-page.png";
 
-type _CaseImagesProps = {};
-
-export type CaseImagesProps = _CaseImagesProps &
-	Omit<ComponentPropsWithRef<"div">, keyof _CaseImagesProps>;
-
-function CaseImages({ className, ...props }: CaseImagesProps) {
+function YandexCaseImages() {
 	return (
-		<div className={cn(`flex flex-col gap-12 px-12`, className)} {...props}>
+		<CaseImages>
 			<section>
 				<CaseImage
 					imageProps={{
@@ -28,22 +23,20 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 					}}
 				/>
 			</section>
-			<section className="flex gap-12">
-				<CaseImage
-					className="flex-1 px-60 py-40"
+			<IphoneCaseSection>
+				<IphoneCaseImage
 					imageProps={{
 						src: IphoneLandingPageImg,
 						alt: "Iphone landing page",
 					}}
 				/>
-				<CaseImage
-					className="flex-1 px-60 py-40"
+				<IphoneCaseImage
 					imageProps={{
 						src: IphoneLandingPage2Img,
 						alt: "Iphone landing page part 2",
 					}}
 				/>
-			</section>
+			</IphoneCaseSection>
 			<section>
 				<CaseImage
 					imageProps={{
@@ -53,22 +46,20 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 					}}
 				/>
 			</section>
-			<section className="flex gap-12">
-				<CaseImage
-					className="flex-1 px-60 py-40"
+			<IphoneCaseSection>
+				<IphoneCaseImage
 					imageProps={{
 						src: IphoneDescriptionPageImg,
 						alt: "Iphone description page",
 					}}
 				/>
-				<CaseImage
-					className="flex-1 px-60 py-40"
+				<IphoneCaseImage
 					imageProps={{
 						src: IphoneDescriptionPage2Img,
 						alt: "Iphone description page 2",
 					}}
 				/>
-			</section>
+			</IphoneCaseSection>
 			<section>
 				<CaseImage
 					imageProps={{
@@ -78,24 +69,22 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 					}}
 				/>
 			</section>
-			<section className="flex gap-12">
-				<CaseImage
-					className="flex-1 px-60 py-40"
+			<IphoneCaseSection>
+				<IphoneCaseImage
 					imageProps={{
 						src: IphoneDownloadPageImg,
 						alt: "Iphone download page",
 					}}
 				/>
-				<CaseImage
-					className="flex-1 px-60 py-40"
+				<IphoneCaseImage
 					imageProps={{
 						src: IphoneDownloadPage2Img,
 						alt: "Iphone download page 2",
 					}}
 				/>
-			</section>
-		</div>
+			</IphoneCaseSection>
+		</CaseImages>
 	);
 }
 
-export default CaseImages;
+export default YandexCaseImages;

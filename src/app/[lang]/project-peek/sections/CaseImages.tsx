@@ -1,4 +1,5 @@
 import CaseImage, { IphoneCaseImage } from "@/components/CaseImage";
+import CaseImages from "@/components/sections/CaseImagesSection";
 import IphoneCaseSection from "@/components/sections/IphoneCaseSection";
 import PopupImg from "@/public/project-peek/case-images/Pop-up.png";
 import CaseVideoImg from "@/public/project-peek/case-images/case-video.svg";
@@ -13,17 +14,10 @@ import PeekMenuImg from "@/public/project-peek/case-images/peek-menu.png";
 import PickAnyColorImg from "@/public/project-peek/case-images/pick-any-color.png";
 import SpeakerImg from "@/public/project-peek/case-images/speaker.png";
 import YourCartImg from "@/public/project-peek/case-images/your-cart.png";
-import { cn } from "@/utils/component-utils";
-import { ComponentPropsWithRef } from "react";
 
-type _CaseImagesProps = {};
-
-export type CaseImagesProps = _CaseImagesProps &
-	Omit<ComponentPropsWithRef<"div">, keyof _CaseImagesProps>;
-
-function CaseImages({ className, ...props }: CaseImagesProps) {
+function PeekCaseImages() {
 	return (
-		<div className={cn(`flex flex-col gap-2 lg:gap-12 lg:px-12`, className)} {...props}>
+		<CaseImages>
 			<section>
 				<CaseImage
 					className="p-0"
@@ -121,8 +115,8 @@ function CaseImages({ className, ...props }: CaseImagesProps) {
 					}}
 				/>
 			</IphoneCaseSection>
-		</div>
+		</CaseImages>
 	);
 }
 
-export default CaseImages;
+export default PeekCaseImages;
