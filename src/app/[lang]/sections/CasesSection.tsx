@@ -4,14 +4,15 @@ import RubleBrothersImg from "@/public/case-images/Ruble-Brothers.png";
 import YandexMatchImg from "@/public/case-images/Yandex-Match.png";
 import { getTwoDArray } from "@/utils/array-utils";
 import { cn } from "@/utils/component-utils";
+import { getLocaleHref } from "@/utils/link-utils";
 import { ComponentPropsWithRef } from "react";
 
 const CASES: Array<_CaseCardProps> = [
-	{ title: "Yandex Match", src: YandexMatchImg, href: "/project-yandex" },
+	{ title: "Yandex Match", src: YandexMatchImg, href: getLocaleHref("/project-yandex") },
 	{
 		title: "Ruble Brothers",
 		src: RubleBrothersImg,
-		href: "/project-ruble-brothers",
+		href: getLocaleHref("/project-ruble-brothers"),
 	},
 ];
 

@@ -1,5 +1,6 @@
 import ArrowBottomLeft from "@/components/icons/ArrowBottomLeft";
 import { cn } from "@/utils/component-utils";
+import { getLocaleHref } from "@/utils/link-utils";
 import Image, { ImageProps } from "next/image";
 import Link from "next/link";
 import { ComponentPropsWithRef } from "react";
@@ -16,7 +17,7 @@ function ProjectFooter({ className, nextProjectHref, imageSrc, ...props }: Proje
 	return (
 		<footer className={cn(`pt-[256px] md:px-12 md:pt-[440px]`, className)} {...props}>
 			<Link
-				href={nextProjectHref}
+				href={getLocaleHref(nextProjectHref as `/${string}`)}
 				className="group flex cursor-pointer flex-col gap-4 md:gap-6"
 			>
 				<div className="group flex items-center justify-between gap-4 px-4 md:px-0">

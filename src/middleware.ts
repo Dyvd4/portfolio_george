@@ -1,7 +1,9 @@
 import { NextRequest } from "next/server";
 
-const DEFAULT_LOCALE = "en";
-const LOCALES = [DEFAULT_LOCALE, "ru"];
+export const ENGLISH_LOCALE = "en";
+export const RUSSIAN_LOCALE = "ru";
+export const DEFAULT_LOCALE = ENGLISH_LOCALE;
+export const LOCALES = [DEFAULT_LOCALE, RUSSIAN_LOCALE];
 
 function getLocale(request: NextRequest) {
 	return request.headers["Accept-Language"] || DEFAULT_LOCALE;

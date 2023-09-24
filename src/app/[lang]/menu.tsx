@@ -3,6 +3,7 @@
 import menuIsActiveAtom from "@/atoms/menuIsActiveAtom";
 import SocialLinks from "@/components/SocialLinks";
 import { cn } from "@/utils/component-utils";
+import { getLocaleHref } from "@/utils/link-utils";
 import { useAtom } from "jotai";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -15,7 +16,7 @@ export const ABOUT_ME_HREF =
 const LINKS: Array<Link> = [
 	{
 		title: "Work",
-		href: "/#cases",
+		href: getLocaleHref("/#cases"),
 	},
 	{
 		title: "About me",
@@ -24,11 +25,11 @@ const LINKS: Array<Link> = [
 	},
 	{
 		title: "F.A.Q",
-		href: "/#faqs",
+		href: getLocaleHref("/#faqs"),
 	},
 	{
 		title: "Contact me",
-		href: "/#footer",
+		href: getLocaleHref("/#footer"),
 	},
 ];
 
