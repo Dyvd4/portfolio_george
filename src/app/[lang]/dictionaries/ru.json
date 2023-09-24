@@ -1,5 +1,7 @@
 {
-	"products": {
-		"cart": "Add to Cart"
+	"pages": {
+		"main": {
+			"AboutMeSectionDescription": "Я решаю проблемы бизнеса и пользователей через исключительный UX."
+		}
 	}
 }

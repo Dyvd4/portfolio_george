@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ComponentPropsWithRef } from "react";
 import { ABOUT_ME_HREF } from "../menu";
+import useDictionary from "@/hooks/useDictionary";
 
 type _AboutMeSectionProps = {};
 
@@ -14,6 +15,11 @@ export type AboutMeSectionProps = _AboutMeSectionProps &
 	Omit<ComponentPropsWithRef<"section">, keyof _AboutMeSectionProps>;
 
 function AboutMeSection({ className, ...props }: AboutMeSectionProps) {
+	const {
+		pages: {
+			main: { AboutMeSectionDescription },
+		},
+	} = useDictionary();
 	return (
 		<section
 			className={cn(
@@ -25,7 +31,7 @@ function AboutMeSection({ className, ...props }: AboutMeSectionProps) {
 			{...props}
 		>
 			<h1 className="text-center text-2xl !leading-[150%] tracking-[-0.36px] xl:text-7xl">
-				I empower companies through problem-solving and exceptional user experiences.
+				{AboutMeSectionDescription}
 			</h1>
 			<Link rel="noreferrer noopener" target={"_blank"} href={ABOUT_ME_HREF}>
 				<Button className="w-fit">More about me</Button>

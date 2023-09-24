@@ -1,5 +1,7 @@
 {
-	"products": {
-		"cart": "Toevoegen aan Winkelwagen"
+	"pages": {
+		"main": {
+			"AboutMeSectionDescription": "I empower companies through problem-solving and exceptional user experiences."
+		}
 	}
 }
