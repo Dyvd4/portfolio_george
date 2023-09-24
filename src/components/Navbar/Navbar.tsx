@@ -2,6 +2,7 @@
 
 import menuIsActiveAtom from "@/atoms/menuIsActiveAtom";
 import Logo from "@/components/Logo";
+import ButtonLanguage from "@/components/buttons/ButtonLanguage";
 import { cn } from "@/utils/component-utils";
 import { useAtom } from "jotai";
 import { ComponentPropsWithRef, PropsWithChildren } from "react";
@@ -17,7 +18,10 @@ function Navbar({ className, children, ...props }: NavbarProps) {
 	return (
 		<nav className={cn(`fixed z-50 w-full p-4 md:px-12 md:py-8`, className)} {...props}>
 			<div className="flex w-full justify-between">
-				<Logo />
+				<div className="flex items-center gap-6 lg:gap-8">
+					<Logo />
+					<ButtonLanguage />
+				</div>
 				<div
 					onClick={() => setMenuIsActive((isActive) => !isActive)}
 					className="text-primary cursor-pointer text-base md:text-lg"
