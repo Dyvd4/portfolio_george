@@ -1,40 +1,29 @@
-import Button from "@/components/buttons/Button";
-import { cn } from "@/utils/component-utils";
-import Image from "next/image";
-import { ComponentPropsWithRef } from "react";
+import ProjectHeroSection from "@/components/Project/ProjectHeroSection";
 import LogotypeImg from "@/public/project-ruble-brothers/Logotype.svg";
+import Image from "next/image";
 
-type _HeroSectionProps = {};
-
-export type HeroSectionProps = _HeroSectionProps &
-	Omit<ComponentPropsWithRef<"section">, keyof _HeroSectionProps>;
-
-function HeroSection({ className, ...props }: HeroSectionProps) {
+function HeroSection() {
 	return (
-		<section
-			className={cn(`flex h-screen flex-col justify-between px-12 pb-10 pt-28`, className)}
-			{...props}
-		>
-			<Image
-				priority
-				alt="Logotype"
-				src={LogotypeImg}
-				style={{
-					width: "100%",
-				}}
-			/>
-			<div className="flex justify-between">
-				<p className="text-lg">
+		<ProjectHeroSection
+			image={
+				<Image
+					priority
+					alt="Logotype"
+					src={LogotypeImg}
+					style={{
+						width: "100%",
+					}}
+				/>
+			}
+			description={
+				<>
 					Presenting a money exchange landing page design that is intuitive,
 					<br />
 					user-friendly, and modern. Our design will make it easy for customers <br />
 					to quickly and securely exchange money.
-				</p>
-				<div className="flex flex-col justify-end">
-					<Button disabled>Visit the website</Button>
-				</div>
-			</div>
-		</section>
+				</>
+			}
+		/>
 	);
 }
 
