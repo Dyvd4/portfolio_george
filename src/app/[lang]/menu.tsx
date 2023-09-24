@@ -3,7 +3,7 @@
 import menuIsActiveAtom from "@/atoms/menuIsActiveAtom";
 import SocialLinks from "@/components/SocialLinks";
 import { cn } from "@/utils/component-utils";
-import { getLocaleHref } from "@/utils/link-utils";
+import { getLocaleHref } from "@/utils/locale-utils";
 import { useAtom } from "jotai";
 import Link from "next/link";
 import { useRouter } from "next/navigation";

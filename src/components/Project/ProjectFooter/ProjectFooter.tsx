@@ -1,6 +1,6 @@
 import ArrowBottomLeft from "@/components/icons/ArrowBottomLeft";
 import { cn } from "@/utils/component-utils";
-import { getLocaleHref } from "@/utils/link-utils";
+import { getLocaleHref } from "@/utils/locale-utils";
 import Image, { ImageProps } from "next/image";
 import Link from "next/link";
 import { ComponentPropsWithRef } from "react";

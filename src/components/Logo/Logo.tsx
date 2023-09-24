@@ -1,6 +1,6 @@
 import menuIsActiveAtom from "@/atoms/menuIsActiveAtom";
 import LogoImg from "@/public/Logo.svg";
-import { getLocaleHref } from "@/utils/link-utils";
+import { getLocaleHref } from "@/utils/locale-utils";
 import { useAtom } from "jotai";
 import Image from "next/image";
 import Link from "next/link";

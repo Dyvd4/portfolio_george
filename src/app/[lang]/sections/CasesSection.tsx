@@ -4,7 +4,7 @@ import RubleBrothersImg from "@/public/case-images/Ruble-Brothers.png";
 import YandexMatchImg from "@/public/case-images/Yandex-Match.png";
 import { getTwoDArray } from "@/utils/array-utils";
 import { cn } from "@/utils/component-utils";
-import { getLocaleHref } from "@/utils/link-utils";
+import { getLocaleHref } from "@/utils/locale-utils";
 import { ComponentPropsWithRef } from "react";
 
 const CASES: Array<_CaseCardProps> = [
