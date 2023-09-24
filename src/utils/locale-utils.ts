@@ -4,7 +4,7 @@ export const getCurrentLocale = () => {
 	return LOCALES.find(
 		(locale) =>
 			window.location.pathname.startsWith(`/${locale}/`) ||
-			window.location.pathname.startsWith(`/${locale}`)
+			window.location.pathname.startsWith(`/${locale}`)!
 	);
 };
 

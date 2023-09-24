@@ -5,5 +5,5 @@ const dictionaries = {
 	en,
 	ru,
 };
-
-export const getDictionary = (locale: keyof typeof dictionaries) => dictionaries[locale];
+export type Locales = keyof typeof dictionaries;
+export const getDictionary = (locale: Locales) => dictionaries[locale];
