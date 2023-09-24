@@ -4,10 +4,12 @@ import { cn } from "@/utils/component-utils";
 function Page(props) {
 	return (
 		<div
-			className={cn(`flex flex-col gap-6 pb-[440px] pl-[440px] pr-[440px] pt-[256px]`)}
+			className={cn(
+				`flex flex-col gap-6 px-4 pb-[256px] pt-16 lg:pb-[440px] lg:pl-[440px] lg:pr-[440px] lg:pt-[256px]`
+			)}
 			{...props}
 		>
-			<h1 className="text-7xl leading-[150%]">Privacy Policy</h1>
+			<h1 className="text-[32px] leading-[150%] lg:text-7xl">Privacy Policy</h1>
 			<p>
 				1. Общие положения
 				<br />
