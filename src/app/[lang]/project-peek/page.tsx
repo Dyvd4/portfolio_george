@@ -1,6 +1,6 @@
 "use client";
 
-import ProjectFooter from "@/components/ProjectFooter";
+import ProjectFooter from "@/components/Project/ProjectFooter";
 import { cn } from "@/utils/component-utils";
 import CaseImages from "./sections/CaseImages";
 import HeroSection from "./sections/HeroSection";
