@@ -21,7 +21,7 @@ function ModalHeader({ className, children, ...props }: ModalHeaderProps) {
 	};
 	return (
 		<h1
-			className={cn(`flex w-[576px] items-center justify-between text-2xl`, className)}
+			className={cn(`flex items-center justify-between text-2xl md:min-w-[576px]`, className)}
 			{...props}
 		>
 			{children}

@@ -15,7 +15,7 @@ function Navbar({ className, children, ...props }: NavbarProps) {
 	const [menuIsActive, setMenuIsActive] = useAtom(menuIsActiveAtom);
 	const menuTitle = !menuIsActive ? "Menu" : "Close";
 	return (
-		<nav className={cn(`fixed z-50 w-full px-12 py-8`, className)} {...props}>
+		<nav className={cn(`fixed z-50 w-full p-4 md:px-12 md:py-8`, className)} {...props}>
 			<div className="flex w-full justify-between">
 				<Logo />
 				<div

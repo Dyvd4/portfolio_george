@@ -1,8 +1,8 @@
 import { cn } from "@/utils/component-utils";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import { ComponentPropsWithRef, PropsWithChildren } from "react";
 import { ArrowRight } from "../icons";
-import Link from "next/link";
 
 export type _CaseCardProps = {
 	title: string;
@@ -16,17 +16,24 @@ export type CaseCardProps = _CaseCardProps &
 function CaseCard({ className, children, title, src, href, ...props }: CaseCardProps) {
 	return (
 		<Link
-			className={cn(`group flex flex-1 cursor-pointer flex-col items-start gap-4`, className)}
+			className={cn(
+				`group flex flex-1 cursor-pointer flex-col items-start gap-2 md:gap-4`,
+				className
+			)}
 			href={href}
 			{...props}
 		>
-			<Image className="transform rounded-2xl" src={src} alt={"case card"} />
+			<Image
+				className=" aspect-square transform rounded-xl object-cover md:rounded-2xl lg:aspect-auto lg:object-fill"
+				src={src}
+				alt={"case card"}
+			/>
 			<h3
-				className="group-hover:text-primary text-tertiary flex cursor-pointer
-							items-center gap-2 text-2xl transition-all duration-150"
+				className="group-hover:text-primary text-tertiary flex cursor-pointer items-center gap-2
+							pl-3 text-lg transition-all duration-150 md:pl-0 md:text-2xl"
 			>
 				{title}
-				<ArrowRight className="-rotate-45 [&>path]:transition-all" />
+				<ArrowRight className="h-6 w-6 -rotate-45 md:h-8 md:w-8 [&>path]:transition-all" />
 			</h3>
 		</Link>
 	);

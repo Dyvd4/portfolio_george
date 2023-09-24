@@ -1,8 +1,8 @@
 "use client";
 
+import { Copy } from "@/components/icons";
 import { cn } from "@/utils/component-utils";
 import { ComponentPropsWithRef, PropsWithChildren, useRef } from "react";
-import { Copy } from "@/components/icons";
 
 type _CopyableProps = {
 	onClick?(copiedText: string): void;
@@ -25,7 +25,7 @@ function Copyable({ className, children, onClick, ...props }: CopyableProps) {
 			{...props}
 		>
 			<div ref={childrenRef}>{children}</div>
-			<div className="flex items-start pt-4">
+			<div className="hidden items-start pt-4 md:flex">
 				<Copy />
 			</div>
 		</div>

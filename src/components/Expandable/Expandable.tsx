@@ -23,15 +23,15 @@ function Expandable({ className, children, title, description, ...props }: Expan
 			ref={(ref) => ref && autoAnimate(ref)}
 			onClick={toggleIsExpanded}
 			className={cn(
-				`expandable
-				border-1 border-tertiary hover:border-primary group
-				flex w-[576px] cursor-pointer flex-col
-				gap-4 rounded-lg border p-6 text-xl`,
+				`expandable border-1 border-tertiary
+				hover:border-primary group z-10 flex
+				cursor-pointer flex-col gap-4
+				rounded-lg border p-4 md:w-[576px] md:p-6 md:text-xl`,
 				className
 			)}
 			{...props}
 		>
-			<div className="flex items-center justify-between">
+			<div className="flex items-center justify-between gap-8">
 				<h1>{title}</h1>
 				<ArrowDownCircle
 					className={classNames({

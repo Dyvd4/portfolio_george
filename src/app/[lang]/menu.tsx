@@ -68,7 +68,7 @@ function Menu({ className, children, ...props }: MenuProps) {
 				className="flex w-[1200px] flex-col items-center justify-between 
 			sm:px-0 md:flex-row md:items-end md:px-20 xl:p-0"
 			>
-				<ul className="flex flex-col gap-6 text-6xl leading-[150%] md:gap-8 md:text-8xl">
+				<ul className="flex flex-col gap-6 text-3xl leading-[150%] md:gap-8 md:text-8xl">
 					{LINKS.map(({ href, title, target }) => (
 						<li
 							key={href}
@@ -93,9 +93,6 @@ function Menu({ className, children, ...props }: MenuProps) {
 				<div className="mb-5 hidden items-end md:flex">
 					<SocialLinks />
 				</div>
-			</div>
-			<div className="absolute bottom-0 mx-auto pb-24 md:hidden">
-				<SocialLinks />
 			</div>
 		</div>
 	);

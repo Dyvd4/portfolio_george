@@ -24,8 +24,8 @@ function Modal({ className, children, ...props }: ModalProps) {
 		createPortal(
 			<div
 				className={cn(
-					`border-1 absolute z-50 scale-0 transform rounded-2xl border border-[#111]
-				bg-[#050505] pb-8 pl-8 pr-8 pt-6 transition-transform duration-500 ease-in-out`,
+					`border-1 absolute z-50 m-4 scale-0 transform rounded-2xl border border-[#111] bg-[#050505]
+				pb-8 pl-8 pr-8 pt-6 transition-transform duration-500 ease-in-out md:m-0`,
 					{
 						"scale-100": !!modalIsActive,
 					},

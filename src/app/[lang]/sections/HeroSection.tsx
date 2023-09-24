@@ -15,41 +15,65 @@ function HeroSection({ className, ...props }: HeroSectionProps) {
 	return (
 		<section
 			className={cn(
-				`relative flex min-h-screen flex-col items-center
-                 justify-center gap-6`,
+				`relative flex flex-col items-center justify-center gap-6 px-4 pb-16 pt-32 md:min-h-screen
+                 md:px-0 md:py-0`,
 				className
 			)}
 			{...props}
 		>
 			<div
 				className="flex flex-col items-start justify-center 
-                            text-9xl leading-[130%] tracking-[-1.28px]"
+                            text-3xl !leading-[130%] tracking-[-1.28px] md:text-9xl"
 			>
 				<h1>
-					Crafting <i className="pr-4">friendly</i> and
+					Crafting <i className="pr-2 md:pr-4">friendly</i> and
 				</h1>
-				<h1 className="flex items-center gap-12 pl-4">
+				<h1 className="flex items-center gap-3 pl-4 md:gap-12">
 					<Image
+						className="md:hidden"
+						width={26}
+						height={26}
 						style={{
 							filter: "drop-shadow(0px 12px 64px rgba(96, 83, 248, 0.64))",
 						}}
-						className="pt-4"
+						src={HeroSectionSmileImg}
+						alt="smile"
+					/>
+					<Image
+						className="hidden pt-4 md:inline"
+						width={98}
+						height={98}
+						style={{
+							filter: "drop-shadow(0px 12px 64px rgba(96, 83, 248, 0.64))",
+						}}
 						src={HeroSectionSmileImg}
 						alt="smile"
 					/>
 					<div>
-						<i className="pr-4">intuitive</i> interfaces
+						<i className="pr-2 md:pr-4">intuitive</i> interfaces
 					</div>
 				</h1>
-				<h1 className="flex items-center gap-12">
+				<h1 className="flex items-center gap-3 md:gap-12">
 					<div>
-						with <i className="pr-4">creative</i> flair
+						with <i className="pr-2 md:pr-4">creative</i> flair
 					</div>
 					<Image
+						className="pt-2 md:hidden"
+						width={46}
+						height={22}
 						style={{
 							filter: "drop-shadow(0px 12px 64px rgba(96, 83, 248, 0.64))",
 						}}
-						className="pt-6"
+						src={HeroSectionSwitchImg}
+						alt="switch"
+					/>
+					<Image
+						className="hidden pt-6 md:inline"
+						width={170}
+						height={80}
+						style={{
+							filter: "drop-shadow(0px 12px 64px rgba(96, 83, 248, 0.64))",
+						}}
 						src={HeroSectionSwitchImg}
 						alt="switch"
 					/>

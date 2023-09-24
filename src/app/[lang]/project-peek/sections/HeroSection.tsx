@@ -1,8 +1,8 @@
 import Button from "@/components/buttons/Button";
+import LogotypeImg from "@/public/project-peek/Logotype.svg";
 import { cn } from "@/utils/component-utils";
 import Image from "next/image";
 import { ComponentPropsWithRef } from "react";
-import LogotypeImg from "@/public/project-peek/Logotype.svg";
 
 type _HeroSectionProps = {};
 
