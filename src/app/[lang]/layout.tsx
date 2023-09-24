@@ -39,7 +39,7 @@ export default function RootLayout({ children, params }: { children: React.React
 		<html lang={params.lang}>
 			<head>
 				<title>Portfolio</title>
-				<link rel="icon" href="/Favicon.svg" type="image/x-icon" />
+				<link rel="icon" href="/en/Favicon.svg" type="image/x-icon" />
 			</head>
 			<JotaiProvider>
 				<body className={matterFont.className}>
