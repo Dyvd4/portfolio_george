@@ -13,7 +13,10 @@ export type ProjectHeroSectionProps = _ProjectHeroSectionProps &
 function ProjectHeroSection({ className, image, description, ...props }: ProjectHeroSectionProps) {
 	return (
 		<section
-			className={cn(`flex h-screen flex-col justify-between px-12 pb-10 pt-28`, className)}
+			className={cn(
+				`flex h-screen flex-col justify-between px-4 pb-10 pt-20 lg:px-12 lg:pt-28`,
+				className
+			)}
 			{...props}
 		>
 			{image}
