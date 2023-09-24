@@ -1,10 +1,14 @@
 import { LOCALES } from "@/middleware";
 
-export const getLocaleHref = (href: `/${string}`) => {
-	const currentLocale = LOCALES.find(
+export const getCurrentLocale = () => {
+	return LOCALES.find(
 		(locale) =>
 			window.location.pathname.startsWith(`/${locale}/`) ||
 			window.location.pathname.startsWith(`/${locale}`)
 	);
-	return `/${currentLocale}${href}`;
+};
+
+export const getLocaleHref = (href: `/${string}`): string => {
+	if (typeof window === "undefined") return "";
+	return `/${getCurrentLocale()}${href}`;
 };

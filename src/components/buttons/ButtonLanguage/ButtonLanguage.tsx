@@ -3,6 +3,7 @@ import EnFlag from "@/public/en-flag.svg";
 import RuFlag from "@/public/ru-flag.svg";
 import { cn } from "@/utils/component-utils";
 import Image, { ImageProps } from "next/image";
+import { useEffect, useState } from "react";
 
 type _ButtonLanguageProps = {};
 
@@ -10,7 +11,11 @@ export type ButtonLanguageProps = _ButtonLanguageProps &
 	Omit<ImageProps, keyof _ButtonLanguageProps | "src" | "alt">;
 
 function ButtonLanguage({ className, ...props }: ButtonLanguageProps) {
-	const isEnglishLocale = window.location.pathname.includes(ENGLISH_LOCALE);
+	const [isEnglishLocale, setIsEnglishLocale] = useState(false);
+
+	useEffect(() => {
+		setIsEnglishLocale(window.location.pathname.includes(ENGLISH_LOCALE));
+	}, []);
 
 	const switchLocale = () => {
 		window.location.pathname = window.location.pathname.replace(
