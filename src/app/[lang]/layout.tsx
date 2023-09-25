@@ -9,6 +9,7 @@ import ModalPortal from "./modal-portal";
 import { Toaster } from "react-hot-toast";
 import ButtonCursor from "@/components/buttons/ButtonCursor";
 import config from "@/app/[lang]/config";
+import { Locales } from "./dictionaries";
 
 const { BASE_URL } = config;
 
@@ -34,7 +35,13 @@ export const metadata: Metadata = {
 	metadataBase: new URL(BASE_URL),
 };
 
-export default function RootLayout({ children, params }: { children: React.ReactNode; params }) {
+export default function RootLayout({
+	children,
+	params,
+}: {
+	children: React.ReactNode;
+	params: { lang: Locales };
+}) {
 	return (
 		<html lang={params.lang}>
 			<head>
@@ -45,10 +52,10 @@ export default function RootLayout({ children, params }: { children: React.React
 				<body className={matterFont.className}>
 					<ButtonCursor />
 					<div className="min-h-screen">
-						<Navbar />
+						<Navbar lang={params.lang} />
 						<main>{children}</main>
 					</div>
-					<Footer />
+					<Footer lang={params.lang} />
 					<Menu />
 					<ModalPortal />
 					<Toaster

@@ -7,6 +7,7 @@ import { getTwoDArray } from "@/utils/array-utils";
 import { cn } from "@/utils/component-utils";
 import { getLocaleHref } from "@/utils/locale-utils";
 import { ComponentPropsWithRef } from "react";
+import { Locales } from "@/app/[lang]/dictionaries";
 
 const CASES: Array<_CaseCardProps> = [
 	{ title: "Yandex Match", src: YandexMatchImg, href: getLocaleHref("/project-yandex") },
@@ -17,13 +18,15 @@ const CASES: Array<_CaseCardProps> = [
 	},
 ];
 
-type _CasesSectionProps = {};
+type _CasesSectionProps = {
+	lang: Locales;
+};
 
 export type CasesSectionProps = _CasesSectionProps &
 	Omit<ComponentPropsWithRef<"section">, keyof _CasesSectionProps>;
 
-function CasesSection({ className, ...props }: CasesSectionProps) {
-	const dict = useDictionary();
+function CasesSection({ lang: currentLocale, className, ...props }: CasesSectionProps) {
+	const dict = useDictionary(currentLocale);
 	return (
 		<section id="cases" className={cn(``, className)} {...props}>
 			{getTwoDArray(CASES, 2).map((cards, i) => (

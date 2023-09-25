@@ -8,8 +8,9 @@ import HeroSection from "./sections/HeroSection";
 import MainCaseSection from "./sections/MainCaseSection";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { Locales } from "./dictionaries";
 
-export default function Home() {
+export default function Home({ params: { lang } }: { params: { lang: Locales } }) {
 	const [footerIsActive] = useFooter({ disable: false });
 	const router = useRouter();
 
@@ -19,11 +20,11 @@ export default function Home() {
 
 	return (
 		<>
-			<HeroSection />
+			<HeroSection lang={lang} />
 			<MainCaseSection />
-			<AboutMeSection />
-			<CasesSection />
-			<FaqSection />
+			<AboutMeSection lang={lang} />
+			<CasesSection lang={lang} />
+			<FaqSection lang={lang} />
 		</>
 	);
 }

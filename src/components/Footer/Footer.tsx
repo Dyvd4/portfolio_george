@@ -12,20 +12,23 @@ import { ComponentPropsWithRef, PropsWithChildren } from "react";
 import { toast } from "react-hot-toast";
 import ContactModal from "../Modals/ContactModal";
 import useDictionary from "@/hooks/useDictionary";
+import { Locales } from "@/app/[lang]/dictionaries";
 
-type _FooterProps = {};
+type _FooterProps = {
+	lang: Locales;
+};
 
 export type FooterProps = _FooterProps &
 	Omit<PropsWithChildren<ComponentPropsWithRef<"footer">>, keyof _FooterProps>;
 
-function Footer({ className, children, ...props }: FooterProps) {
+function Footer({ lang, className, children, ...props }: FooterProps) {
 	const [, setModalIsActive] = useAtom(modalIsActiveAtom);
 	const [footerIsActive] = useAtom(footerIsActiveAtom);
 	const {
 		pages: {
 			main: { ContactForm },
 		},
-	} = useDictionary();
+	} = useDictionary(lang);
 	const handleCopyClick = () => toast.success("Copied");
 
 	return !!footerIsActive ? (
@@ -45,13 +48,13 @@ function Footer({ className, children, ...props }: FooterProps) {
 				</div>
 				<div className="hidden items-center justify-between px-12 py-8 lg:flex">
 					<SocialLinks className="gap-8" />
-					<DevSign />
+					<DevSign lang={lang} />
 					<div className="text-secondary text-sm">© 2023 George Palkin</div>
 				</div>
 				<div className="flex flex-col items-center gap-10 px-4 py-8 lg:hidden lg:flex-row lg:gap-0">
 					<SocialLinks className="gap-8" />
 					<div className="flex flex-col items-center gap-2 lg:flex-row lg:justify-between">
-						<DevSign />
+						<DevSign lang={lang} />
 						<div className="text-secondary text-sm">© 2023 George Palkin</div>
 					</div>
 				</div>

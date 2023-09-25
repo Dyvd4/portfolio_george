@@ -8,18 +8,21 @@ import Link from "next/link";
 import { ComponentPropsWithRef } from "react";
 import { ABOUT_ME_HREF } from "../menu";
 import useDictionary from "@/hooks/useDictionary";
+import { Locales } from "@/app/[lang]/dictionaries";
 
-type _AboutMeSectionProps = {};
+type _AboutMeSectionProps = {
+	lang: Locales;
+};
 
 export type AboutMeSectionProps = _AboutMeSectionProps &
 	Omit<ComponentPropsWithRef<"section">, keyof _AboutMeSectionProps>;
 
-function AboutMeSection({ className, ...props }: AboutMeSectionProps) {
+function AboutMeSection({ lang: currentLocale, className, ...props }: AboutMeSectionProps) {
 	const {
 		pages: {
 			main: { AboutMeSectionDescription },
 		},
-	} = useDictionary();
+	} = useDictionary(currentLocale);
 	return (
 		<section
 			className={cn(

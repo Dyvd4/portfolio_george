@@ -6,18 +6,21 @@ import TransparencyImg from "@/public/Transparency.svg";
 import { cn } from "@/utils/component-utils";
 import Image from "next/image";
 import { ComponentPropsWithRef } from "react";
+import { Locales } from "@/app/[lang]/dictionaries";
 
-type _FaqSectionProps = {};
+type _FaqSectionProps = {
+	lang: Locales;
+};
 
 export type FaqSectionProps = _FaqSectionProps &
 	Omit<ComponentPropsWithRef<"section">, keyof _FaqSectionProps>;
 
-function FaqSection({ className, children, ...props }: FaqSectionProps) {
+function FaqSection({ lang: currentLocale, className, children, ...props }: FaqSectionProps) {
 	const {
 		pages: {
 			main: { faqs, faqsTitle },
 		},
-	} = useDictionary();
+	} = useDictionary(currentLocale);
 	return (
 		<>
 			<section

@@ -1,7 +1,6 @@
 import { Locales, getDictionary } from "@/app/[lang]/dictionaries";
-import { getCurrentLocale } from "@/utils/locale-utils";
 
-const useDictionary = () => {
-	return getDictionary(getCurrentLocale() as Locales);
+const useDictionary = (lang: Locales) => {
+	return getDictionary(lang);
 };
 export default useDictionary;
