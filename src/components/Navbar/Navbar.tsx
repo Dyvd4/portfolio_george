@@ -23,7 +23,7 @@ function Navbar({ lang, className, children, ...props }: NavbarProps) {
 			<div className="flex w-full justify-between">
 				<div className="flex items-center gap-6 lg:gap-8">
 					<Logo lang={lang} />
-					<ButtonLanguage />
+					<ButtonLanguage lang={lang} />
 				</div>
 				<div
 					onClick={() => setMenuIsActive((isActive) => !isActive)}
