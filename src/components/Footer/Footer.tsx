@@ -11,6 +11,7 @@ import { useAtom } from "jotai";
 import { ComponentPropsWithRef, PropsWithChildren } from "react";
 import { toast } from "react-hot-toast";
 import ContactModal from "../Modals/ContactModal";
+import useDictionary from "@/hooks/useDictionary";
 
 type _FooterProps = {};
 
@@ -20,7 +21,11 @@ export type FooterProps = _FooterProps &
 function Footer({ className, children, ...props }: FooterProps) {
 	const [, setModalIsActive] = useAtom(modalIsActiveAtom);
 	const [footerIsActive] = useAtom(footerIsActiveAtom);
-
+	const {
+		pages: {
+			main: { ContactForm },
+		},
+	} = useDictionary();
 	const handleCopyClick = () => toast.success("Copied");
 
 	return !!footerIsActive ? (
@@ -36,7 +41,7 @@ function Footer({ className, children, ...props }: FooterProps) {
 							hello@itsgeorge.com
 						</h1>
 					</Copyable>
-					<Button onClick={() => setModalIsActive(true)}>Contact form</Button>
+					<Button onClick={() => setModalIsActive(true)}>{ContactForm}</Button>
 				</div>
 				<div className="hidden items-center justify-between px-12 py-8 lg:flex">
 					<SocialLinks className="gap-8" />

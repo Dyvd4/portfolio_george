@@ -5,6 +5,9 @@ import Link from "next/link";
 import { ComponentPropsWithRef } from "react";
 import HeroSectionSmileImg from "@/public/hero-section_1st-row_smile.svg";
 import HeroSectionSwitchImg from "@/public/hero-section_2nd-row_switch.svg";
+import useDictionary from "@/hooks/useDictionary";
+import { getCurrentLocale } from "@/utils/locale-utils";
+import { ENGLISH_LOCALE } from "@/middleware";
 
 type _HeroSectionProps = {};
 
@@ -12,6 +15,12 @@ export type HeroSectionProps = _HeroSectionProps &
 	Omit<ComponentPropsWithRef<"section">, keyof _HeroSectionProps>;
 
 function HeroSection({ className, ...props }: HeroSectionProps) {
+	const {
+		pages: {
+			main: { StartAProject },
+		},
+	} = useDictionary();
+	const isEnglishLocale = getCurrentLocale() === ENGLISH_LOCALE;
 	return (
 		<section
 			className={cn(
@@ -26,7 +35,12 @@ function HeroSection({ className, ...props }: HeroSectionProps) {
                             text-3xl !leading-[130%] tracking-[-1.28px] xl:text-9xl"
 			>
 				<h1>
-					Crafting <i className="pr-2 xl:pr-4">friendly</i> and
+					{!!isEnglishLocale && (
+						<>
+							Crafting <i className="pr-2 xl:pr-4">friendly</i> and
+						</>
+					)}
+					{!isEnglishLocale && <>Создаю уникальные</>}
 				</h1>
 				<h1 className="flex items-center gap-3 pl-4 xl:gap-12">
 					<Image
@@ -50,12 +64,22 @@ function HeroSection({ className, ...props }: HeroSectionProps) {
 						alt="smile"
 					/>
 					<div>
-						<i className="pr-2 xl:pr-4">intuitive</i> interfaces
+						{!!isEnglishLocale && (
+							<>
+								<i className="pr-2 xl:pr-4">intuitive</i> interfaces
+							</>
+						)}
+						{!isEnglishLocale && <>и конверсионные</>}
 					</div>
 				</h1>
 				<h1 className="flex items-center gap-3 xl:gap-12">
 					<div>
-						with <i className="pr-2 xl:pr-4">creative</i> flair
+						{!!isEnglishLocale && (
+							<>
+								with <i className="pr-2 xl:pr-4">creative</i> flair
+							</>
+						)}
+						{!isEnglishLocale && <>дизайн-проекты</>}
 					</div>
 					<Image
 						className="pt-2 xl:hidden"
@@ -80,7 +104,7 @@ function HeroSection({ className, ...props }: HeroSectionProps) {
 				</h1>
 			</div>
 			<Link href={"#footer"}>
-				<Button>Start a project</Button>
+				<Button>{StartAProject}</Button>
 			</Link>
 		</section>
 	);
