@@ -1,13 +1,13 @@
 import Button from "@/components/buttons/Button";
-import { cn } from "@/utils/component-utils";
-import Image from "next/image";
-import Link from "next/link";
-import { ComponentPropsWithRef } from "react";
+import useDictionary from "@/hooks/useDictionary";
+import { ENGLISH_LOCALE } from "@/middleware";
 import HeroSectionSmileImg from "@/public/hero-section_1st-row_smile.svg";
 import HeroSectionSwitchImg from "@/public/hero-section_2nd-row_switch.svg";
-import useDictionary from "@/hooks/useDictionary";
+import { cn } from "@/utils/component-utils";
 import { getCurrentLocale } from "@/utils/locale-utils";
-import { ENGLISH_LOCALE } from "@/middleware";
+import Image from "next/image";
+import Link from "next/link";
+import { ComponentPropsWithRef, useEffect, useState } from "react";
 
 type _HeroSectionProps = {};
 
@@ -15,12 +15,17 @@ export type HeroSectionProps = _HeroSectionProps &
 	Omit<ComponentPropsWithRef<"section">, keyof _HeroSectionProps>;
 
 function HeroSection({ className, ...props }: HeroSectionProps) {
+	const [isEnglishLocale, setIsEnglishLocale] = useState(false);
 	const {
 		pages: {
 			main: { StartAProject },
 		},
 	} = useDictionary();
-	const isEnglishLocale = getCurrentLocale() === ENGLISH_LOCALE;
+
+	useEffect(() => {
+		setIsEnglishLocale(getCurrentLocale() === ENGLISH_LOCALE);
+	}, []);
+
 	return (
 		<section
 			className={cn(

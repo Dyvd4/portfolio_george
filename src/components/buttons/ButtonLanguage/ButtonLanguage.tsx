@@ -2,6 +2,7 @@ import { ENGLISH_LOCALE, RUSSIAN_LOCALE } from "@/middleware";
 import EnFlag from "@/public/en-flag.svg";
 import RuFlag from "@/public/ru-flag.svg";
 import { cn } from "@/utils/component-utils";
+import { getCurrentLocale } from "@/utils/locale-utils";
 import Image, { ImageProps } from "next/image";
 import { useEffect, useState } from "react";
 
@@ -14,7 +15,7 @@ function ButtonLanguage({ className, ...props }: ButtonLanguageProps) {
 	const [isEnglishLocale, setIsEnglishLocale] = useState(false);
 
 	useEffect(() => {
-		setIsEnglishLocale(window.location.pathname.includes(ENGLISH_LOCALE));
+		setIsEnglishLocale(getCurrentLocale() === ENGLISH_LOCALE);
 	}, []);
 
 	const switchLocale = () => {
