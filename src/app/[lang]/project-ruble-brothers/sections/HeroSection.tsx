@@ -18,9 +18,8 @@ function HeroSection() {
 			description={
 				<>
 					Presenting a money exchange landing page design that is intuitive,
-					<br />
-					user-friendly, and modern. Our design will make it easy for customers <br />
-					to quickly and securely exchange money.
+					user-friendly, and modern. Our design will make it easy for customers to quickly
+					and securely exchange money.
 				</>
 			}
 		/>

@@ -17,8 +17,8 @@ function HeroSection() {
 			}
 			description={
 				<>
-					Yandex Match is a new dating service that can help you find a person <br />
-					with similar hobbies thanks to the new feature — «Maximum Match»!
+					Yandex Match is a new dating service that can help you find a person with
+					similar hobbies thanks to the new feature — «Maximum Match»!
 				</>
 			}
 		/>

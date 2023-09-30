@@ -21,7 +21,7 @@ function ProjectHeroSection({ className, image, description, ...props }: Project
 		>
 			{image}
 			<div className="flex flex-col justify-between gap-4 md:flex-row md:gap-0">
-				<p className="text-sm sm:text-lg">{description}</p>
+				<p className="max-w-[576px] text-sm sm:text-lg">{description}</p>
 				<div className="flex flex-col justify-end">
 					<Button disabled>Visit the website</Button>
 				</div>
