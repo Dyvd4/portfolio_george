@@ -1,11 +1,11 @@
 import modalIsActiveAtom from "@/atoms/modalIsActiveAtom";
 import CaseImage, { IphoneCaseImage } from "@/components/CaseImage";
+import Button from "@/components/buttons/Button";
 import CaseImages from "@/components/sections/CaseImagesSection";
 import IphoneCaseSection from "@/components/sections/IphoneCaseSection";
 import useFollowingCursorButton from "@/hooks/useFollowingCursorButton";
 import PopupImg from "@/public/project-peek/case-images/Pop-up.png";
 import CaseVideoWithoutButtonImg from "@/public/project-peek/case-images/case-video-without-button.png";
-import CaseVideoImg from "@/public/project-peek/case-images/case-video.svg";
 import ChooseYourPeekImg from "@/public/project-peek/case-images/choose-your-peek.png";
 import IphoneBePreparedForTheFutureImg from "@/public/project-peek/case-images/iphone-be-prepared-for-the-future.png";
 import IphoneChooseYourPeek2Img from "@/public/project-peek/case-images/iphone-choose-your-peek-2.png";
@@ -18,6 +18,7 @@ import PickAnyColorImg from "@/public/project-peek/case-images/pick-any-color.pn
 import SpeakerImg from "@/public/project-peek/case-images/speaker.png";
 import YourCartImg from "@/public/project-peek/case-images/your-cart.png";
 import { useAtom } from "jotai";
+import Image from "next/image";
 import { useRef } from "react";
 import CaseVideoPlayerModal from "../components/CaseVideoPlayerModal";
 
@@ -37,17 +38,30 @@ function PeekCaseImages() {
 		<>
 			<CaseImages>
 				<section>
-					<CaseImage
-						onClick={() => setModalIsActive(true)}
-						className="p-0 sm:hidden"
-						imageProps={{
-							src: CaseVideoImg,
-							alt: "Case video",
-						}}
-					/>
+					<div
+						className={`bg-tertiary relative flex items-center
+							 justify-center rounded-2xl sm:hidden`}
+					>
+						<Button
+							style={{
+								backdropFilter: "blur(16px)",
+								color: "white",
+							}}
+							className="bg-tertiary absolute"
+							onClick={() => setModalIsActive(true)}
+						>
+							Play video
+						</Button>
+						<Image
+							src={CaseVideoWithoutButtonImg}
+							alt="Case video"
+							className={"rounded-xl"}
+							style={{ width: "100%" }}
+						/>
+					</div>
 					<CaseImage
 						ref={caseVideoImgRef}
-						className="hidden p-0 sm:block"
+						className="hidden p-0 sm:block 2xl:p-0"
 						imageProps={{
 							src: CaseVideoWithoutButtonImg,
 							alt: "Case video",
