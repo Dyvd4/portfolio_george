@@ -1,6 +1,5 @@
 import modalIsActiveAtom from "@/atoms/modalIsActiveAtom";
 import CaseImage, { IphoneCaseImage } from "@/components/CaseImage";
-import VideoPlayerModal from "@/components/VideoPlayerModal";
 import CaseImages from "@/components/sections/CaseImagesSection";
 import IphoneCaseSection from "@/components/sections/IphoneCaseSection";
 import useFollowingCursorButton from "@/hooks/useFollowingCursorButton";
@@ -20,10 +19,11 @@ import SpeakerImg from "@/public/project-peek/case-images/speaker.png";
 import YourCartImg from "@/public/project-peek/case-images/your-cart.png";
 import { useAtom } from "jotai";
 import { useRef } from "react";
+import CaseVideoPlayerModal from "../components/CaseVideoPlayerModal";
 
 function PeekCaseImages() {
-	const caseVideoImgRef = useRef<HTMLElement | null>(null);
-	const [modalIsActive, setModalIsActive] = useAtom(modalIsActiveAtom);
+	const caseVideoImgRef = useRef<HTMLDivElement | null>(null);
+	const [, setModalIsActive] = useAtom(modalIsActiveAtom);
 	useFollowingCursorButton({
 		parentRef: caseVideoImgRef,
 		buttonProps: {
@@ -36,8 +36,9 @@ function PeekCaseImages() {
 	return (
 		<>
 			<CaseImages>
-				<section ref={caseVideoImgRef}>
+				<section>
 					<CaseImage
+						onClick={() => setModalIsActive(true)}
 						className="p-0 sm:hidden"
 						imageProps={{
 							src: CaseVideoImg,
@@ -45,6 +46,7 @@ function PeekCaseImages() {
 						}}
 					/>
 					<CaseImage
+						ref={caseVideoImgRef}
 						className="hidden p-0 sm:block"
 						imageProps={{
 							src: CaseVideoWithoutButtonImg,
@@ -141,11 +143,7 @@ function PeekCaseImages() {
 					/>
 				</IphoneCaseSection>
 			</CaseImages>
-			<VideoPlayerModal
-				url={"../../../../../case-video.mp4"}
-				controls
-				playing={modalIsActive}
-			/>
+			<CaseVideoPlayerModal />
 		</>
 	);
 }
