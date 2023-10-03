@@ -2,6 +2,7 @@
 	"pages": {
 		"main": {
 			"AboutMeSectionDescription": "Я решаю проблемы бизнеса и пользователей через исключительный UX.",
+			"MoreAboutMe": "Читать обо мне",
 			"StartAProject": "Начать проект",
 			"Ruble Brothers": "Братья Рублевы",
 			"Yandex Match": "Yandex Мэтч",
@@ -71,6 +72,6 @@
 	"projectFooter": {
 		"Next Project": "Дальше"
 	},
-	"See this work": "Смотреть",
-	"Play video": "Смотреть"
+	"See this work": "Смотреть проект",
+	"Play video": "Смотреть видео"
 }

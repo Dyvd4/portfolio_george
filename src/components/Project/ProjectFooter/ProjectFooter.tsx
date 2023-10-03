@@ -31,7 +31,7 @@ function ProjectFooter({
 				className="group flex cursor-pointer flex-col gap-4 md:gap-6"
 			>
 				<div className="group flex items-center justify-between gap-4 px-4 md:px-0">
-					<h1 className="text-[32px] leading-[130%] md:text-9xl">
+					<h1 className="text-[32px] !leading-[130%] md:text-9xl">
 						{projectFooter["Next Project"]}
 					</h1>
 					<div className="flex flex-col justify-end">

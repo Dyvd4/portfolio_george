@@ -20,7 +20,7 @@ export type AboutMeSectionProps = _AboutMeSectionProps &
 function AboutMeSection({ lang: currentLocale, className, ...props }: AboutMeSectionProps) {
 	const {
 		pages: {
-			main: { AboutMeSectionDescription },
+			main: { AboutMeSectionDescription, MoreAboutMe },
 		},
 	} = useDictionary(currentLocale);
 	return (
@@ -37,7 +37,7 @@ function AboutMeSection({ lang: currentLocale, className, ...props }: AboutMeSec
 				{AboutMeSectionDescription}
 			</h1>
 			<Link rel="noreferrer noopener" target={"_blank"} href={ABOUT_ME_HREF}>
-				<Button className="w-fit">More about me</Button>
+				<Button className="w-fit">{MoreAboutMe}</Button>
 			</Link>
 			<Image
 				className="absolute left-4 top-10 h-20 w-[38px] xl:left-[169.024px] xl:top-[151.968px] xl:h-[156px] xl:w-[127px]"
