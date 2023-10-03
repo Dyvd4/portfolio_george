@@ -11,6 +11,7 @@ import ButtonCursor from "@/components/buttons/ButtonCursor";
 import config from "@/app/[lang]/config";
 import { Locales } from "./dictionaries";
 import { LOCALES } from "@/middleware";
+import { Geologica } from "next/font/google";
 
 const { BASE_URL } = config;
 
@@ -28,6 +29,8 @@ const matterFont = localFont({
 		},
 	],
 });
+
+const geologicaFont = Geologica({ subsets: ["latin"], weight: "300" });
 
 export async function generateStaticParams() {
 	return LOCALES.map((locale) => ({ lang: locale }));
@@ -54,7 +57,11 @@ export default function RootLayout({
 				<link rel="icon" href="/en/Favicon.svg" type="image/x-icon" />
 			</head>
 			<JotaiProvider>
-				<body className={matterFont.className}>
+				<body
+					className={
+						params.lang === "ru" ? geologicaFont.className : matterFont.className
+					}
+				>
 					<ButtonCursor />
 					<div className="min-h-screen">
 						<Navbar lang={params.lang} />
