@@ -10,6 +10,7 @@ import { Toaster } from "react-hot-toast";
 import ButtonCursor from "@/components/buttons/ButtonCursor";
 import config from "@/app/[lang]/config";
 import { Locales } from "./dictionaries";
+import { LOCALES } from "@/middleware";
 
 const { BASE_URL } = config;
 
@@ -27,6 +28,10 @@ const matterFont = localFont({
 		},
 	],
 });
+
+export async function generateStaticParams() {
+	return LOCALES.map((locale) => ({ lang: locale }));
+}
 
 export const metadata: Metadata = {
 	title: "itsgeorge: Designing Exceptional User Experiences",
@@ -56,7 +61,7 @@ export default function RootLayout({
 						<main>{children}</main>
 					</div>
 					<Footer lang={params.lang} />
-					<Menu />
+					<Menu lang={params.lang} />
 					<ModalPortal />
 					<Toaster
 						position="bottom-center"

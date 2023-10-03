@@ -35,5 +35,20 @@
 			]
 		}
 	},
-	"DevelopedByDavidKimmich": "Разработано David Kimmich"
+	"DevelopedByDavidKimmich": "Разработано David Kimmich",
+	"menu": {
+		"Work": "Работы",
+		"About me": "Обо мне",
+		"F.A.Q": "ЧаВо",
+		"Contact me": "Контакты"
+	},
+	"ContactModal": {
+		"privacy policy": "политикой конфиденциальности",
+		"By clicking “Send”, you accept our": "Нажав “Отправить” Вы соглашаетесь с",
+		"Contact Form": "Форма связи",
+		"Name": "Имя",
+		"Email": "Почта",
+		"Type your message here...": "Начните писать здесь..."
+	},
+	"Send": "Отправить"
 }

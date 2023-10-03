@@ -1,7 +1,13 @@
 "use client";
 
 import modalIsActiveAtom from "@/atoms/modalIsActiveAtom";
+import FormControl from "@/components/FormControl";
+import Input from "@/components/Input";
 import Modal, { ModalBody, ModalFooter, ModalHeader } from "@/components/Modal";
+import Textarea from "@/components/Textarea";
+import ButtonSecondary from "@/components/buttons/ButtonSecondary";
+import useDictionary from "@/hooks/useDictionary";
+import { getCurrentLocale } from "@/utils/locale-utils";
 import request from "@/utils/request-utils";
 import { useAtom } from "jotai";
 import Link from "next/link";
@@ -10,10 +16,6 @@ import { ComponentPropsWithRef, PropsWithChildren, useRef, useState } from "reac
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { z } from "zod";
-import FormControl from "@/components/FormControl";
-import Input from "@/components/Input";
-import Textarea from "@/components/Textarea";
-import ButtonSecondary from "@/components/buttons/ButtonSecondary";
 
 const contactSchema = z.object({
 	name: z.string().nonempty(),
@@ -33,7 +35,7 @@ function ContactModal({ className, children, ...props }: ContactModalProps) {
 	const [errorMap, setErrorMap] = useState<Zod.ZodFormattedError<ContactSchema> | null>(null);
 	const submitButtonRef = useRef<HTMLButtonElement | null>(null);
 	const router = useRouter();
-
+	const { Send, ContactModal } = useDictionary(getCurrentLocale());
 	const handleLinkClick = (e, href: string) => {
 		e.preventDefault();
 		setModalIsActive(false);
@@ -61,16 +63,22 @@ function ContactModal({ className, children, ...props }: ContactModalProps) {
 
 	return (
 		<Modal>
-			<ModalHeader onClose={() => setErrorMap(null)}>Contact Form</ModalHeader>
+			<ModalHeader onClose={() => setErrorMap(null)}>
+				{ContactModal["Contact Form"]}
+			</ModalHeader>
 			<ModalBody>
 				<form className="flex flex-col gap-2" onSubmit={handleSubmit(makeContactRequest)}>
 					<FormControl errorMessage={errorMap?.name?._errors}>
-						<Input className="w-full" placeholder="Name" {...register("name")} />
+						<Input
+							className="w-full"
+							placeholder={ContactModal.Name}
+							{...register("name")}
+						/>
 					</FormControl>
 					<FormControl errorMessage={errorMap?.email?._errors}>
 						<Input
 							className="w-full"
-							placeholder="Email"
+							placeholder={ContactModal.Email}
 							type="email"
 							{...register("email")}
 						/>
@@ -78,7 +86,7 @@ function ContactModal({ className, children, ...props }: ContactModalProps) {
 					<FormControl errorMessage={errorMap?.message?._errors}>
 						<Textarea
 							className="w-full resize-none"
-							placeholder="Type your message here..."
+							placeholder={ContactModal["Type your message here..."]}
 							rows={4}
 							{...register("message")}
 						/>
@@ -88,16 +96,16 @@ function ContactModal({ className, children, ...props }: ContactModalProps) {
 			</ModalBody>
 			<ModalFooter className="flex flex-col gap-2">
 				<ButtonSecondary onClick={() => submitButtonRef.current!.click()}>
-					Send
+					{Send}
 				</ButtonSecondary>
-				<div>
-					By clicking “Send”, you accept our{" "}
+				<div className="privacy policy">
+					{ContactModal["By clicking “Send”, you accept our"]}{" "}
 					<Link
 						className="underline"
 						href={"/privacy-policy"}
 						onClick={(e) => handleLinkClick(e, "/privacy-policy")}
 					>
-						privacy policy
+						{ContactModal["privacy policy"]}
 					</Link>
 				</div>
 			</ModalFooter>

@@ -35,5 +35,20 @@
 			]
 		}
 	},
-	"DevelopedByDavidKimmich": "Developed by David Kimmich"
+	"DevelopedByDavidKimmich": "Developed by David Kimmich",
+	"menu": {
+		"Work": "Work",
+		"About me": "About me",
+		"F.A.Q": "F.A.Q",
+		"Contact me": "Contact me"
+	},
+	"ContactModal": {
+		"By clicking “Send”, you accept our": "By clicking “Send”, you accept our",
+		"privacy policy": "privacy policy",
+		"Contact Form": "Contact Form",
+		"Name": "Name",
+		"Email": "Email",
+		"Type your message here...": "Type your message here..."
+	},
+	"Send": "Send"
 }

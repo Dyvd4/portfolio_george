@@ -8,36 +8,44 @@ import { useAtom } from "jotai";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ComponentPropsWithRef, PropsWithChildren, useEffect } from "react";
+import { Locales, getDictionary } from "./dictionaries";
 
 export type Link = { href: string; title: string; target?: string };
 
 export const ABOUT_ME_HREF =
 	"https://niklapinv.notion.site/George-Palkin-Resume-10a727f21ccd405195712547bf9f698c?pvs=4";
-const LINKS: Array<Link> = [
-	{
-		title: "Work",
-		href: getLocaleHref("/#cases"),
-	},
-	{
-		title: "About me",
-		href: ABOUT_ME_HREF,
-		target: "_blank",
-	},
-	{
-		title: "F.A.Q",
-		href: getLocaleHref("/#faqs"),
-	},
-	{
-		title: "Contact me",
-		href: getLocaleHref("/#footer"),
-	},
-];
 
-type _MenuProps = {};
+const getLinks = (lang: Locales) => {
+	const { menu } = getDictionary(lang);
+	const LINKS: Array<Link> = [
+		{
+			title: menu.Work,
+			href: getLocaleHref("/#cases"),
+		},
+		{
+			title: menu["About me"],
+			href: ABOUT_ME_HREF,
+			target: "_blank",
+		},
+		{
+			title: menu["F.A.Q"],
+			href: getLocaleHref("/#faqs"),
+		},
+		{
+			title: menu["Contact me"],
+			href: getLocaleHref("/#footer"),
+		},
+	];
+	return LINKS;
+};
+
+type _MenuProps = {
+	lang: Locales;
+};
 export type MenuProps = _MenuProps &
 	Omit<PropsWithChildren<ComponentPropsWithRef<"div">>, keyof _MenuProps>;
 
-function Menu({ className, children, ...props }: MenuProps) {
+function Menu({ className, children, lang, ...props }: MenuProps) {
 	const [menuIsActive, setMenuIsActive] = useAtom(menuIsActiveAtom);
 	const router = useRouter();
 
@@ -70,7 +78,7 @@ function Menu({ className, children, ...props }: MenuProps) {
 			sm:px-0 md:flex-row md:items-end md:px-20 xl:p-0"
 			>
 				<ul className="flex flex-col gap-6 text-3xl leading-[150%] md:gap-8 md:text-8xl">
-					{LINKS.map(({ href, title, target }) => (
+					{getLinks(lang).map(({ href, title, target }) => (
 						<li
 							key={href}
 							className="hover:text-primary flex cursor-pointer
