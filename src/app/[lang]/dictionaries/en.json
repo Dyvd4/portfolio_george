@@ -33,6 +33,9 @@
 					"description": "I take 50% upfront and the remaining 50% after the design is finalized. For clients in Russia, I accept any payment method. However, please note that I can only accept crypto-transactions from clients outside Russia as SWIFT transactions are blocked."
 				}
 			]
+		},
+		"privacy-policy": {
+			"Privacy Policy": "Privacy Policy"
 		}
 	},
 	"DevelopedByDavidKimmich": "Developed by David Kimmich",

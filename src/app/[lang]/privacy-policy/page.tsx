@@ -1,15 +1,19 @@
 // prettier-ignore
 import { cn } from "@/utils/component-utils";
+import { Locales } from "../dictionaries";
+import useDictionary from "@/hooks/useDictionary";
 
-function Page(props) {
+function Page({ params: { lang } }: { params: { lang: Locales } }) {
+	const { pages } = useDictionary(lang);
 	return (
 		<div
 			className={cn(
 				`flex flex-col gap-6 px-4 pb-[256px] pt-16 lg:pb-[440px] lg:pl-[440px] lg:pr-[440px] lg:pt-[256px]`
 			)}
-			{...props}
 		>
-			<h1 className="text-[32px] leading-[150%] lg:text-7xl">Privacy Policy</h1>
+			<h1 className="text-[32px] leading-[150%] lg:text-7xl">
+				{pages["privacy-policy"]["Privacy Policy"]}
+			</h1>
 			<p>
 				1. Общие положения
 				<br />
