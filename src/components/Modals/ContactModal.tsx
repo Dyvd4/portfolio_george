@@ -98,7 +98,7 @@ function ContactModal({ className, children, ...props }: ContactModalProps) {
 				<ButtonSecondary onClick={() => submitButtonRef.current!.click()}>
 					{Send}
 				</ButtonSecondary>
-				<div className="privacy policy">
+				<div className="text-tertiary">
 					{ContactModal["By clicking “Send”, you accept our"]}{" "}
 					<Link
 						className="underline"
