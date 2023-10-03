@@ -77,7 +77,7 @@ function Menu({ className, children, lang, ...props }: MenuProps) {
 				className="flex w-[1200px] flex-col items-center justify-between 
 			sm:px-0 md:flex-row md:items-end md:px-20 xl:p-0"
 			>
-				<ul className="flex flex-col gap-6 text-3xl leading-[150%] md:gap-8 md:text-8xl">
+				<ul className="flex flex-col gap-6 text-3xl !leading-[150%] md:gap-8 md:text-8xl">
 					{getLinks(lang).map(({ href, title, target }) => (
 						<li
 							key={href}

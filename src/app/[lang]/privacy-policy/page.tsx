@@ -11,7 +11,7 @@ function Page({ params: { lang } }: { params: { lang: Locales } }) {
 				`flex flex-col gap-6 px-4 pb-[256px] pt-16 lg:pb-[440px] lg:pl-[440px] lg:pr-[440px] lg:pt-[256px]`
 			)}
 		>
-			<h1 className="text-[32px] leading-[150%] lg:text-7xl">
+			<h1 className="text-[32px] !leading-[150%] lg:text-7xl">
 				{pages["privacy-policy"]["Privacy Policy"]}
 			</h1>
 			<p>
