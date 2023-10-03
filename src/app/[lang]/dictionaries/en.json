@@ -36,6 +36,9 @@
 		},
 		"privacy-policy": {
 			"Privacy Policy": "Privacy Policy"
+		},
+		"project-peek": {
+			"description": "Revolutionizing design and function, the project showcases a cutting-edge smart speaker concept. During this project I designed an adaptive website, 3D models and animations that transport users into an immersive visual realm."
 		}
 	},
 	"DevelopedByDavidKimmich": "Developed by David Kimmich",
@@ -53,5 +56,6 @@
 		"Email": "Email",
 		"Type your message here...": "Type your message here..."
 	},
-	"Send": "Send"
+	"Send": "Send",
+	"Visit the website": "Visit the website"
 }

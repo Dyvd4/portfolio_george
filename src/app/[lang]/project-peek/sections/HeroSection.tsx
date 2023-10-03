@@ -1,10 +1,14 @@
 import ProjectHeroSection from "@/components/Project/ProjectHeroSection";
 import LogotypeImg from "@/public/project-peek/Logotype.svg";
 import Image from "next/image";
+import { Locales } from "../../dictionaries";
+import useDictionary from "@/hooks/useDictionary";
 
-function HeroSection() {
+function HeroSection({ lang }: { lang: Locales }) {
+	const { pages } = useDictionary(lang);
 	return (
 		<ProjectHeroSection
+			lang={lang}
 			image={
 				<Image
 					priority
@@ -15,13 +19,7 @@ function HeroSection() {
 					}}
 				/>
 			}
-			description={
-				<>
-					Revolutionizing design and function, the project showcases a cutting-edge smart
-					speaker concept. During this project I designed an adaptive website, 3D models
-					and animations that transport users into an immersive visual realm.
-				</>
-			}
+			description={<>{pages["project-peek"].description}</>}
 		/>
 	);
 }

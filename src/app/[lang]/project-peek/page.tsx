@@ -6,12 +6,13 @@ import CaseImages from "./sections/CaseImages";
 import HeroSection from "./sections/HeroSection";
 import useFooter from "@/hooks/useFooter";
 import FooterImg from "@/public/project-peek/footer-image.png";
+import { Locales } from "../dictionaries";
 
-function Page(props) {
+function Page({ params: { lang } }: { params: { lang: Locales } }) {
 	useFooter({ disable: true });
 	return (
 		<div className={cn(``)}>
-			<HeroSection />
+			<HeroSection lang={lang} />
 			<CaseImages />
 			<ProjectFooter imageSrc={FooterImg} nextProjectHref="/project-yandex" />
 		</div>
