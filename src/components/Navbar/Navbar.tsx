@@ -4,6 +4,7 @@ import { Locales } from "@/app/[lang]/dictionaries";
 import menuIsActiveAtom from "@/atoms/menuIsActiveAtom";
 import Logo from "@/components/Logo";
 import ButtonLanguage from "@/components/buttons/ButtonLanguage";
+import useDictionary from "@/hooks/useDictionary";
 import { cn } from "@/utils/component-utils";
 import { useAtom } from "jotai";
 import { ComponentPropsWithRef, PropsWithChildren } from "react";
@@ -17,7 +18,10 @@ export type NavbarProps = _NavbarProps &
 
 function Navbar({ lang, className, children, ...props }: NavbarProps) {
 	const [menuIsActive, setMenuIsActive] = useAtom(menuIsActiveAtom);
-	const menuTitle = !menuIsActive ? "Menu" : "Close";
+	const {
+		Navbar: { Menu, Close },
+	} = useDictionary(lang);
+	const menuTitle = !menuIsActive ? Menu : Close;
 	return (
 		<nav className={cn(`fixed z-50 w-full p-4 md:px-12 md:py-8`, className)} {...props}>
 			<div className="flex w-full justify-between">

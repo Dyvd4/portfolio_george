@@ -1,10 +1,14 @@
 import ProjectHeroSection from "@/components/Project/ProjectHeroSection";
 import LogotypeImg from "@/public/project-yandex/Logotype.svg";
 import Image from "next/image";
+import { Locales } from "../../dictionaries";
+import useDictionary from "@/hooks/useDictionary";
 
-function HeroSection() {
+function HeroSection({ lang }: { lang: Locales }) {
+	const { pages } = useDictionary(lang);
 	return (
 		<ProjectHeroSection
+			lang={lang}
 			image={
 				<Image
 					priority
@@ -15,12 +19,7 @@ function HeroSection() {
 					}}
 				/>
 			}
-			description={
-				<>
-					Yandex Match is a new dating service that can help you find a person with
-					similar hobbies thanks to the new feature — «Maximum Match»!
-				</>
-			}
+			description={<>{pages["project-yandex"].description}</>}
 		/>
 	);
 }

@@ -21,7 +21,7 @@ export default function Home({ params: { lang } }: { params: { lang: Locales } }
 	return (
 		<>
 			<HeroSection lang={lang} />
-			<MainCaseSection />
+			<MainCaseSection lang={lang} />
 			<AboutMeSection lang={lang} />
 			<CasesSection lang={lang} />
 			<FaqSection lang={lang} />

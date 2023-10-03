@@ -39,6 +39,12 @@
 		},
 		"project-peek": {
 			"description": "Revolutionizing design and function, the project showcases a cutting-edge smart speaker concept. During this project I designed an adaptive website, 3D models and animations that transport users into an immersive visual realm."
+		},
+		"project-ruble-brothers": {
+			"description": "Presenting a money exchange landing page design that is intuitive, user-friendly, and modern. Our design will make it easy for customers to quickly and securely exchange money."
+		},
+		"project-yandex": {
+			"description": "Yandex Match is a new dating service that can help you find a person with similar hobbies thanks to the new feature — «Maximum Match»!"
 		}
 	},
 	"DevelopedByDavidKimmich": "Developed by David Kimmich",
@@ -57,5 +63,14 @@
 		"Type your message here...": "Type your message here..."
 	},
 	"Send": "Send",
-	"Visit the website": "Visit the website"
+	"Visit the website": "Visit the website",
+	"Navbar": {
+		"Menu": "Menu",
+		"Close": "Close"
+	},
+	"projectFooter": {
+		"Next Project": "Next Project"
+	},
+	"See this work": "See this work",
+	"Play video": "Play video"
 }

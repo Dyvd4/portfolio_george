@@ -1,10 +1,14 @@
 import ProjectHeroSection from "@/components/Project/ProjectHeroSection";
 import LogotypeImg from "@/public/project-ruble-brothers/Logotype.svg";
 import Image from "next/image";
+import { Locales } from "../../dictionaries";
+import useDictionary from "@/hooks/useDictionary";
 
-function HeroSection() {
+function HeroSection({ lang }: { lang: Locales }) {
+	const { pages } = useDictionary(lang);
 	return (
 		<ProjectHeroSection
+			lang={lang}
 			image={
 				<Image
 					priority
@@ -15,13 +19,7 @@ function HeroSection() {
 					}}
 				/>
 			}
-			description={
-				<>
-					Presenting a money exchange landing page design that is intuitive,
-					user-friendly, and modern. Our design will make it easy for customers to quickly
-					and securely exchange money.
-				</>
-			}
+			description={<>{pages["project-ruble-brothers"].description}</>}
 		/>
 	);
 }

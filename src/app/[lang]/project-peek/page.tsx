@@ -13,8 +13,8 @@ function Page({ params: { lang } }: { params: { lang: Locales } }) {
 	return (
 		<div className={cn(``)}>
 			<HeroSection lang={lang} />
-			<CaseImages />
-			<ProjectFooter imageSrc={FooterImg} nextProjectHref="/project-yandex" />
+			<CaseImages lang={lang} />
+			<ProjectFooter lang={lang} imageSrc={FooterImg} nextProjectHref="/project-yandex" />
 		</div>
 	);
 }

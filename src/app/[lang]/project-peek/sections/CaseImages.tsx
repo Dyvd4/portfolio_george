@@ -21,14 +21,17 @@ import { useAtom } from "jotai";
 import Image from "next/image";
 import { useRef } from "react";
 import CaseVideoPlayerModal from "../components/CaseVideoPlayerModal";
+import { Locales } from "../../dictionaries";
+import useDictionary from "@/hooks/useDictionary";
 
-function PeekCaseImages() {
+function PeekCaseImages({ lang }: { lang: Locales }) {
 	const caseVideoImgRef = useRef<HTMLDivElement | null>(null);
 	const [, setModalIsActive] = useAtom(modalIsActiveAtom);
+	const dict = useDictionary(lang);
 	useFollowingCursorButton({
 		parentRef: caseVideoImgRef,
 		buttonProps: {
-			title: "Play video",
+			title: dict["Play video"],
 			onClick: () => {
 				setModalIsActive(true);
 			},
@@ -50,7 +53,7 @@ function PeekCaseImages() {
 							className="bg-tertiary absolute"
 							onClick={() => setModalIsActive(true)}
 						>
-							Play video
+							{dict["Play video"]}
 						</Button>
 						<Image
 							src={CaseVideoWithoutButtonImg}
