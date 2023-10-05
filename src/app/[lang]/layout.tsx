@@ -1,17 +1,16 @@
+import config from "@/app/[lang]/config";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import JotaiProvider from "@/components/Provider/Provider";
+import ButtonCursor from "@/components/buttons/ButtonCursor";
+import { LOCALES } from "@/middleware";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Toaster } from "react-hot-toast";
+import { Locales } from "./dictionaries";
 import "./globals.css";
 import Menu from "./menu";
 import ModalPortal from "./modal-portal";
-import { Toaster } from "react-hot-toast";
-import ButtonCursor from "@/components/buttons/ButtonCursor";
-import config from "@/app/[lang]/config";
-import { Locales } from "./dictionaries";
-import { LOCALES } from "@/middleware";
-import { Geologica } from "next/font/google";
 
 const { BASE_URL } = config;
 
@@ -30,7 +29,14 @@ const matterFont = localFont({
 	],
 });
 
-const geologicaFont = Geologica({ subsets: ["latin"], weight: "300" });
+const geologicaFont = localFont({
+	src: [
+		{
+			path: "../../../public/fonts/geologica-font/Geologica-VariableFont.ttf",
+			weight: "300",
+		},
+	],
+});
 
 export async function generateStaticParams() {
 	return LOCALES.map((locale) => ({ lang: locale }));
