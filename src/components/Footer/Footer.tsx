@@ -41,7 +41,7 @@ function Footer({ lang, className, children, ...props }: FooterProps) {
 				<div className="flex flex-col items-center gap-6">
 					<Copyable onClick={handleCopyClick}>
 						<h1 className="text-primary text-[32px] !leading-[150%] underline lg:text-[88px]">
-							hello@itsgeorge.com
+							hello@itsgeorge.pro
 						</h1>
 					</Copyable>
 					<Button onClick={() => setModalIsActive(true)}>{ContactForm}</Button>
