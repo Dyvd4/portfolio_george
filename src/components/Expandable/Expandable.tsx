@@ -41,7 +41,9 @@ function Expandable({ className, children, title, description, ...props }: Expan
 			</div>
 			{isExpanded && (
 				<>
-					<p className="text-secondary text-sm !leading-[160%]">{description}</p>
+					<p className="text-secondary text-sm !leading-[160%] md:text-lg">
+						{description}
+					</p>
 				</>
 			)}
 		</div>
