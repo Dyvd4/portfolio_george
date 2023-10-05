@@ -16,7 +16,6 @@ export async function POST(req: NextRequest) {
 	const reqData = await req.json();
 	const { name, email, message } = reqData;
 	try {
-		console.log("🚀 ~ file: route.ts:8 ~ BASE_URL:", BASE_URL);
 		contactSchema.parse({ name, email, message });
 		await mailTransport.sendMail({
 			from: email,
