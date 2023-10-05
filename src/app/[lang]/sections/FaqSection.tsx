@@ -32,7 +32,7 @@ function FaqSection({ lang: currentLocale, className, children, ...props }: FaqS
 				)}
 				{...props}
 			>
-				<h1 className="text-4xl !leading-[108%] lg:text-7xl">{faqsTitle}</h1>
+				<h1 className="text-4xl !leading-[150%] lg:text-7xl">{faqsTitle}</h1>
 				<ul className="flex flex-col gap-4">
 					{faqs.map(({ title, description }) => (
 						<li key={title}>
