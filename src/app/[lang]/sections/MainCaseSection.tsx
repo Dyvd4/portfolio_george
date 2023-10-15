@@ -35,7 +35,7 @@ function MainCaseSection({ className, lang, ...props }: MainCaseSectionProps) {
 			<CaseCard
 				className="lg:hidden"
 				title="PEEK"
-				href="/project-peek"
+				href={getLocaleHref("/project-peek")}
 				src={MainCaseSectionCaseImg}
 			/>
 			<Image
